@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/api/show-bill/[congress]/[billType]/[billNumber]/route.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/api/show-bill/[congress]/[billType]/[billNumber]/route.ts", "app/loading.tsx"],
   "exclude": ["node_modules"]
 }
