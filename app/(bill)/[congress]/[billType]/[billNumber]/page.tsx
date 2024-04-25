@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { cleanActionString } from '@/app/utils/utils';
+import Summary from '@/components/summary'
 
 export default function Bill({ params }) {
     const { congress, billType, billNumber } = params;
@@ -48,7 +49,8 @@ export default function Bill({ params }) {
                 {oneBill.sponsors.map((sponsor, index) => (
                     <div key={index} className="text-slate-500">Rep. {sponsor.firstName} {sponsor.lastName} ({sponsor.party}-{sponsor.state})</div>
                     ))}
-                <div className="text-slate-500">{oneBill.policyArea.name}</div>
+                {oneBill?.policyArea?.name && (<div className="text-slate-500">{oneBill.policyArea.name}</div>)}
+                <Summary congress={congress} billType={billType} billNumber={billNumber} />
             </div>
         </>
     );

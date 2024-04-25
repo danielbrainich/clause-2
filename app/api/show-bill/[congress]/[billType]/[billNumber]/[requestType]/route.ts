@@ -1,17 +1,19 @@
+import { request } from "http";
 import { NextResponse, NextRequest } from "next/server";
 
 export const GET = async (res: NextResponse, req: NextRequest) => {
   const apiKey = process.env.CONGRESS_GOV_API_KEY;
-  const { congress, billType, billNumber } = req.params;
+  const { congress, billType, billNumber, requestType } = req.params;
 
   try {
     const response = await fetch(
-      `https://api.congress.gov/v3/bill/${congress}/${billType}/${billNumber}?api_key=${apiKey}`
+      `https://api.congress.gov/v3/bill/${congress}/${billType.toLowerCase()}/${billNumber}/${requestType}?api_key=${apiKey}`
     );
     if (!response.ok) {
-      throw new Error(`http error. status: ${response.status}`);
+      throw new Error(`http error. status: ${res.status}`);
     }
     const data = await response.json();
+    console.log(data);
     return NextResponse.json(data);
   } catch (error) {
     console.error(`error fetching data: ${error}`);
