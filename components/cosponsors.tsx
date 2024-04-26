@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 
 export default function Cosponsors({ congress, billType, billNumber }) {
-    const [ isLoading, setIsLoading ] = useState(true);
-    const [ cosponsors, setCosponsors ] = useState("");
+    const [isLoading, setIsLoading] = useState(true);
+    const [cosponsors, setCosponsors] = useState("");
 
     useEffect(() => {
         const fetchCosponsors = async () => {
@@ -27,11 +27,12 @@ export default function Cosponsors({ congress, billType, billNumber }) {
 
     return (
         <>
-            <div className="text-slate-500">Cosponsors</div>
+            <div className="font-bold text-slate-900">{cosponsors.length > 1 ? "Cosponsors" : "Cosponsor"}</div>
             {cosponsors && cosponsors.map(cosponsor => {
                 return (
-                <div key={cosponsor.url} className="text-slate-500">{cosponsor.fullName}</div>
-            )})}
+                    <div key={cosponsor.url} className="text-slate-500">{cosponsor.fullName}</div>
+                )
+            })}
         </>
     );
 }

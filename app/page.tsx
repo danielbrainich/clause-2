@@ -48,7 +48,7 @@ export default function Home() {
         <ul>
           {links.map(link => (
             <li key={link.label}>
-              <Link href={`${link.href}/congress/billType/billNumber`} className="text-indigo-500">Blah</Link>
+              <Link href={`${link.href}/congress/billType/billNumber`} className="text-indigo-500"></Link>
             </li>
           ))}
         </ul>
