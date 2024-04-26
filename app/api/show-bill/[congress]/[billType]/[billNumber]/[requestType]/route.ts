@@ -1,4 +1,3 @@
-import { request } from "http";
 import { NextResponse, NextRequest } from "next/server";
 
 export const GET = async (res: NextResponse, req: NextRequest) => {

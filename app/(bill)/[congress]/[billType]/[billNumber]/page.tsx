@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { cleanActionString } from '@/app/utils/utils';
-import Summary from '@/components/summary'
+import Cosponsors from '@/components/cosponsors'
+import Actions from '@/components/actions'
 
 export default function Bill({ params }) {
     const { congress, billType, billNumber } = params;
@@ -50,7 +51,9 @@ export default function Bill({ params }) {
                     <div key={index} className="text-slate-500">Rep. {sponsor.firstName} {sponsor.lastName} ({sponsor.party}-{sponsor.state})</div>
                     ))}
                 {oneBill?.policyArea?.name && (<div className="text-slate-500">{oneBill.policyArea.name}</div>)}
-                <Summary congress={congress} billType={billType} billNumber={billNumber} />
+                <Cosponsors congress={congress} billType={billType} billNumber={billNumber} />
+                <Actions congress={congress} billType={billType} billNumber={billNumber} />
+
             </div>
         </>
     );
