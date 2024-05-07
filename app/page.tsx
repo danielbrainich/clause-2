@@ -5,21 +5,21 @@ import { cleanActionString } from '@/app/utils/utils';
 import Link from 'next/link';
 
 export default function Home() {
-  const [ bills, setBills ] = useState([]);
-  const [ oneBill, setOneBill ] = useState({});
-  const [ isLoading, setIsLoading ] = useState(true);
+  const [bills, setBills] = useState([]);
+  const [oneBill, setOneBill] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
+  const [offset, setOffset] = useState(0);
 
 
   useEffect(() => {
     const fetchBillsList = async () => {
-      setIsLoading(true);
       try {
-        const response = await fetch("/api/list-bills");
+        const response = await fetch(`/api/list-bills/${offset}`);
         if (!response.ok) {
           throw new Error(`http error. status: ${response.status}`)
         }
         const data = await response.json();
-        setBills(data.bills)
+        setBills(prevBills => [...prevBills, ...data.bills]);
         console.log(data.bills);
       }
       catch (error) {
@@ -28,7 +28,8 @@ export default function Home() {
       setIsLoading(false);
     }
     fetchBillsList();
-  }, []);
+  }, [offset]);
+
 
   const links = [
     { href: "/bill", label: "Bill" }
@@ -68,6 +69,7 @@ export default function Home() {
           </div>
         )
       )}
+      <div onClick={() => setOffset(prevOffset => prevOffset + 10)} className="cursor-pointer font-bold text-slate-900">Show More</div>
     </>
 
   );
