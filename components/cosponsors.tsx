@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 export default function Cosponsors({ congress, billType, billNumber }) {
     const [isLoading, setIsLoading] = useState(true);
@@ -27,12 +28,17 @@ export default function Cosponsors({ congress, billType, billNumber }) {
 
     return (
         <>
-            <div className="font-bold text-slate-900">{cosponsors.length > 1 ? "Cosponsors" : "Cosponsor"}</div>
-            {cosponsors && cosponsors.map(cosponsor => {
-                return (
-                    <div key={cosponsor.url} className="text-slate-500">{cosponsor.fullName}</div>
-                )
-            })}
+            <div className="font-bold text-slate-900">{cosponsors.length === 1 ? "Cosponsor" : "Cosponsors"}</div>
+            {cosponsors && cosponsors.length > 0 ? (
+                cosponsors.map(cosponsor => (
+                    <Link key={cosponsor.url} href={`/representative/${cosponsor.bioguideId}`}>
+                    <div className="text-slate-500">{cosponsor.fullName}</div>
+                    </Link>
+                ))
+                ) : (
+                    <div className="text-slate-500">None</div>
+                )}
         </>
     );
 }
+

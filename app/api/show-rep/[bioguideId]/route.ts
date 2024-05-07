@@ -2,12 +2,11 @@ import { NextResponse, NextRequest } from "next/server";
 
 export const GET = async (res: NextResponse, req: NextRequest) => {
   const apiKey = process.env.CONGRESS_GOV_API_KEY;
-  const { offset } = req.params;
+  const { bioguideId } = req.params;
 
   try {
-    const response = await fetch(
-      `https://api.congress.gov/v3/bill?api_key=${apiKey}&limit=10&offset=${offset}`
-    );
+    const response = await fetch(`https://api.congress.gov/v3/member/${bioguideId}?api_key=${apiKey}`
+        );
     if (!response.ok) {
       throw new Error(`http error. status: ${response.status}`);
     }

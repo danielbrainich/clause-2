@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react';
-import { cleanActionString } from '@/app/utils/utils';
+import Link from 'next/link';
 import Cosponsors from '@/components/cosponsors'
 import Actions from '@/components/actions'
 import Text from '@/components/text'
@@ -46,7 +46,10 @@ export default function Bill({ params }) {
                 <div className="text-slate-500">{oneBill.title}</div>
                 <div className="font-bold text-slate-900">{oneBill.sponsors.length > 1 ? "Sponsors" : "Sponsor"}</div>
                 {oneBill.sponsors.map((sponsor, index) => (
-                    <div key={index} className="text-slate-500">Rep. {sponsor.fullname} {sponsor.lastName} [{sponsor.party}-{sponsor.state}{sponsor.district ? `-${sponsor.district}` : ''}]</div>
+                    <Link key={index} href={`/representative/${sponsor.bioguideId}`}>
+                        {console.log(sponsor)}
+                        <div className="text-slate-500">Rep. {sponsor.fullname} {sponsor.lastName} [{sponsor.party}-{sponsor.state}{sponsor.district ? `-${sponsor.district}` : ''}]</div>
+                    </Link>
                 ))}
                 {oneBill?.policyArea?.name && (
                     <>
