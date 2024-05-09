@@ -46,7 +46,7 @@ export default function Bill({ params }) {
                 <div className="text-slate-500">{oneBill.title}</div>
                 <div className="font-bold text-slate-900">{oneBill.sponsors.length > 1 ? "Sponsors" : "Sponsor"}</div>
                 {oneBill.sponsors.map((sponsor, index) => (
-                    <Link key={index} href={`/representative/${sponsor.bioguideId}`}>
+                    <Link key={index} href={`/rep/${sponsor.bioguideId}`}>
                         {console.log(sponsor)}
                         <div className="text-slate-500">{sponsor.district ? 'Rep.' : 'Sen.'}{sponsor.fullname} {sponsor.lastName} [{sponsor.party}-{sponsor.state}{sponsor.district ? `-${sponsor.district}` : ''}]</div>
                     </Link>

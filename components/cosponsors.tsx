@@ -31,7 +31,7 @@ export default function Cosponsors({ congress, billType, billNumber }) {
             <div className="font-bold text-slate-900">{cosponsors.length === 1 ? "Cosponsor" : "Cosponsors"}</div>
             {cosponsors && cosponsors.length > 0 ? (
                 cosponsors.map(cosponsor => (
-                    <Link key={cosponsor.url} href={`/representative/${cosponsor.bioguideId}`}>
+                    <Link key={cosponsor.url} href={`/rep/${cosponsor.bioguideId}`}>
                     <div className="text-slate-500">{cosponsor.fullName}</div>
                     </Link>
                 ))
