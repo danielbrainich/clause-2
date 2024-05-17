@@ -14,7 +14,6 @@ export const GET = async (res: NextResponse, req: NextRequest) => {
     const data = await response.json();
     const array = data.members;
 
-
     const response2 = await fetch(
       `https://api.congress.gov/v3/member/congress/${congress}?api_key=${apiKey}&offset=250&limit=250`
     );
@@ -23,7 +22,6 @@ export const GET = async (res: NextResponse, req: NextRequest) => {
     }
     const data2 = await response2.json();
     const array2 = data2.members;
-
 
     const response3 = await fetch(
       `https://api.congress.gov/v3/member/congress/${congress}?api_key=${apiKey}&offset=500&limit=250`
@@ -34,11 +32,10 @@ export const GET = async (res: NextResponse, req: NextRequest) => {
     const data3 = await response3.json();
     const array3 = data3.members;
 
+    const fullArray = [...array, ...array2, ...array3];
+    const nextResponse = NextResponse.json(fullArray);
+    return nextResponse;
 
-    const fullArray = [...array, ...array2, ...array3]
-
-
-    return NextResponse.json(fullArray);
   } catch (error) {
     console.error(`error fetching data: ${error}`);
     return NextResponse.json({ error: "failed to fetch data" });

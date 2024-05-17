@@ -12,9 +12,14 @@ export const GET = async (res: NextResponse, req: NextRequest) => {
       throw new Error(`http error. status: ${response.status}`);
     }
     const data = await response.json();
-    return NextResponse.json(data);
+    const nextResponse = NextResponse.json(data);
+    nextResponse.headers.set('Cache-Control', 's-maxage=3600');
+    return nextResponse;
+
   } catch (error) {
     console.error(`error fetching data: ${error}`);
     return NextResponse.json({ error: "failed to fetch data" });
   }
 };
+
+fetch("https://...", { next: { revalidate: 3600 } });
