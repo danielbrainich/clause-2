@@ -32,7 +32,7 @@ export default function Cosponsors({ congress, billType, billNumber }) {
             {cosponsors && cosponsors.length > 0 ? (
                 cosponsors.map(cosponsor => (
                     <Link key={cosponsor.url} href={`/POL/${cosponsor.bioguideId}`}>
-                    <div className="text-slate-500">{cosponsor.fullName}</div>
+                    <div className="text-slate-500 hover:text-blue-500 underline-animation w-fit">{cosponsor.fullName}</div>
                     </Link>
                 ))
                 ) : (

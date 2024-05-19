@@ -57,7 +57,7 @@ export default function Bill({ params }) {
                 {oneBill.sponsors.map((sponsor, index) => (
                     <Link key={index} href={`/POL/${sponsor.bioguideId}`}>
                         {console.log(sponsor)}
-                        <div className="text-slate-500">{sponsor.district ? 'Rep.' : 'Sen.'}{sponsor.fullname && toTitleCase(sponsor.fullname)} {sponsor.lastName && toTitleCase(sponsor.lastName)} [{sponsor.party}-{sponsor.state}{sponsor.district ? `-${sponsor.district}` : ''}]</div>
+                        <div className="text-slate-500 hover:text-blue-500 underline-animation w-fit">{sponsor.district ? 'Rep.' : 'Sen.'}{sponsor.fullname && toTitleCase(sponsor.fullname)} {sponsor.lastName && toTitleCase(sponsor.lastName)} [{sponsor.party}-{sponsor.state}{sponsor.district ? `-${sponsor.district}` : ''}]</div>
                     </Link>
                 ))}
                 {oneBill?.policyArea?.name && (
