@@ -11,6 +11,15 @@ export default function Bill({ params }) {
     const [oneBill, setOneBill] = useState({});
     const [isLoading, setIsLoading] = useState(true);
 
+    function toTitleCase(str) {
+        return str.replace(
+            /\w\S*/g,
+            function (txt) {
+                return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+            }
+        );
+    }
+
     useEffect(() => {
         const fetchOneBill = async () => {
             setIsLoading(true);
@@ -45,21 +54,21 @@ export default function Bill({ params }) {
                 <div className="font-caveat font-medium text-xl text-indigo-500 mb-1 sm:mb-0">{`${oneBill.type}-${oneBill.number}`}</div>
                 <div className="text-slate-500">{oneBill.title}</div>
                 <div className="font-bold text-slate-900">{oneBill.sponsors.length > 1 ? "Sponsors" : "Sponsor"}</div>
-            {oneBill.sponsors.map((sponsor, index) => (
-                <Link key={index} href={`/POL/${sponsor.bioguideId}`}>
-                    {console.log(sponsor)}
-                    <div className="text-slate-500">{sponsor.district ? 'Rep.' : 'Sen.'}{sponsor.fullname} {sponsor.lastName} [{sponsor.party}-{sponsor.state}{sponsor.district ? `-${sponsor.district}` : ''}]</div>
-                </Link>
-            ))}
-            {oneBill?.policyArea?.name && (
-                <>
-                    <div className="font-bold text-slate-900">Policy Area</div>
-                    <div className="text-slate-500">{oneBill.policyArea.name}</div>
-                </>
-            )}
-            <Text congress={congress} billType={billType} billNumber={billNumber} />
-            <Cosponsors congress={congress} billType={billType} billNumber={billNumber} />
-            <div className="font-bold text-slate-900">Actions</div>
+                {oneBill.sponsors.map((sponsor, index) => (
+                    <Link key={index} href={`/POL/${sponsor.bioguideId}`}>
+                        {console.log(sponsor)}
+                        <div className="text-slate-500">{sponsor.district ? 'Rep.' : 'Sen.'}{sponsor.fullname && toTitleCase(sponsor.fullname)} {sponsor.lastName && toTitleCase(sponsor.lastName)} [{sponsor.party}-{sponsor.state}{sponsor.district ? `-${sponsor.district}` : ''}]</div>
+                    </Link>
+                ))}
+                {oneBill?.policyArea?.name && (
+                    <>
+                        <div className="font-bold text-slate-900">Policy Area</div>
+                        <div className="text-slate-500">{oneBill.policyArea.name}</div>
+                    </>
+                )}
+                <Text congress={congress} billType={billType} billNumber={billNumber} />
+                <Cosponsors congress={congress} billType={billType} billNumber={billNumber} />
+                <div className="font-bold text-slate-900">Actions</div>
             </div>
             <Actions congress={congress} billType={billType} billNumber={billNumber} />
         </>
