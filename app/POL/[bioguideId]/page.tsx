@@ -88,7 +88,6 @@ export default function Representative({ params }) {
                 )}
             </div>
             <div>Sponsored Legislation</div>
-            {console.log("sponsoredLeg", sponsoredLeg)}
             {sponsoredLeg && sponsoredLeg.filter(bill => bill.title !== undefined).map((bill, index) => (
                 <div key={index} className="relative pl-8 sm:pl-32 py-6 group">
                     <Link href={`/BILL/${bill.congress}/${bill.type}/${bill.number}`}>

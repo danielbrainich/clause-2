@@ -7,10 +7,12 @@ export default function findBill() {
     const [billType, setBillType] = useState('');
     const [number, setNumber] = useState('');
     const [congress, setCongress] = useState('');
-    const [results, setResults] = useState();
+    const [result, setResult] = useState();
+    const [isLoading, setIsLoading] = useState(false);
     const billTypes = ["HR", "HJRES", "S", "SJRES"]
 
     const fetchBill = async (congress, billType, number) => {
+        setIsLoading(true);
         try {
             console.log("fetching bill")
             console.log(billType)
@@ -20,15 +22,17 @@ export default function findBill() {
             }
             const data = await response.json();
             console.log(data.bill);
-            setResults(data.bill);
+            setResult(data.bill);
         }
         catch (error) {
             console.error(`failed to fetch bills: ${error}`)
         }
+        setIsLoading(false);
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setResult(null);
         fetchBill(congress, billType, number);
     }
 
@@ -112,21 +116,24 @@ export default function findBill() {
                 <div className="sm:flex sm:items-center">
                     <div className="sm:w-1/2"></div>
                     <div className="sm:w-2/2">
-                        <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" type="submit">Submit</button>
+                        <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" type="submit">Search</button>
                     </div>
                 </div>
             </form>
             <div>
-                {results && (
-                    <div className="relative pl-8 sm:pl-32 py-6 group">
-                        <Link href={`/BILL/${results.congress}/${results.type}/${results.number}`}>
+                {result && (
+                    <div className="relative sm:pl-32 py-6 group">
+                        <Link href={`/BILL/${result.congress}/${result.type}/${result.number}`}>
                             <div className="hover:bg-slate-100 p-4 rounded">
-                                <div className="font-caveat font-medium text-xl text-indigo-500 mb-1 sm:mb-0">{`${results.type}-${results.number}`}</div>
-                                <time className="translate-y-0.5 text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">{results.introducedDate}</time>
-                                <div className="text-slate-500">{results.title}</div>
+                                <div className="font-caveat font-medium text-xl text-indigo-500 mb-1 sm:mb-0">{`${result.type}-${result.number}`}</div>
+                                <time className="left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 text-emerald-600 bg-emerald-100 rounded-full">{result.introducedDate}</time>
+                                <div className="text-slate-500">{result.title}</div>
                             </div>
                         </Link>
                     </div>
+                )}
+                {isLoading && (
+                    <div>Loading...</div>
                 )}
             </div>
         </>
