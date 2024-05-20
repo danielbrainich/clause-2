@@ -50,25 +50,26 @@ export default function Bill({ params }) {
 
     return (
         <>
-            <div className="relative pl-8 sm:pl-32 py-6 group">
-                <div className="font-caveat font-medium text-xl text-indigo-500 mb-1 sm:mb-0">{`${oneBill.type}-${oneBill.number}`}</div>
+            <div className="relative pl-8 sm:pl-32 pt-6 group">
+                <div className="font-caveat font-medium text-xl text-indigo-500 mb-1 sm:mb-0 pb-1">{`${oneBill.type}-${oneBill.number}`}</div>
                 <div className="text-slate-500">{oneBill.title}</div>
-                <div className="font-bold text-slate-900">{oneBill.sponsors.length > 1 ? "Sponsors" : "Sponsor"}</div>
+                <div className="font-bold text-slate-700 pt-4 pb-1">{oneBill.sponsors.length > 1 ? "Sponsors" : "Sponsor"}</div>
                 {oneBill.sponsors.map((sponsor, index) => (
                     <Link key={index} href={`/POL/${sponsor.bioguideId}`}>
                         {console.log(sponsor)}
-                        <div className="text-slate-500 hover:text-blue-500 underline-animation w-fit">{sponsor.district ? 'Rep.' : 'Sen.'}{sponsor.fullname && toTitleCase(sponsor.fullname)} {sponsor.lastName && toTitleCase(sponsor.lastName)} [{sponsor.party}-{sponsor.state}{sponsor.district ? `-${sponsor.district}` : ''}]</div>
+                        <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{sponsor.district ? 'Rep.' : 'Sen.'}{sponsor.fullname && toTitleCase(sponsor.fullname)} {sponsor.lastName && toTitleCase(sponsor.lastName)} [{sponsor.party}-{sponsor.state}{sponsor.district ? `-${sponsor.district}` : ''}]</div>
                     </Link>
                 ))}
                 {oneBill?.policyArea?.name && (
                     <>
-                        <div className="font-bold text-slate-900">Policy Area</div>
+                        <div className="font-bold text-slate-700 pt-4 pb-1">Policy Area</div>
                         <div className="text-slate-500">{oneBill.policyArea.name}</div>
                     </>
                 )}
-                <Text congress={congress} billType={billType} billNumber={billNumber} />
+                <div className="w-fit">
+                    <Text congress={congress} billType={billType} billNumber={billNumber} />
+                </div>
                 <Cosponsors congress={congress} billType={billType} billNumber={billNumber} />
-                <div className="font-bold text-slate-900">Actions</div>
             </div>
             <Actions congress={congress} billType={billType} billNumber={billNumber} />
         </>

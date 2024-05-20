@@ -28,11 +28,11 @@ export default function Cosponsors({ congress, billType, billNumber }) {
 
     return (
         <>
-            <div className="font-bold text-slate-900">{cosponsors.length === 1 ? "Cosponsor" : "Cosponsors"}</div>
+            <div className="font-bold text-slate-700 pt-4 pb-2">{cosponsors.length === 1 ? "Cosponsor" : "Cosponsors"}</div>
             {cosponsors && cosponsors.length > 0 ? (
                 cosponsors.map(cosponsor => (
                     <Link key={cosponsor.url} href={`/POL/${cosponsor.bioguideId}`}>
-                    <div className="text-slate-500 hover:text-blue-500 underline-animation w-fit">{cosponsor.fullName}</div>
+                    <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{cosponsor.fullName}</div>
                     </Link>
                 ))
                 ) : (

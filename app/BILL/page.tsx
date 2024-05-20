@@ -116,7 +116,7 @@ export default function findBill() {
                 <div className="sm:flex sm:items-center">
                     <div className="sm:w-1/2"></div>
                     <div className="sm:w-2/2">
-                        <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" type="submit">Search</button>
+                        <button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded" type="submit">Search</button>
                     </div>
                 </div>
             </form>

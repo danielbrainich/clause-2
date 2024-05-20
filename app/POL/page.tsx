@@ -68,14 +68,14 @@ export default function findRep() {
                             value={searchParam}
                             onChange={handleChange}
                             required
-                            className="border rounded w-20 py-2 px-3 text-gray-700"
+                            className="border rounded py-2 px-3 text-gray-700"
                         />
                     </div>
                 </div>
                 <div className="sm:flex sm:items-center">
                     <div className="sm:w-1/2"></div>
                     <div className="sm:w-2/2">
-                        <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded" type="submit">Search</button>
+                        <button className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded" type="submit">Search</button>
                     </div>
                 </div>
             </form>
@@ -84,7 +84,7 @@ export default function findRep() {
                     <div className="relative sm:pl-32 group">
 
                         <Link key={index} href={`/POL/${result.bioguideId}`}>
-                            <div className="text-slate-500 hover:text-blue-500 underline-animation w-fit">{result.name}</div>
+                            <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{result.name}</div>
                         </Link>
                     </div>
                 ))}

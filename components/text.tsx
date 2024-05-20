@@ -27,8 +27,8 @@ export default function Text({ congress, billType, billNumber }) {
     return (
         text && (
             <>
-                <div className="font-bold text-slate-900">Text</div>
-                <a href={text} target="_blank" className="text-slate-500">Link to full text</a>
+                <div className="font-bold text-slate-700 pt-4 pb-2">Text</div>
+                <a href={text} target="_blank" className="text-slate-500 hover:text-indigo-500 underline-animation">Link to full text</a>
             </>
         )
     );

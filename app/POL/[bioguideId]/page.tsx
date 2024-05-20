@@ -78,18 +78,18 @@ export default function Representative({ params }) {
 
     return (
         <>
-            <div className="relative pl-8 sm:pl-32 py-6 group">
-                <div className="font-caveat font-medium text-xl text-indigo-500 mb-1 sm:mb-0">{rep.district ? 'Rep.' : 'Sen.'} {rep.directOrderName}</div>
+            <div className="relative pl-8 sm:pl-32 pt-6 group">
+                <div className="font-caveat font-medium text-xl text-indigo-500 mb-1 sm:mb-0 pb-1">{rep.district ? 'Rep.' : 'Sen.'} {rep.directOrderName}</div>
                 <div className="text-slate-500">{rep.partyHistory && rep.partyHistory[0].partyName} Party</div>
-                <div className="text-slate-500">{rep.state}</div>
+                <div className="text-slate-500 pb-4">{rep.state}</div>
 
                 {rep.depiction && rep.depiction.imageUrl && (
                     <img src={rep.depiction.imageUrl} alt={`Photo of ${rep.directOrderName}`} />
                 )}
             </div>
-            <div>Sponsored Legislation</div>
+            <div className="font-bold text-slate-700 pl-8 sm:pl-32 pt-6 pb-1">Sponsored Legislation</div>
             {sponsoredLeg && sponsoredLeg.filter(bill => bill.title !== undefined).map((bill, index) => (
-                <div key={index} className="relative pl-8 sm:pl-32 py-6 group">
+                <div key={index} className="relative pl-8 sm:pl-32 group">
                     <Link href={`/BILL/${bill.congress}/${bill.type}/${bill.number}`}>
                         <div className="hover:bg-slate-100 p-4 rounded">
                             <div className="font-caveat font-medium text-xl text-indigo-500 mb-1 sm:mb-0">{`${bill.type}-${bill.number}`}</div>
