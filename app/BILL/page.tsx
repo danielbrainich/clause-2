@@ -7,7 +7,7 @@ export default function findBill() {
     const [billType, setBillType] = useState('');
     const [number, setNumber] = useState('');
     const [congress, setCongress] = useState('');
-    const [results, setResults] = useState({});
+    const [results, setResults] = useState();
     const billTypes = ["HR", "HJRES", "S", "SJRES"]
 
     const fetchBill = async (congress, billType, number) => {
@@ -118,9 +118,15 @@ export default function findBill() {
             </form>
             <div>
                 {results && (
-                    <Link href={`/BILL/${results.congress}/${results.type}/${results.number}`}>
-                        <div>{results.title}</div>
-                    </Link>
+                    <div className="relative pl-8 sm:pl-32 py-6 group">
+                        <Link href={`/BILL/${results.congress}/${results.type}/${results.number}`}>
+                            <div className="hover:bg-slate-100 p-4 rounded">
+                                <div className="font-caveat font-medium text-xl text-indigo-500 mb-1 sm:mb-0">{`${results.type}-${results.number}`}</div>
+                                <time className="translate-y-0.5 text-xs font-semibold uppercase w-20 h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">{results.introducedDate}</time>
+                                <div className="text-slate-500">{results.title}</div>
+                            </div>
+                        </Link>
+                    </div>
                 )}
             </div>
         </>
