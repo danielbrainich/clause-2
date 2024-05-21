@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link'
 import { cleanActionString } from '@/app/utils/utils';
+import SaveLegislatorButton from '@/components/saveLegislatorButton';
 
 export default function Representative({ params }) {
     const { bioguideId } = params;
@@ -89,7 +90,8 @@ export default function Representative({ params }) {
             <div className="relative pl-8 sm:pl-32 pt-6 group">
                 <div className="font-caveat font-medium text-xl text-indigo-500 mb-1 sm:mb-0 pb-1">{rep.district ? 'Rep.' : 'Sen.'} {rep.directOrderName}</div>
                 <div className="text-slate-500">{rep.partyHistory && rep.partyHistory[0].partyName} Party</div>
-                <div className="text-slate-500 pb-4">{rep.state}</div>
+                <div className="text-slate-500 pb-3">{rep.state}</div>
+                <SaveLegislatorButton bioguideId={bioguideId}/>
 
                 {rep.depiction && rep.depiction.imageUrl && (
                     <img src={rep.depiction.imageUrl} alt={`Photo of ${rep.directOrderName}`} />
