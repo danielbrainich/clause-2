@@ -52,7 +52,7 @@ export default function findBill() {
 
     return (
         <>
-            <h2 className="w-full text-4xl font-bold sm:text-center text-gray-700 mb-10">Search bills</h2>
+            <h2 className="w-full text-4xl font-bold sm:text-center text-gray-700 mb-10">Search Bills</h2>
             <form className="w-full" onSubmit={handleSubmit}>
                 <div className="sm:flex sm:items-center mb-6">
                     <div className="sm:w-1/2">

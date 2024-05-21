@@ -52,14 +52,14 @@ export default function findRep() {
 
     return (
         <>
-            <h2 className="w-full text-4xl font-bold sm:text-center text-gray-700 mb-10">Search legislators</h2>
+            <h2 className="w-full text-4xl font-bold sm:text-center text-gray-700 mb-10">Search Legislators</h2>
             <form className="w-full" onSubmit={handleSubmit}>
                 <div className="sm:flex sm:items-center mb-6">
                     <div className="sm:w-1/2">
                         <label
                             htmlFor="search"
                             className="block text-gray-700 font-bold sm:text-right mb-1 sm:mb-0 pr-4"
-                        >Search legislators</label>
+                        >Legislator Name</label>
                     </div>
                     <div className="sm:w-2/2">
                         <input

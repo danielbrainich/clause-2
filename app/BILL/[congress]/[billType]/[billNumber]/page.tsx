@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Cosponsors from '@/components/cosponsors'
 import Actions from '@/components/actions'
 import Text from '@/components/text'
+import SaveBillButton from '@/components/saveBillButton'
+
 
 export default function Bill({ params }) {
     const { congress, billType, billNumber } = params;
@@ -61,6 +63,7 @@ export default function Bill({ params }) {
             <div className="relative pl-8 sm:pl-32 pt-6 group">
                 <div className="font-caveat font-medium text-xl text-indigo-500 mb-1 sm:mb-0 pb-1">{`${oneBill.type}-${oneBill.number}`}</div>
                 <div className="text-slate-500">{oneBill.title}</div>
+                <SaveBillButton congress={congress} billType={billType} billNumber={billNumber} />
                 <div className="font-bold text-slate-700 pt-4 pb-1">{oneBill.sponsors.length > 1 ? "Sponsors" : "Sponsor"}</div>
                 {oneBill.sponsors.map((sponsor, index) => (
                     <Link key={index} href={`/POL/${sponsor.bioguideId}`}>
