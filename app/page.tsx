@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { cleanActionString } from '@/app/utils/utils';
 import Link from 'next/link';
+import { GoogleSignInButton, GithubSignInButton } from '@/components/authButtons';
 
 export default function Home() {
   const [bills, setBills] = useState([]);
@@ -72,6 +73,8 @@ export default function Home() {
         )}
       </div>
       <div onClick={() => setOffset(prevOffset => prevOffset + 10)} className="cursor-pointer font-bold text-slate-700 pl-8 sm:pl-32 py-6">Show More</div>
+      <GoogleSignInButton />
+      <GithubSignInButton />
     </>
 
   );
