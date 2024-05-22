@@ -16,7 +16,7 @@ export default function findBill() {
         try {
             console.log("fetching bill")
             console.log(billType)
-            const response = await fetch(`api/show-bill/${congress}/${billType}/${number}`) // You'll need an input where they can put the congress number
+            const response = await fetch(`api/show-bill/${congress}/${billType}/${number}`)
             if (!response.ok) {
                 throw new Error(`http error: ${response.status}`)
             }

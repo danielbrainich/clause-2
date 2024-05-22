@@ -8,7 +8,7 @@ import Text from '@/components/text'
 import SaveBillButton from '@/components/saveBillButton'
 
 
-export default function Bill({ params }) {
+export default async function Bill({ params }) {
     const { congress, billType, billNumber } = params;
     const [oneBill, setOneBill] = useState({});
     const [isLoading, setIsLoading] = useState(true);
