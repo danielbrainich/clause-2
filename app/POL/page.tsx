@@ -83,7 +83,7 @@ export default function findRep() {
                 {results && results.map((result, index) => (
                     <div className="relative sm:pl-32 group">
 
-                        <Link key={index} href={`/POL/${result.bioguideId}`}>
+                        <Link key={index} href={`/pol/${result.bioguideId}`}>
                             <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{result.name}</div>
                         </Link>
                     </div>

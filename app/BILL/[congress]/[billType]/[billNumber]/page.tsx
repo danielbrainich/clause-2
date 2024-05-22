@@ -66,7 +66,7 @@ export default async function Bill({ params }) {
                 <SaveBillButton congress={congress} billType={billType} billNumber={billNumber} />
                 <div className="font-bold text-slate-700 pt-4 pb-1">{oneBill.sponsors.length > 1 ? "Sponsors" : "Sponsor"}</div>
                 {oneBill.sponsors.map((sponsor, index) => (
-                    <Link key={index} href={`/POL/${sponsor.bioguideId}`}>
+                    <Link key={index} href={`/pol/${sponsor.bioguideId}`}>
                         {console.log(sponsor)}
                         <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{sponsor.district ? 'Rep.' : 'Sen.'}{sponsor.fullname && toTitleCase(sponsor.fullname)} {sponsor.lastName && toTitleCase(sponsor.lastName)} [{sponsor.party}-{sponsor.state}{sponsor.district ? `-${sponsor.district}` : ''}]</div>
                     </Link>

@@ -123,7 +123,7 @@ export default function findBill() {
             <div>
                 {result && (
                     <div className="relative sm:pl-32 py-6 group">
-                        <Link href={`/BILL/${result.congress}/${result.type}/${result.number}`}>
+                        <Link href={`/bill/${result.congress}/${result.type}/${result.number}`}>
                             <div className="hover:bg-slate-100 p-4 rounded">
                                 <div className="font-caveat font-medium text-xl text-indigo-500 mb-1 sm:mb-0">{`${result.type}-${result.number}`}</div>
                                 <time className="left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 text-emerald-600 bg-emerald-100 rounded-full">{result.introducedDate}</time>

@@ -11,17 +11,17 @@ export default async function Navbar() {
     const links = [
         {
             label: "Search Bills",
-            href: "/BILL",
+            href: "/bill",
             className: "block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-700 md:p-0 md:dark:hover:text-indigo-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent underline-animation",
         },
         {
             label: "Search Legislators",
-            href: "/POL",
+            href: "/pol",
             className: "block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-700 md:p-0 md:dark:hover:text-indigo-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent underline-animation",
         },
         {
-            label: "What is This?",
-            href: "#",
+            label: "My Stuff",
+            href: "/saved",
             className: "block py-2 px-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-indigo-700 md:p-0 md:dark:hover:text-indigo-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent underline-animation",
         }
     ]
