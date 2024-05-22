@@ -1,7 +1,12 @@
 import Link from 'next/link';
+import { authConfig } from '@/lib/auth';
+import { getServerSession } from 'next-auth';
 
 
-export default function Navbar() {
+
+export default async function Navbar() {
+
+    const session = await getServerSession(authConfig);
 
     const links = [
         {
@@ -41,6 +46,12 @@ export default function Navbar() {
                         }
                     </ul>
                 </div>
+                {!session && (
+                    <Link href="/login">Login</Link>
+                )}
+                {session?.user?.image && (
+                    <img className="round w-9 rounded-full" src={session?.user?.image} alt="" />
+                )}
             </div>
         </nav>
     );
