@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { authConfig } from '@/lib/auth';
 import { getServerSession } from 'next-auth';
-
+import { SignOutButton } from './authButtons';
 
 
 export default async function Navbar() {
@@ -50,7 +50,10 @@ export default async function Navbar() {
                     <Link href="/login">Login</Link>
                 )}
                 {session?.user?.image && (
-                    <img className="round w-9 rounded-full" src={session?.user?.image} alt="" />
+                    <>
+                        <SignOutButton />
+                        <img className="round w-9 rounded-full" src={session?.user?.image} alt="" />
+                    </>
                 )}
             </div>
         </nav>
