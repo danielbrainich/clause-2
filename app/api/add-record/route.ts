@@ -3,18 +3,24 @@ import { NextResponse } from "next/server";
 import { supabase } from "@/utils/supaBaseClient";
 import { getServerSession } from "next-auth";
 
-
-export async function POST(req: NextApiRequest, res: NextResponse, ) {
-
-  const { billNumber, billType, congress } = await req.json();
-  console.log("Received:", congress, billType, billNumber);
+export async function POST(req: NextApiRequest, res: NextResponse) {
+  const { billNumber, billType, congress, bioguideId } = await req.json();
+  console.log("Received:", congress, billType, billNumber, bioguideId);
 
   const session = await getServerSession();
   if (!session) {
-    console.log('throw some kind of error here');
+    console.log("throw some kind of error here");
   }
   const email = session.user.email;
+  let item_type, info;
 
+  if (bioguideId) {
+    item_type = "legislator";
+    info = bioguideId;
+  } else {
+    item_type = "bill";
+    info = `${congress}-${billType}-${billNumber}`;
+  }
 
   try {
     const { data, error } = await supabase
@@ -22,8 +28,8 @@ export async function POST(req: NextApiRequest, res: NextResponse, ) {
       .insert([
         {
           email: email,
-          item_type: 'bill',
-          info: `${congress}-${billType}-${billNumber}`,
+          item_type: item_type,
+          info: info,
         },
       ])
       .select();

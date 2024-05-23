@@ -1,9 +1,27 @@
-import { useState, useEffect } from 'react';
+'use client'
 
-export default function SaveBillButton({bioguideId}) {
+export default function SaveLegislator({ bioguideId }) {
 
-    const handleClick = () => {
-        console.log("props", bioguideId)
+    const handleClick = async () => {
+        try {
+            const requestOptions = {
+                method: "POST",
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    bioguideId: bioguideId,
+                })
+            }
+            console.log(requestOptions)
+            const response = await fetch(`/api/add-record`, requestOptions);
+            if (!response.ok) {
+                throw new Error(`http error: ${response.status}`)
+            }
+            const data = await response.json();
+            console.log(data);
+        }
+        catch (error) {
+            console.error(`failed to save bill: ${error}`)
+        }
     }
 
     return (

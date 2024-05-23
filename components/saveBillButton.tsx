@@ -1,4 +1,6 @@
-export default async function SaveBillButton({ billType, billNumber, congress }) {
+'use client'
+
+export default function SaveBillButton({ billType, billNumber, congress }) {
 
     const handleClick = async () => {
         try {
