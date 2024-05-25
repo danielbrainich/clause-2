@@ -25,7 +25,7 @@ Capitol View is a web application designed to present legislative information in
 
 - **Save Favorite Items**: Users can save legislators and bills to their 'Saved Items' to easily monitor updates and changes.
 
-- **User Authentication**: Securely sign up and log in to personalize your experience and save preferences.
+- **User Authentication**: Securely sign up and log in using Next Auth, with support for Google and GitHub OAuth, allowing users to easily access their accounts.
 
 - **Stylish Presentation**: Utilizes Tailwind CSS for a clean and modern user interface.
 
