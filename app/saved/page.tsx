@@ -39,30 +39,28 @@ export default function SavedRecords() {
 
 
     return (
-        <>
-            <div className="pl-8 sm:pl-32 py-6">
-                {records && (
-                    <>
-                        {records.filter((record) => record.item_type === "bill").map((record, index) => {
-                            const [congress, billType, billNumber] = record.info.split("-");
-                            return (
-                                <Link key={`bill-${index}`} href={`/bill/${congress}/${billType}/${billNumber}`}>
-                                    <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{`Congress: ${congress}, Bill Type: ${billType}, Bill Number: ${billNumber}`}</div>
-                                </Link>
-                            );
-                        })}
-                        {records.filter((record) => record.item_type === "legislator").map((record, index) => {
-                            return (
-                                <Link key={`legislator-${index}`} href={`/pol/${record.info}`}>
-                                    <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{record.info}</div>
-                                </Link>
-                            );
-                        })}
-                    </>
-                )
-                }
-            </div>
-        </>
+        <div className="pl-8 sm:pl-32 py-6">
+            {records && (
+                <>
+                    {records.filter((record) => record.item_type === "bill").map((record, index) => {
+                        const [congress, billType, billNumber] = record.info.split("-");
+                        return (
+                            <Link key={`bill-${index}`} href={`/bill/${congress}/${billType}/${billNumber}`}>
+                                <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{`Congress: ${congress}, Bill Type: ${billType}, Bill Number: ${billNumber}`}</div>
+                            </Link>
+                        );
+                    })}
+                    {records.filter((record) => record.item_type === "legislator").map((record, index) => {
+                        return (
+                            <Link key={`legislator-${index}`} href={`/pol/${record.info}`}>
+                                <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{record.info}</div>
+                            </Link>
+                        );
+                    })}
+                </>
+            )
+            }
+        </div>
 
     );
 }

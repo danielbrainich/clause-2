@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Capitol View
 
-## Getting Started
+## Project Status
+Capitol View is currently under active development. New features are being added to enhance functionality and user experience. Features in progress include alerts for legislative actions and a feature to find your representative based on your current location, similar to the functionality in the Rep Radar app.
 
-First, run the development server:
+## Description
+Capitol View is a web application designed to present legislative information in a visually engaging way, utilizing data from the Congress.gov API. It targets individuals interested in U.S. politics, providing them with up-to-date information on bills and legislators. The application features a dynamic timeline of the latest actions on bills in both the House and Senate, detailed views of bills, and comprehensive profiles of legislators.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Tech Stack
+- **Frontend**: Next.js, React, Tailwind CSS for stylish and responsive design
+- **Backend**: Node.js with backend caching for enhanced performance
+- **Database**: Supabase
+- **Authentication**: Next Auth for secure user authentication
+- **API**: Congress.gov API for real-time legislative data
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Interactive Timeline**: View the latest legislative actions in a chronological timeline on the landing page.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Detailed Legislative Data**: Access detailed information about bills, including sponsors, actions, and co-sponsors.
 
-## Learn More
+- **Legislator Profiles**: Click on any legislator's name to see their photo, biographical details, and the bills they have sponsored.
 
-To learn more about Next.js, take a look at the following resources:
+- **Search Functionality**: Includes a search bar for quickly finding specific bills or legislators.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Save Favorite Items**: Users can save legislators and bills to their 'Saved Items' to easily monitor updates and changes.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **User Authentication**: Securely sign up and log in to personalize your experience and save preferences.
 
-## Deploy on Vercel
+- **Stylish Presentation**: Utilizes Tailwind CSS for a clean and modern user interface.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Efficient Pagination**: Manage large sets of data effectively with built-in pagination.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Performance Optimization**: Backend caching to ensure swift load times and performance efficiency.
+
+## Upcoming Features
+
+- **Action Alerts**: Receive notifications for updates or actions related to saved bills or legislators.
+- **Locate Your Rep**: Find your representative based on your current location.
+
+## Screenshots
+
+_Screenshots coming soon!_
+
+## Support
+
+For support, please open an issue in the GitHub issue tracker for Capitol View.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
