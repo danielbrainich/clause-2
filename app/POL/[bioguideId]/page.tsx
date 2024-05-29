@@ -8,6 +8,7 @@ import SaveLegislatorButton from '@/components/saveLegislatorButton';
 export default function Representative({ params }) {
     const { bioguideId } = params;
     const [rep, setRep] = useState({});
+    const [repName, setRepName] = useState('');
     const [sponsoredLeg, setSponsoredLeg] = useState([]);
     const [cosponsoredLeg, setCosponsoredLeg] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -23,6 +24,14 @@ export default function Representative({ params }) {
                 const data = await response.json()
                 setRep(data.member);
                 console.log(data.member)
+
+                const repName = data.member.directOrderName
+                const repTitle = data.member.district ? 'Rep.' : 'Sen.';
+                const repFullName = `${repTitle} ${repName}`;
+                setRepName(repFullName);
+                console.log(repFullName);
+
+
             }
             catch (error) {
                 console.error(`error fetching data: ${error}`);
@@ -91,7 +100,7 @@ export default function Representative({ params }) {
                 <div className="font-caveat font-medium text-xl text-indigo-500 mb-1 sm:mb-0 pb-1">{rep.district ? 'Rep.' : 'Sen.'} {rep.directOrderName}</div>
                 <div className="text-slate-500">{rep.partyHistory && rep.partyHistory[0].partyName} Party</div>
                 <div className="text-slate-500 pb-3">{rep.state}</div>
-                <SaveLegislatorButton bioguideId={bioguideId}/>
+                <SaveLegislatorButton bioguideId={bioguideId} name={repName}/>
 
                 {rep.depiction && rep.depiction.imageUrl && (
                     <img src={rep.depiction.imageUrl} alt={`Photo of ${rep.directOrderName}`} />

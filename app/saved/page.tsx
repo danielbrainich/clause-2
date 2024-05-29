@@ -16,6 +16,7 @@ export default function SavedRecords() {
                 }
                 const data = await response.json();
                 setRecords(data);
+                console.log(data)
             }
             catch (error) {
                 console.error(`failed to fetch records: ${error}`)
@@ -46,14 +47,14 @@ export default function SavedRecords() {
                         const [congress, billType, billNumber] = record.info.split("-");
                         return (
                             <Link key={`bill-${index}`} href={`/bill/${congress}/${billType}/${billNumber}`}>
-                                <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{`Congress: ${congress}, Bill Type: ${billType}, Bill Number: ${billNumber}`}</div>
+                                <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{`${billType}-${billNumber}: ${record.bill_title} `} </div>
                             </Link>
                         );
                     })}
                     {records.filter((record) => record.item_type === "legislator").map((record, index) => {
                         return (
                             <Link key={`legislator-${index}`} href={`/pol/${record.info}`}>
-                                <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{record.info}</div>
+                                <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{record.legislator_name}</div>
                             </Link>
                         );
                     })}

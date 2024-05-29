@@ -1,6 +1,6 @@
 'use client'
 
-export default function SaveBillButton({ billType, billNumber, congress }) {
+export default function SaveBillButton({ billType, billNumber, congress, billTitle }) {
 
     const handleClick = async () => {
         try {
@@ -11,6 +11,7 @@ export default function SaveBillButton({ billType, billNumber, congress }) {
                     congress: congress,
                     billType: billType,
                     billNumber: billNumber,
+                    billTitle: billTitle
                 })
             }
             console.log(requestOptions)

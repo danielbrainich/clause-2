@@ -13,7 +13,7 @@ export async function GET(req: NextApiRequest, res: NextResponse) {
   try {
     let { data, error } = await supabase
       .from("saved_items")
-      .select("item_type, info")
+      .select("item_type, info, legislator_name, bill_title")
       .eq("email", email);
 
     if (error) throw error;

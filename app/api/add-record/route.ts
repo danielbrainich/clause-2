@@ -4,22 +4,25 @@ import { supabase } from "@/utils/supaBaseClient";
 import { getServerSession } from "next-auth";
 
 export async function POST(req: NextApiRequest, res: NextResponse) {
-  const { billNumber, billType, congress, bioguideId } = await req.json();
-  console.log("Received:", congress, billType, billNumber, bioguideId);
+  const { billNumber, billType, billTitle, congress, bioguideId, name } = await req.json();
+  console.log("Received:", congress, billType, billNumber, bioguideId, name, billTitle);
 
   const session = await getServerSession();
   if (!session) {
     console.log("throw some kind of error here");
   }
   const email = session.user.email;
-  let item_type, info;
+  let item_type, info, legislator_name, bill_title;
 
   if (bioguideId) {
     item_type = "legislator";
     info = bioguideId;
+    legislator_name = name;
+
   } else {
     item_type = "bill";
     info = `${congress}-${billType}-${billNumber}`;
+    bill_title = billTitle
   }
 
   try {
@@ -30,6 +33,8 @@ export async function POST(req: NextApiRequest, res: NextResponse) {
           email: email,
           item_type: item_type,
           info: info,
+          legislator_name: legislator_name,
+          bill_title: bill_title,
         },
       ])
       .select();

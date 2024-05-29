@@ -1,6 +1,6 @@
 'use client'
 
-export default function SaveLegislator({ bioguideId }) {
+export default function SaveLegislator({ bioguideId, name }) {
 
     const handleClick = async () => {
         try {
@@ -9,6 +9,7 @@ export default function SaveLegislator({ bioguideId }) {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     bioguideId: bioguideId,
+                    name: name
                 })
             }
             console.log(requestOptions)
