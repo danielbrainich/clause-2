@@ -2,10 +2,12 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link'
+import DeleteItemButton from '@/components/deleteItemButton';
 
 export default function SavedRecords() {
     const [records, setRecords] = useState([])
     const [isLoading, setIsLoading] = useState(true)
+    const [deleteSuccess, setDeleteSuccess] = useState(false)
 
     useEffect(() => {
         const fetchRecords = async () => {
@@ -24,7 +26,7 @@ export default function SavedRecords() {
             setIsLoading(false)
         }
         fetchRecords()
-    }, [])
+    }, [deleteSuccess])
 
     if (isLoading) {
         return (
@@ -46,16 +48,22 @@ export default function SavedRecords() {
                     {records.filter((record) => record.item_type === "bill").map((record, index) => {
                         const [congress, billType, billNumber] = record.info.split("-");
                         return (
-                            <Link key={`bill-${index}`} href={`/bill/${congress}/${billType}/${billNumber}`}>
-                                <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{`${billType}-${billNumber}: ${record.bill_title} `} </div>
-                            </Link>
+                            <div key={record.id} >
+                                <Link href={`/bill/${congress}/${billType}/${billNumber}`}>
+                                    <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{`${billType}-${billNumber}: ${record.bill_title} `} </div>
+                                </Link>
+                                <DeleteItemButton id={record.id} deleteSuccess={deleteSuccess} setDeleteSuccess={setDeleteSuccess} />
+                            </div>
                         );
                     })}
                     {records.filter((record) => record.item_type === "legislator").map((record, index) => {
                         return (
-                            <Link key={`legislator-${index}`} href={`/pol/${record.info}`}>
-                                <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{record.legislator_name}</div>
-                            </Link>
+                            <div key={record.id} >
+                                <Link href={`/pol/${record.info}`}>
+                                    <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{record.legislator_name}</div>
+                                </Link>
+                                <DeleteItemButton id={record.id} deleteSuccess={deleteSuccess} setDeleteSuccess={setDeleteSuccess}/>
+                            </div>
                         );
                     })}
                 </>

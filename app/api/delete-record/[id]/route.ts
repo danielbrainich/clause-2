@@ -1,9 +1,10 @@
-import { NextApiRequest } from "next";
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import { supabase } from "@/utils/supaBaseClient";
 import { getServerSession } from "next-auth";
 
-export async function GET(req: NextApiRequest, res: NextResponse) {
+export async function DELETE(res: NextResponse, req: NextRequest) {
+  const { id } = req.params;
+
   const session = await getServerSession();
   if (!session) {
     console.log("throw some kind of error here");
@@ -11,14 +12,16 @@ export async function GET(req: NextApiRequest, res: NextResponse) {
   const email = session.user.email;
 
   try {
-    let { data, error } = await supabase
+    const { error } = await supabase
       .from("saved_items")
-      .select("id, item_type, info, legislator_name, bill_title")
+      .delete()
+      .eq("id", id)
       .eq("email", email);
+    if (error) {
+      throw error;
+    }
+    return NextResponse.json({ message: "Record deleted successfully" }, { status: 200 });
 
-    if (error) throw error;
-    const nextResponse = NextResponse.json(data);
-    return nextResponse;
   } catch (error) {
     console.error("Error accessing Supabase", error);
     return NextResponse.json({ error: "failed to fetch data" });
