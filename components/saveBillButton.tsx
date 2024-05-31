@@ -1,6 +1,34 @@
 'use client'
 
+import { useState, useEffect } from 'react';
+
 export default function SaveBillButton({ billType, billNumber, congress, billTitle }) {
+    const [records, setRecords] = useState([])
+    const [billSaved, setBillSaved] = useState(false)
+
+    useEffect(() => {
+        const fetchRecords = async () => {
+            try {
+                const response = await fetch(`/api/view-records`);
+                if (!response.ok) {
+                    throw new Error(`http error: ${response.status}`)
+                }
+                const data = await response.json();
+                console.log("my important data", data)
+                setRecords(data);
+                for (let bill of data) {
+                    if (bill.info == `${congress}-${billType}-${billNumber}`) {
+                        setBillSaved(true);
+                    }
+                }
+
+            }
+            catch (error) {
+                console.error(`failed to fetch records: ${error}`)
+            }
+        }
+        fetchRecords()
+    }, [])
 
     const handleClick = async () => {
         try {
@@ -14,13 +42,14 @@ export default function SaveBillButton({ billType, billNumber, congress, billTit
                     billTitle: billTitle
                 })
             }
-            console.log(requestOptions)
             const response = await fetch(`/api/add-record`, requestOptions);
             if (!response.ok) {
                 throw new Error(`http error: ${response.status}`)
             }
             const data = await response.json();
             console.log(data);
+            setBillSaved(true)
+            console.log("Is bill saved?", billSaved)
         }
         catch (error) {
             console.error(`failed to save bill: ${error}`)
@@ -28,6 +57,6 @@ export default function SaveBillButton({ billType, billNumber, congress, billTit
     }
 
     return (
-        <button onClick={handleClick} className="mt-3 bg-indigo-500 hover:bg-indigo-600 text-white font-bold px-4 py-2 rounded" type="submit">Save Bill</button>
+        <button onClick={handleClick} className="mt-3 bg-indigo-500 hover:bg-indigo-600 text-white font-bold px-4 py-2 rounded disabled:opacity-50 disabled:cursor-not-allowed" disabled={billSaved} type="submit">Save Bill</button>
     )
 }

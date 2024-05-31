@@ -42,6 +42,8 @@ export default function SavedRecords() {
 
 
     return (
+        <>
+        <h2 className="w-full text-4xl font-bold sm:text-center text-gray-700 mb-10">My Stuff</h2>
         <div className="pl-8 sm:pl-32 py-6">
             {records && (
                 <>
@@ -70,6 +72,6 @@ export default function SavedRecords() {
             )
             }
         </div>
-
+</>
     );
 }

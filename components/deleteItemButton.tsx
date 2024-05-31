@@ -8,6 +8,8 @@ export default function deleteItemButton({ id, deleteSuccess, setDeleteSuccess }
             if (!response.ok) {
                 throw new Error(`http error: ${response.status}`)
             }
+            const data = await response.json()
+            console.log(data.message)
             setDeleteSuccess(!deleteSuccess);
         }
         catch (error) {
