@@ -70,7 +70,7 @@ export default function Home() {
           )
         )}
       </div>
-      <div onClick={() => setOffset(prevOffset => prevOffset + 10)} className="cursor-pointer font-bold text-slate-700 pl-8 sm:pl-32 py-6">Show More</div>
+      <div onClick={() => setOffset(prevOffset => prevOffset + 10)} className="w-fit cursor-pointer font-bold text-slate-700 pl-8 sm:pl-32 py-6 underline-animation hover:text-indigo-600">Show More</div>
     </>
 
   );

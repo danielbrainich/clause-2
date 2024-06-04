@@ -47,7 +47,7 @@ export default async function Navbar() {
                     </ul>
                 </div>
                 {!session && (
-                    <Link href="/login">Login</Link>
+                    <Link className="hover:text-indigo-700 underline-animation" href="/login">Login</Link>
                 )}
                 {session?.user?.image && (
                     <>

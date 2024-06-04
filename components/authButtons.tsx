@@ -40,7 +40,7 @@ export function GithubSignInButton() {
 
 export function SignOutButton() {
     return (
-        <div className="cursor-pointer" onClick={() => signOut({ callbackUrl: '/' })}>
+        <div className="cursor-pointer hover:text-indigo-700 underline-animation" onClick={() => signOut({ callbackUrl: '/' })}>
             Sign Out
         </div>
     )
