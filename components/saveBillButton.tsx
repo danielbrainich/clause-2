@@ -3,8 +3,9 @@
 import { useState, useEffect } from 'react';
 
 export default function SaveBillButton({ billType, billNumber, congress, billTitle }) {
-    const [records, setRecords] = useState([])
-    const [billSaved, setBillSaved] = useState(false)
+    const [records, setRecords] = useState([]);
+    const [billSaved, setBillSaved] = useState(false);
+    const [responseStatus, setResponseStatus] = useState("200");
 
     useEffect(() => {
         const fetchRecords = async () => {
@@ -43,6 +44,7 @@ export default function SaveBillButton({ billType, billNumber, congress, billTit
                 })
             }
             const response = await fetch(`/api/add-record`, requestOptions);
+            setResponseStatus(response.status)
             if (!response.ok) {
                 throw new Error(`http error: ${response.status}`)
             }
@@ -57,6 +59,13 @@ export default function SaveBillButton({ billType, billNumber, congress, billTit
     }
 
     return (
+        <>
         <button onClick={handleClick} className="mt-3 bg-indigo-500 hover:bg-indigo-600 text-white font-bold px-4 py-2 rounded disabled:opacity-50 disabled:cursor-not-allowed" disabled={billSaved} type="submit">Save Bill</button>
+        {console.log("responseStatus", responseStatus)}
+        {responseStatus.toString().includes("4") || responseStatus.toString().includes("5") && (
+
+            <div className="text-slate-500 bg-slate-100 p-4 rounded mt-4">Unable to save bill to your saved items. Please make sure you're signed up and logged in!</div>
+        )}
+        </>
     )
 }
