@@ -18,6 +18,6 @@ export default function deleteItemButton({ id, deleteSuccess, setDeleteSuccess }
     }
 
     return (
-        <button onClick={handleClick} className="mt-3 bg-indigo-500 hover:bg-indigo-600 text-white font-bold px-4 py-2 rounded" type="submit">Delete</button>
+        <button onClick={handleClick} className="bg-indigo-500 hover:bg-indigo-600 text-white font-bold px-4 py-2 rounded w-24 flex-none" type="submit">Delete</button>
     )
 }

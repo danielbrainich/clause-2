@@ -43,35 +43,42 @@ export default function SavedRecords() {
 
     return (
         <>
-        <h2 className="w-full text-4xl font-bold sm:text-center text-gray-700 mb-10">My Stuff</h2>
-        <div className="pl-8 sm:pl-32 py-6">
-            {records && (
-                <>
-                    {records.filter((record) => record.item_type === "bill").map((record, index) => {
-                        const [congress, billType, billNumber] = record.info.split("-");
-                        return (
-                            <div key={record.id} >
-                                <Link href={`/bill/${congress}/${billType}/${billNumber}`}>
-                                    <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{`${billType}-${billNumber}: ${record.bill_title} `} </div>
-                                </Link>
-                                <DeleteItemButton id={record.id} deleteSuccess={deleteSuccess} setDeleteSuccess={setDeleteSuccess} />
-                            </div>
-                        );
-                    })}
-                    {records.filter((record) => record.item_type === "legislator").map((record, index) => {
-                        return (
-                            <div key={record.id} >
-                                <Link href={`/pol/${record.info}`}>
-                                    <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{record.legislator_name}</div>
-                                </Link>
-                                <DeleteItemButton id={record.id} deleteSuccess={deleteSuccess} setDeleteSuccess={setDeleteSuccess}/>
-                            </div>
-                        );
-                    })}
-                </>
-            )
-            }
-        </div>
-</>
+            <h2 className="w-full text-4xl font-bold sm:text-center text-gray-700 mb-10">My Stuff</h2>
+            <div className="sm:pl-32 py-6">
+                {records && (
+                    <>
+                        {records.filter((record) => record.item_type === "bill").map((record, index) => {
+                            const [congress, billType, billNumber] = record.info.split("-");
+                            return (
+                                <div className="p-4 grid grid-cols-1 sm:grid-cols-[3fr_1fr] gap-2 items-center mb-3" key={record.id} >
+                                    <Link href={`/bill/${congress}/${billType}/${billNumber}`} >
+                                        <div className="hover:bg-slate-100 p-2 text-slate-500">{`${billType}-${billNumber}: ${record.bill_title} `} </div>
+                                    </Link>
+                                    <DeleteItemButton id={record.id} deleteSuccess={deleteSuccess} setDeleteSuccess={setDeleteSuccess} />
+                                </div>
+                            );
+                        })}
+                        {records.filter((record) => record.item_type === "legislator").map((record, index) => {
+                            return (
+                                <div className="p-4 grid grid-cols-1 sm:grid-cols-[3fr_1fr] gap-2 items-center mb-3" key={record.id} >
+                                    <Link href={`/pol/${record.info}`} >
+                                        <div className="hover:bg-slate-100 text-slate-500 p-2">{record.legislator_name}</div>
+                                    </Link>
+                                    <DeleteItemButton id={record.id} deleteSuccess={deleteSuccess} setDeleteSuccess={setDeleteSuccess} />
+                                </div>
+                            );
+                        })}
+                    </>
+                )
+                }
+            </div>
+        </>
     );
 }
+
+
+{/* <div className="hover:bg-slate-100 p-4 rounded">
+    <div className="font-caveat font-medium text-xl text-indigo-500 mb-1 sm:mb-0">{`${result.type}-${result.number}`}</div>
+    <time className="left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 text-emerald-600 bg-emerald-100 rounded-full">{result.introducedDate}</time>
+    <div className="text-slate-500">{result.title}</div>
+</div> */}
