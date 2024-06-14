@@ -2,7 +2,13 @@ import { NextResponse } from "next/server";
 
 export const GET = async (res, req) => {
   const apiKey = process.env.CONGRESS_GOV_API_KEY;
-  const { billType, number, keyWord } = req.params;
+  
+  const params = req.params || {};
+  const { billType, number, keyWord } = params;
+
+  if (!billType || !number || !keyWord) {
+    return NextResponse.json({ error: "Missing required parameters" }, { status: 400 });
+  }
 
   try {
     const response = await fetch(
