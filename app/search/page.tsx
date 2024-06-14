@@ -6,7 +6,7 @@ import SearchLegislators from '@/components/searchLegislators'
 import Link from 'next/link'
 
 
-export default function search() {
+export default function Search() {
     const [billsResults, setBillsResults] = useState()
     const [legislatorsResults, setLegislatorsResults] = useState([])
     const [isLoading, setIsLoading] = useState(false)
@@ -34,8 +34,8 @@ export default function search() {
                 </div>
             )}
             {legislatorsResults && legislatorsResults.map((result, index) => (
-                <div className="relative sm:pl-32 group">
-                    <Link key={index} href={`/pol/${result.bioguideId}`}>
+                <div key={index} className="relative sm:pl-32 group">
+                    <Link href={`/pol/${result.bioguideId}`}>
                         <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{result.name}</div>
                     </Link>
                 </div>

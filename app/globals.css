@@ -28,3 +28,9 @@ h2 {
   font-family: 'Ultra', sans-serif;
   font-size: x-large !important;
 }
+
+.nav-link {
+  text-transform: uppercase !important;
+  font-weight: 700;
+  font-size: medium !important;
+}

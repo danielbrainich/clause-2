@@ -63,7 +63,7 @@ export default function SaveBillButton({ billType, billNumber, congress, billTit
         <button onClick={handleClick} className="mt-3 bg-indigo-500 hover:bg-indigo-600 text-white font-bold px-4 py-2 rounded disabled:opacity-50 disabled:cursor-not-allowed" disabled={billSaved} type="submit">Save Bill</button>
         {console.log("responseStatus", responseStatus)}
         {responseStatus.toString().includes("4") || responseStatus.toString().includes("5") && (
-            <div className="text-emerald-600 bg-emerald-100 p-4 rounded mt-4">Unable to save bill to your saved items. Please make sure you're signed up and logged in!</div>
+            <div className="text-emerald-600 bg-emerald-100 p-4 rounded mt-4">Unable to save bill to your saved items. Please make sure you\'re signed up and logged in!</div>
         )}
         </>
     )

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link'
 
-export default function searchLegislators( { setBillsResults, setLegislatorsResults, setIsLoading} ) {
+export default function SearchLegislators( { setBillsResults, setLegislatorsResults, setIsLoading} ) {
     const [allReps, setAllReps] = useState([]);
     const [searchParam, setSearchParam] = useState('');
 
