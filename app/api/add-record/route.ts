@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { supabase } from "@/utils/supaBaseClient";
 import { getServerSession } from "next-auth";
 
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
+export async function POST(req, res) {
   const { billNumber, billType, billTitle, congress, bioguideId, name } = await req.json();
   console.log("Received:", congress, billType, billNumber, bioguideId, name, billTitle);
 
