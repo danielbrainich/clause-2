@@ -25,6 +25,7 @@ export default async function Navbar() {
     return (
         <nav className="bg-slate-50">
             <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                <img src="/bill-logo.png" alt="Image of a cartoon bill" className="w-14" />
                 <Link href="/" className="self-center font-caveat font-medium text-xl text-indigo-500 whitespace-nowrap">Capitol View</Link>
                 <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
                     <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -47,7 +48,7 @@ export default async function Navbar() {
                 {session?.user?.image && (
                     <>
                         <SignOutButton />
-                        <img className="round w-9 rounded-full" src={session?.user?.image} alt="" />
+                        <img className="round w-9 rounded-full" src={session?.user?.image} alt="Image of user" />
                     </>
                 )}
             </div>
