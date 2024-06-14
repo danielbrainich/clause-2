@@ -61,7 +61,7 @@ export default function SaveLegislator({ bioguideId, name }) {
         <>
             <button onClick={handleClick} className="mb-4 bg-indigo-500 hover:bg-indigo-600 text-white font-bold px-4 py-2 rounded disabled:opacity-50 disabled:cursor-not-allowed" disabled={legislatorSaved} type="submit">Save Legislator</button>
             {responseStatus.toString().includes("4") || responseStatus.toString().includes("5") && (
-                <div className="text-emerald-600 bg-emerald-100 p-4 rounded mb-5">Unable to save legislator to your saved items. Please make sure you're signed up and logged in!</div>
+                <div className="text-emerald-600 bg-emerald-100 p-4 rounded mb-5">Unable to save legislator to your saved items. Please make sure you&apos;re signed up and logged in!</div>
             )}
         </>
     )
