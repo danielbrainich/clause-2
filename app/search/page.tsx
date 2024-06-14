@@ -26,7 +26,7 @@ export default function search() {
                 <div className="relative sm:pl-32 group">
                     <Link href={`/bill/${billsResults.congress}/${billsResults.type}/${billsResults.number}`}>
                         <div className="hover:bg-slate-100 p-4 rounded">
-                            <div className="font-caveat font-medium text-xl text-indigo-500 mb-1 sm:mb-0">{`${billsResults.type}-${billsResults.number}`}</div>
+                            <div className="ultra font-medium text-xl text-indigo-500 mb-1 sm:mb-0">{`${billsResults.type}-${billsResults.number}`}</div>
                             <time className="left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 text-emerald-600 bg-emerald-100 rounded-full">{billsResults.introducedDate}</time>
                             <div className="text-slate-500">{billsResults.title}</div>
                         </div>

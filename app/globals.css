@@ -14,3 +14,17 @@
     transform: scaleX(1);
   }
 }
+
+@font-face {
+  font-family: 'Ultra';
+  src: url('/fonts/Ultra-Regular.ttf') format('truetype');
+}
+
+.ultra {
+  font-family: 'Ultra', sans-serif;
+}
+
+h2 {
+  font-family: 'Ultra', sans-serif;
+  font-size: x-large !important;
+}

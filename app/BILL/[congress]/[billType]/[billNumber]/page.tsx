@@ -62,7 +62,7 @@ export default async function Bill({ params }) {
     return (
         <>
             <div className="relative pl-8 sm:pl-32 pt-6 group">
-                <div className="font-caveat font-medium text-xl text-indigo-500 mb-1 sm:mb-0 pb-1">{`${oneBill.type}-${oneBill.number}`}</div>
+                <div className="ultra font-medium text-xl text-indigo-500 mb-1 sm:mb-0 pb-1">{`${oneBill.type}-${oneBill.number}`}</div>
                 <div className="text-slate-500">{oneBill.title}</div>
                     <SaveBillButton congress={congress} billType={billType} billNumber={billNumber} billTitle={oneBill.title} />
                 <div className="font-bold text-slate-700 pt-4 pb-1">{oneBill.sponsors.length > 1 ? "Sponsors" : "Sponsor"}</div>

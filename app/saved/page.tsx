@@ -45,7 +45,7 @@ export default function SavedRecords() {
         <>
             <h2 className="w-full text-4xl font-bold sm:text-center text-gray-700 mb-10">My Stuff</h2>
             <div className="sm:pl-32 py-6">
-                {records && (
+                {records.length > 0 && (
                     <>
                         {records.filter((record) => record.item_type === "bill").map((record, index) => {
                             const [congress, billType, billNumber] = record.info.split("-");
@@ -75,10 +75,3 @@ export default function SavedRecords() {
         </>
     );
 }
-
-
-{/* <div className="hover:bg-slate-100 p-4 rounded">
-    <div className="font-caveat font-medium text-xl text-indigo-500 mb-1 sm:mb-0">{`${result.type}-${result.number}`}</div>
-    <time className="left-0 translate-y-0.5 inline-flex items-center justify-center text-xs font-semibold uppercase w-20 h-6 mb-3 text-emerald-600 bg-emerald-100 rounded-full">{result.introducedDate}</time>
-    <div className="text-slate-500">{result.title}</div>
-</div> */}
