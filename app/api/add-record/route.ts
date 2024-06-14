@@ -1,8 +1,9 @@
-import { NextResponse, NextRequest } from "next/server";
+import { NextResponse } from "next/server";
+import { NextApiRequest, NextApiResponse } from 'next';
 import { supabase } from "@/utils/supaBaseClient";
 import { getServerSession } from "next-auth";
 
-export async function POST(req: NextRequest, res: NextResponse) {
+export async function POST(req: NextApiRequest, res: NextApiResponse) {
   const { billNumber, billType, billTitle, congress, bioguideId, name } = await req.json();
   console.log("Received:", congress, billType, billNumber, bioguideId, name, billTitle);
 
