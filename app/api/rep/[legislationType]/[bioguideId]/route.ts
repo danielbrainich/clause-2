@@ -1,6 +1,6 @@
-import { NextResponse, NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 
-export const GET = async (res: NextResponse, req: NextRequest) => {
+export const GET = async (res, req) => {
   const apiKey = process.env.CONGRESS_GOV_API_KEY;
   const { legislationType, bioguideId } = req.params;
 

@@ -1,9 +1,8 @@
-import { NextApiRequest } from "next";
 import { NextResponse } from "next/server";
 import { supabase } from "@/utils/supaBaseClient";
 import { getServerSession } from "next-auth";
 
-export async function GET(req: NextApiRequest, res: NextResponse) {
+export async function GET(req, res) {
   const session = await getServerSession();
   if (!session) {
     console.log("throw some kind of error here");
