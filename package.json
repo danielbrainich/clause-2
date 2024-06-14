@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "tsc --noEmitOnError false && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check-types": "tsc --noEmit"
+
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.43.3",

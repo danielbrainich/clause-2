@@ -3,7 +3,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import { supabase } from "@/utils/supaBaseClient";
 import { getServerSession } from "next-auth";
 
-export async function DELETE(res: NextApiResponse, req: NextApiRequest) {
+export async function DELETE(res, req) {
   const { id } = req.params;
 
   const session = await getServerSession();
