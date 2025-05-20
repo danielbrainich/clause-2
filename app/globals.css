@@ -2,35 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Timeline link hover underline effect */
 @layer utilities {
   .underline-animation::after {
     display: block;
     content: "";
-    border-bottom: solid 2px;
+    border-bottom: solid 2px currentColor;
     transform: scaleX(0);
     transition: transform 200ms ease-in-out;
+    transform-origin: left;
   }
   .underline-animation:hover::after {
     transform: scaleX(1);
   }
 }
 
+/* Custom font for 'Ultra' serif headline font */
 @font-face {
   font-family: 'Ultra';
   src: url('/fonts/Ultra-Regular.ttf') format('truetype');
+  font-display: swap;
 }
 
+/* Apply Ultra font */
 .ultra {
-  font-family: 'Ultra', sans-serif;
+  font-family: 'Ultra', serif;
 }
 
+/* Override h2 with Ultra (but Tailwind classes preferred) */
 h2 {
-  font-family: 'Ultra', sans-serif;
-  font-size: x-large !important;
+  font-family: 'Ultra', serif;
+  @apply text-xl tracking-wide;
 }
 
+/* Navigation link style */
 .nav-link {
-  text-transform: uppercase !important;
+  text-transform: uppercase;
   font-weight: 700;
-  font-size: medium !important;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
 }
