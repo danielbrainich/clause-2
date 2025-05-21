@@ -7,7 +7,7 @@ import { Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
 
 const playfair = Playfair_Display({ subsets: ["latin"], weight: "400" });
 const inter = Inter({ subsets: ["latin"] });
-const mono = JetBrains_Mono({ subsets: ['latin'], weight: '400' });
+const mono = JetBrains_Mono({ subsets: ["latin"], weight: "400" });
 
 export default function Home() {
   const [bills, setBills] = useState([]);
@@ -16,8 +16,8 @@ export default function Home() {
 
   function formatDate(dateString) {
     const date = new Date(dateString);
-    const day = String(date.getDate()).padStart(2, '0');
-    const month = date.toLocaleString('en-US', { month: 'short' });
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = date.toLocaleString("en-US", { month: "short" });
     const year = date.getFullYear();
     return `${month} ${day}, ${year}`;
   }
@@ -76,42 +76,49 @@ export default function Home() {
   return (
     <>
       <div>
-      {bills.map((bill, index) => (
-  <div key={index} className="relative pl-8 sm:pl-32 py-6 group">
-    <Link href={`/bill/${bill.congress}/${bill.type}/${bill.number}`}>
-      <div className="hover:bg-blue-50 hover:border-l-4 hover:border-blue-600 transition-all border-slate-300 p-4">
-        <div
-          className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden
-                     before:absolute before:left-2 sm:before:left-0 before:w-px before:h-full before:px-px before:bg-slate-300
-                     sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3
-                     after:absolute after:left-2 sm:after:left-0 after:w-4 after:h-0.5 after:bg-slate-300 after:content-['']
-                     sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-3"
-        >
-<time className={`${mono.className} sm:absolute left-0 translate-y-[3px] -translate-x-[16px] ml-[0.15rem] mb-2 sm:mb-0 text-sm font-medium text-red-700`}>
-            {formatDate(bill.latestAction.actionDate)}
-          </time>
-          <div className={`${mono.className} text-sm text-blue-700 mb-1 translate-y-[3px]`}>
-            {bill.type}-{bill.number}
+        {bills.map((bill, index) => (
+          <div key={index} className="relative pl-8 sm:pl-32 py-6 group font-medium">
+              <div className="hover:border-l-4 hover:border-blue-600 transition-all border-slate-300 p-4">
+                <Link href={`/bill/${bill.congress}/${bill.type}/${bill.number}`}>
+                <div
+                  className="flex flex-col sm:flex-row items-start mb-1 group-last:before:hidden
+                  before:absolute before:left-2 sm:before:left-0 before:w-px before:h-full before:px-px before:bg-slate-300
+                  sm:before:ml-[6.5rem] before:self-start before:-translate-x-1/2 before:translate-y-3
+                  after:absolute after:left-2 sm:after:left-0 after:w-4 after:h-0.5 after:bg-slate-300 after:content-['']
+                  sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-3"
+                >
+                  <time
+                    className={`${inter.className} sm:absolute left-0 translate-y-[3px] -translate-x-[16px] ml-[0.15rem] mb-2 sm:mb-0 text-sm font-medium text-blue-700`}
+                  >
+                    {formatDate(bill.latestAction.actionDate)}
+                  </time>
+                  <div
+                    className={`${inter.className} text-sm text-blue-700 mb-1 translate-y-[3px]`}
+                  >
+                    {bill.type}-{bill.number}
+                  </div>
+                </div>
+                <div
+                  className={`${inter.className} text-sm font-medium text-slate-800 tracking-tight mb-1`}
+                >
+                  {cleanActionString(bill.latestAction.text)}
+                </div>
+                <div
+                  className={`${inter.className} text-sm text-slate-600 leading-snug`}
+                >
+                  {bill.title}
+                </div>
+            </Link>
+              </div>
           </div>
-        </div>
-        <div className={`${inter.className} text-sm font-medium text-slate-800 tracking-tight mb-1`}>
-          {cleanActionString(bill.latestAction.text)}
-        </div>
-        <div className={`${inter.className} text-sm text-slate-600 leading-snug`}>
-          {bill.title}
-        </div>
-      </div>
-    </Link>
-  </div>
-))}
+        ))}
       </div>
 
-      {/* Show More button */}
       <div
         onClick={() => setOffset((prev) => prev + 10)}
-        className="w-fit cursor-pointer font-semibold text-blue-700 pl-8 sm:pl-32 py-6 underline-animation hover:text-blue-900"
+        className={`${inter.className} translate-x-[16px] w-fit cursor-pointer font-medium text-blue-700 text-sm pl-8 sm:pl-32 py-6 underline-animation hover:text-blue-900`}
       >
-        Show More
+        SHOW MORE
       </div>
     </>
   );

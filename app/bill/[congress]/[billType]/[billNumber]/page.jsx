@@ -6,13 +6,14 @@ import Cosponsors from '@/components/cosponsors'
 import Actions from '@/components/actions'
 import Text from '@/components/text'
 import SaveBillButton from '@/components/saveBillButton'
-
+import { Inter, JetBrains_Mono } from "next/font/google";
 
 
 export default async function Bill({ params }) {
     const { congress, billType, billNumber } = params;
     const [oneBill, setOneBill] = useState({});
     const [isLoading, setIsLoading] = useState(true);
+
 
     function toTitleCase(str) {
         return str.replace(
@@ -61,10 +62,11 @@ export default async function Bill({ params }) {
 
     return (
         <>
-            <div className="relative pl-8 sm:pl-32 pt-6 group">
+            <div className="relative pt-6 group">
+            <div className="-translate-x-4">
+
                 <div className="ultra font-medium text-xl text-indigo-500 mb-1 sm:mb-0 pb-1">{`${oneBill.type}-${oneBill.number}`}</div>
                 <div className="text-slate-500">{oneBill.title}</div>
-                    <SaveBillButton congress={congress} billType={billType} billNumber={billNumber} billTitle={oneBill.title} />
                 <div className="font-bold text-slate-700 pt-4 pb-1">{oneBill.sponsors.length > 1 ? "Sponsors" : "Sponsor"}</div>
                 {oneBill.sponsors.map((sponsor, index) => (
                     <Link key={index} href={`/pol/${sponsor.bioguideId}`}>
@@ -82,7 +84,7 @@ export default async function Bill({ params }) {
                     <Text congress={congress} billType={billType} billNumber={billNumber} />
                 </div>
                 <Cosponsors congress={congress} billType={billType} billNumber={billNumber} />
-            </div>
+                </div>        </div>
             <Actions congress={congress} billType={billType} billNumber={billNumber} />
         </>
     );
