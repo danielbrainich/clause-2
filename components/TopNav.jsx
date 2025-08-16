@@ -1,17 +1,15 @@
+"use client";
 import Link from "next/link";
-import ThemeToggle from "./ThemeToggle";
+import SearchButton from "@/components/search/SearchButton";
+import ThemeToggle from "@/components/ThemeToggle"; // if you have it
 
 export default function TopNav() {
   return (
-    <header
-      className="sticky top-0 z-40 border-b backdrop-blur supports-[backdrop-filter]:bg-white/70
-                        dark:supports-[backdrop-filter]:bg-neutral-950/60 dark:border-neutral-800"
-    >
-      <div className="mx-auto flex max-w-7xl items-center gap-3 px-4 py-3">
-        <Link href="/" className="text-lg font-semibold tracking-tight">
-          Capitol View
-        </Link>
-        <div className="ml-auto flex items-center gap-2">
+    <header className="sticky top-0 z-40 border-b bg-white/70 backdrop-blur-md dark:border-neutral-800 dark:bg-neutral-900/70">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+        <Link href="/" className="text-[15px] font-semibold tracking-[-0.01em]">Capitol View</Link>
+        <div className="flex items-center gap-2">
+          <SearchButton />
           <ThemeToggle />
         </div>
       </div>

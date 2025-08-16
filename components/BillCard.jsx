@@ -2,7 +2,6 @@ import { Card, CardContent, CardHeader, Badge } from "./ui/Card";
 import { Bookmark, Landmark } from "lucide-react";
 
 export default function BillCard({ bill }) {
-  // Map your bill object fields here as needed:
   const title = bill.title || bill.shortTitle || bill.number;
   const number = bill.number || bill.billNumber;
   const chamber = bill.chamber || bill.originChamber;

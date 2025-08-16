@@ -1,13 +1,15 @@
-import './globals.css';
-import { Inter } from 'next/font/google';
-import ThemeProvider from '@/components/ThemeProvider';
-import TopNav from '@/components/TopNav';
+import "./globals.css";
+import { Inter } from "next/font/google";
+import ThemeProvider from "@/components/ThemeProvider";
+import TopNav from "@/components/TopNav";
+import SearchDialog from "@/components/search/SearchDialog";
+import SearchProvider from "@/components/search/SearchProvider";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: 'Capitol View',
-  description: 'Legislative tracking',
+  title: "Capitol View",
+  description: "Legislative tracking",
 };
 
 export default function RootLayout({ children }) {
@@ -15,8 +17,11 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100`}>
         <ThemeProvider>
-          <TopNav />
-          {children}
+          <SearchProvider>
+            <TopNav />
+            <SearchDialog /> {/* mounted once */}
+            {children}
+          </SearchProvider>
         </ThemeProvider>
       </body>
     </html>

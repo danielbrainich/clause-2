@@ -5,17 +5,23 @@ import Link from "next/link";
 import Cosponsors from "@/components/cosponsors";
 import Actions from "@/components/actions";
 import Text from "@/components/text";
-// If/when you want it visible, uncomment below and the button in the header
-// import SaveBillButton from "@/components/saveBillButton";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
 // tiny CSS spinner (no SVG issues)
 function InlineSpinner({ size = "sm" }) {
-  const sizes = { xs: "h-3 w-3 border", sm: "h-4 w-4 border-2", md: "h-6 w-6 border-2" };
+  const sizes = {
+    xs: "h-3 w-3 border",
+    sm: "h-4 w-4 border-2",
+    md: "h-6 w-6 border-2",
+  };
   return (
-    <span className="inline-flex items-center" role="status" aria-label="Loading">
+    <span
+      className="inline-flex items-center"
+      role="status"
+      aria-label="Loading"
+    >
       <span
         className={`${sizes[size]} animate-spin rounded-full border-t-transparent border-neutral-300 dark:border-neutral-700`}
         aria-hidden="true"
@@ -29,7 +35,11 @@ function formatDate(d) {
   if (!d) return "—";
   const dt = new Date(d);
   if (Number.isNaN(dt.getTime())) return "—";
-  return dt.toLocaleDateString("en-US", { month: "short", day: "2-digit", year: "numeric" });
+  return dt.toLocaleDateString("en-US", {
+    month: "short",
+    day: "2-digit",
+    year: "numeric",
+  });
 }
 
 export default function Bill({ params }) {
@@ -40,7 +50,10 @@ export default function Bill({ params }) {
   const [error, setError] = useState(null);
 
   const toTitleCase = (str = "") =>
-    String(str).replace(/\w\S*/g, (txt) => txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase());
+    String(str).replace(
+      /\w\S*/g,
+      (txt) => txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase()
+    );
 
   useEffect(() => {
     let cancelled = false;
@@ -48,7 +61,9 @@ export default function Bill({ params }) {
       try {
         setIsLoading(true);
         setError(null);
-        const res = await fetch(`/api/show-bill/${congress}/${billType}/${billNumber}`);
+        const res = await fetch(
+          `/api/show-bill/${congress}/${billType}/${billNumber}`
+        );
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
         if (!cancelled) setOneBill(data?.bill ?? null);
@@ -98,11 +113,11 @@ export default function Bill({ params }) {
 
   const sponsors = Array.isArray(oneBill?.sponsors) ? oneBill.sponsors : [];
   const policyAreaName = oneBill?.policyArea?.name ?? null;
-  const billNo = `${oneBill?.type ?? billType}-${oneBill?.number ?? billNumber}`;
+  const billNo = `${oneBill?.type ?? billType}-${
+    oneBill?.number ?? billNumber
+  }`;
   const latestAction =
-    oneBill?.latestAction?.text ??
-    oneBill?.latestAction ??
-    "";
+    oneBill?.latestAction?.text ?? oneBill?.latestAction ?? "";
 
   const introduced =
     oneBill?.introducedDate ??
@@ -134,7 +149,6 @@ export default function Bill({ params }) {
               </span>
             ) : null}
           </h1>
-          {/* <SaveBillButton congress={congress} billType={billType} billNumber={billNumber} /> */}
         </div>
 
         {/* Bill title — clamp to 2 lines (uniform height) */}
@@ -154,15 +168,22 @@ export default function Bill({ params }) {
         {/* Meta */}
         <div className="mt-3 grid grid-cols-2 gap-x-4 gap-y-1 text-[12px] text-neutral-600 dark:text-neutral-400">
           <div>
-            <span className="font-medium text-neutral-800 dark:text-neutral-200">Introduced:</span>{" "}
+            <span className="font-medium text-neutral-800 dark:text-neutral-200">
+              Introduced:
+            </span>{" "}
             {formatDate(introduced)}
           </div>
           <div>
-            <span className="font-medium text-neutral-800 dark:text-neutral-200">Congress:</span> {congress}
+            <span className="font-medium text-neutral-800 dark:text-neutral-200">
+              Congress:
+            </span>{" "}
+            {congress}
           </div>
           {policyAreaName ? (
             <div className="col-span-2">
-              <span className="font-medium text-neutral-800 dark:text-neutral-200">Policy area:</span>{" "}
+              <span className="font-medium text-neutral-800 dark:text-neutral-200">
+                Policy area:
+              </span>{" "}
               {policyAreaName}
             </div>
           ) : null}
@@ -203,22 +224,6 @@ export default function Bill({ params }) {
               View on Congress.gov
             </a>
           )}
-          <Link
-            href={`/bill/${congress}/${billType}/${billNumber}/text`}
-            className="rounded-xl border px-3 py-1.5 hover:bg-neutral-50
-                       text-blue-700 hover:text-blue-900
-                       dark:border-neutral-800 dark:text-blue-300 dark:hover:bg-neutral-800"
-          >
-            Bill text
-          </Link>
-          <Link
-            href={`/bill/${congress}/${billType}/${billNumber}/cosponsors`}
-            className="rounded-xl border px-3 py-1.5 hover:bg-neutral-50
-                       text-blue-700 hover:text-blue-900
-                       dark:border-neutral-800 dark:text-blue-300 dark:hover:bg-neutral-800"
-          >
-            Cosponsors
-          </Link>
         </div>
 
         {/* Sponsors list */}
@@ -230,15 +235,42 @@ export default function Bill({ params }) {
             <div className="mt-1 space-y-1">
               {sponsors.map((s, i) => {
                 const label = s?.district ? "Rep." : "Sen.";
-                const full =
-                  s?.fullname ? toTitleCase(s.fullname) : s?.lastName ? toTitleCase(s.lastName) : "";
-                const suffix = `[${s?.party ?? "?"}-${s?.state ?? "?"}${s?.district ? `-${s.district}` : ""}]`;
-                return (
-                  <Link key={`${s?.bioguideId ?? i}-${i}`} href={`/pol/${s?.bioguideId ?? ""}`}>
-                    <div className="text-sm text-slate-600 leading-snug hover:text-indigo-500 underline-animation w-fit">
-                      {label} {full} {suffix}
-                    </div>
+                const full = s?.fullname
+                  ? toTitleCase(s.fullname)
+                  : s?.lastName
+                  ? toTitleCase(s.lastName)
+                  : "";
+                const suffix = `[${s?.party ?? "?"}-${s?.state ?? "?"}${
+                  s?.district ? `-${s.district}` : ""
+                }]`;
+                const href = s?.bioguideId ? `/pol/${s.bioguideId}` : null;
+
+                const content = (
+                  <>
+                    <span className="font-medium">{label}</span>{" "}
+                    <span>{full}</span>{" "}
+                    <span className="text-neutral-500">{suffix}</span>
+                  </>
+                );
+
+                return href ? (
+                  <Link
+                    key={`${s?.bioguideId ?? i}-${i}`}
+                    href={href}
+                    className="inline-flex items-center gap-1 rounded-xl border px-2.5 py-1 text-[12px]
+                    text-neutral-700 visited:text-neutral-700 hover:text-neutral-900 hover:bg-neutral-50
+                    dark:border-neutral-800 dark:text-neutral-300 dark:visited:text-neutral-300 dark:hover:bg-neutral-800
+                    transition-colors"
+                  >
+                    {content}
                   </Link>
+                ) : (
+                  <span
+                    key={`${i}-noid`}
+                    className="inline-flex items-center text-[13px] text-neutral-600 dark:text-neutral-400"
+                  >
+                    {content}
+                  </span>
                 );
               })}
             </div>
@@ -248,22 +280,78 @@ export default function Bill({ params }) {
 
       {/* Bill text */}
       <section className="mb-6 rounded-2xl border bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
-        <div className="mb-2 text-[13px] font-semibold tracking-[-0.01em]">Bill text</div>
-        <div className="w-fit">
-          <Text congress={congress} billType={billType} billNumber={billNumber} />
+        <div className="mb-2 text-[13px] font-semibold tracking-[-0.01em]">
+          Bill text
+        </div>
+
+        {/* Chip-styled links inside <Text /> */}
+        <div className="mt-1 -m-1.5">
+          <div
+            className="
+        [&_a]:inline-flex [&_a]:items-center [&_a]:gap-1
+        [&_a]:rounded-xl [&_a]:border [&_a]:px-3 [&_a]:py-1.5
+        [&_a]:text-[12px] [&_a]:transition-colors
+        [&_a]:text-neutral-700 [&_a:visited]:text-neutral-700
+        [&_a:hover]:text-neutral-900 [&_a:hover]:bg-neutral-50
+        dark:[&_a]:text-neutral-300 dark:[&_a:visited]:text-neutral-300
+        dark:[&_a]:border-neutral-800 dark:[&_a:hover]:bg-neutral-800
+        [&_a:focus-visible]:outline-none
+        [&_a:focus-visible]:ring-2 [&_a:focus-visible]:ring-neutral-400/40
+        [&_a]:m-1.5
+        [&_ul]:list-none [&_ol]:list-none [&_li]:m-0
+      "
+          >
+            <Text
+              congress={congress}
+              billType={billType}
+              billNumber={billNumber}
+            />
+          </div>
         </div>
       </section>
 
       {/* Cosponsors */}
       <section className="mb-6 rounded-2xl border bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
-        <div className="mb-2 text-[13px] font-semibold tracking-[-0.01em]">Cosponsors</div>
-        <Cosponsors congress={congress} billType={billType} billNumber={billNumber} />
+        <div className="mb-2 text-[13px] font-semibold tracking-[-0.01em]">
+          Cosponsors
+        </div>
+
+        {/* Chip-styled links inside <Cosponsors /> */}
+        <div className="mt-1 -m-1.5">
+          <div
+            className="
+        [&_a]:inline-flex [&_a]:items-center [&_a]:gap-1
+        [&_a]:rounded-xl [&_a]:border [&_a]:px-3 [&_a]:py-1.5
+        [&_a]:text-[12px] [&_a]:transition-colors
+        [&_a]:text-neutral-700 [&_a:visited]:text-neutral-700
+        [&_a:hover]:text-neutral-900 [&_a:hover]:bg-neutral-50
+        dark:[&_a]:text-neutral-300 dark:[&_a:visited]:text-neutral-300
+        dark:[&_a]:border-neutral-800 dark:[&_a:hover]:bg-neutral-800
+        [&_a:focus-visible]:outline-none
+        [&_a:focus-visible]:ring-2 [&_a:focus-visible]:ring-neutral-400/40
+        [&_a]:m-1.5
+        [&_ul]:list-none [&_ol]:list-none [&_li]:m-0
+      "
+          >
+            <Cosponsors
+              congress={congress}
+              billType={billType}
+              billNumber={billNumber}
+            />
+          </div>
+        </div>
       </section>
 
       {/* Actions */}
       <section className="rounded-2xl border bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
-        <div className="mb-2 text-[13px] font-semibold tracking-[-0.01em]">Action history</div>
-        <Actions congress={congress} billType={billType} billNumber={billNumber} />
+        <div className="mb-2 text-[13px] font-semibold tracking-[-0.01em]">
+          Action history
+        </div>
+        <Actions
+          congress={congress}
+          billType={billType}
+          billNumber={billNumber}
+        />
       </section>
     </main>
   );

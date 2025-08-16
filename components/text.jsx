@@ -30,7 +30,7 @@ export default function Text({ congress, billType, billNumber }) {
     return (
         text && (
             <>
-                <a href={text} target="_blank" className={`${inter.className} text-sm text-slate-600 leading-snug hover:text-indigo-500 underline-animation w-fit`}>Link to full text</a>
+                <a href={text} target="_blank">Link to full text</a>
             </>
         )
     );
