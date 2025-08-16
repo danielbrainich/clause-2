@@ -1,4 +1,7 @@
 import { useEffect, useState } from 'react';
+import { Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
+const inter = Inter({ subsets: ["latin"] });
+
 
 export default function Text({ congress, billType, billNumber }) {
     const [isLoading, setIsLoading] = useState(true);
@@ -27,8 +30,7 @@ export default function Text({ congress, billType, billNumber }) {
     return (
         text && (
             <>
-                <div className="font-bold text-slate-700 pt-4 pb-2">Text</div>
-                <a href={text} target="_blank" className="text-slate-500 hover:text-indigo-500 underline-animation">Link to full text</a>
+                <a href={text} target="_blank" className={`${inter.className} text-sm text-slate-600 leading-snug hover:text-indigo-500 underline-animation w-fit`}>Link to full text</a>
             </>
         )
     );

@@ -6,21 +6,20 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Navbar() {
   return (
-    <nav className="bg-slate-50">
+    <nav className="bg-[#DA391A]">
       <div className="mx-auto w-full max-w-4xl flex items-center justify-between px-4 py-4">
         {/* Logo + App Name */}
         <div className="flex items-center space-x-3">
-          <img
-            src="/bill-logo.png"
-            alt="Cartoon bill logo"
-            className="w-9 translate-y-[1px]"
-          />
+
           <Link
             href="/"
             className={`${inter.className} text-lg text-blue-700 tracking-tight hover:text-blue-800 transition translate-y-[1px]`}
             >
-            Capitol View
-          </Link>
+          <img
+            src="/article-one-logo.png"
+            alt="Article one app logo"
+            className="w-[150px]"
+          />          </Link>
         </div>
 
         {/* Icons */}

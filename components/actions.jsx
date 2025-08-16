@@ -3,6 +3,7 @@ import { cleanActionString } from "@/app/utils/utils";
 import Link from "next/link";
 import { Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
 const mono = JetBrains_Mono({ subsets: ['latin'], weight: '400' });
+const inter = Inter({ subsets: ["latin"] });
 
 
 export default function Actions({ congress, billType, billNumber }) {
@@ -68,12 +69,11 @@ export default function Actions({ congress, billType, billNumber }) {
 
   return (
     <>
-      <div className="font-semibold text-slate-700 pl-8 sm:pl-32 pt-6 pb-2">
-        {actions.length > 1 ? "Actions" : "Action"}
-      </div>
+
+<div className="translate-x-[16px]">
 
       {actions.map((action, index) => (
-        <div key={index} className="relative pl-8 sm:pl-32 py-6 group">
+        <div key={index} className="relative pl-12 sm:pl-32 py-6 group">
           <div
             className="flex flex-col sm:flex-row items-start group-last:before:hidden
               before:absolute before:left-2 sm:before:left-0 before:h-full before:w-px before:bg-slate-300
@@ -81,16 +81,17 @@ export default function Actions({ congress, billType, billNumber }) {
               after:absolute after:left-2 sm:after:left-0 after:w-4 after:h-0.5 after:bg-slate-300 after:opacity-50 after:content-['']
               sm:after:ml-[6.5rem] after:-translate-x-1/2 after:translate-y-4"
           >
-<time className={`${mono.className} sm:absolute left-0 translate-y-[6px] -translate-x-[16px] ml-[0.15rem] mb-2 sm:mb-0 text-sm font-medium text-red-700`}>
+<time className={`${inter.className} sm:absolute left-0 translate-y-[7px] -translate-x-[16px] ml-[0.15rem] mb-2 sm:mb-0 text-sm font-medium text-blue-700`}>
           {formatDate(action.actionDate)}
             </time>
           </div>
 
-          <div className="text-sm text-slate-600 leading-snug translate-y-[6px]">
+          <div className={`${inter.className} translate-y-[7px] text-sm text-slate-600 leading-snug`}>
             {cleanActionString(action.text)}
           </div>
         </div>
       ))}
+</div>
     </>
   );
 }

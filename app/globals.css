@@ -42,3 +42,6 @@ h2 {
   font-size: 1rem;
   letter-spacing: 0.05em;
 }
+
+:root { color-scheme: light dark; }
+:focus-visible { outline: none; }

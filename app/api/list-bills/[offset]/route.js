@@ -1,23 +1,50 @@
 import { NextResponse } from "next/server";
 
-export const GET = async (res, req) => {
+export async function GET(_req, { params }) {
   const apiKey = process.env.CONGRESS_GOV_API_KEY;
-  const { offset } = req.params;
+  const offset = Number(params?.offset ?? 0);
+
+  const PAGE_SIZE = 12; // ← make this 9 or 12 to fit your 3-col grid
 
   try {
-    const response = await fetch(
-      `https://api.congress.gov/v3/bill?api_key=${apiKey}&limit=10&offset=${offset}`
-    );
-    if (!response.ok) {
-      throw new Error(`http error. status: ${response.status}`);
-    }
-    const data = await response.json();
-    const nextResponse = NextResponse.json(data);
-    nextResponse.headers.set('Cache-Control', 's-maxage=3600');
-    return nextResponse;
+    const url = new URL("https://api.congress.gov/v3/bill");
+    url.searchParams.set("api_key", apiKey ?? "");
+    url.searchParams.set("format", "json");
+    url.searchParams.set("sort", "updateDate:desc");
+    url.searchParams.set("limit", String(PAGE_SIZE));
+    url.searchParams.set("offset", String(offset));
 
+    const res = await fetch(url.toString(), {
+      // Cache at the edge; tweak as desired:
+      next: { revalidate: 900 },
+    });
+
+    if (!res.ok) {
+      return NextResponse.json(
+        { bills: [], error: `HTTP ${res.status}` },
+        { status: res.status }
+      );
+    }
+
+    const data = await res.json();
+    // Congress.gov v3 usually nests under data.bills.items
+    const items =
+      data?.bills?.items ??
+      data?.bills ??
+      data?.results ??
+      data?.items ??
+      [];
+
+    const json = NextResponse.json({
+      bills: items,
+      pageSize: PAGE_SIZE,
+      nextOffset: offset + PAGE_SIZE,
+    });
+    // Edge cache header (works with Vercel):
+    json.headers.set("Cache-Control", "s-maxage=3600");
+    return json;
   } catch (error) {
-    console.error(`error fetching data: ${error}`);
-    return NextResponse.json({ error: "failed to fetch data" });
+    console.error("error fetching data:", error);
+    return NextResponse.json({ bills: [], error: "failed to fetch data" }, { status: 500 });
   }
-};
+}

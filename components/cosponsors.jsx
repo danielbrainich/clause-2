@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { Playfair_Display, Inter, JetBrains_Mono } from "next/font/google";
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Cosponsors({ congress, billType, billNumber }) {
     const [isLoading, setIsLoading] = useState(true);
@@ -28,15 +30,14 @@ export default function Cosponsors({ congress, billType, billNumber }) {
 
     return (
         <>
-            <div className="font-bold text-slate-700 pt-4 pb-2">{cosponsors.length === 1 ? "Cosponsor" : "Cosponsors"}</div>
             {cosponsors && cosponsors.length > 0 ? (
                 cosponsors.map(cosponsor => (
                     <Link key={cosponsor.url} href={`/pol/${cosponsor.bioguideId}`}>
-                    <div className="text-slate-500 hover:text-indigo-500 underline-animation w-fit">{cosponsor.fullName}</div>
+                    <div className={`${inter.className} text-sm text-slate-600 leading-snug hover:text-indigo-500 underline-animation w-fit`}>{cosponsor.fullName}</div>
                     </Link>
                 ))
                 ) : (
-                    <div className="text-slate-500">None</div>
+                    <div className={`${inter.className} text-sm text-slate-600 leading-snug`}>None</div>
                 )}
         </>
     );
