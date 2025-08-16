@@ -1,10 +1,10 @@
-# Capitol View
+# Article One
 
 ## Project Status
-Capitol View is currently under active development. New features are being added to enhance functionality and user experience. Features in progress include alerts for legislative actions and a feature to find your representative based on your current location, similar to the functionality in the Rep Radar app.
+Article One is currently under active development. New features are being added to enhance functionality and user experience. Features in progress include alerts for legislative actions and a feature to find your representative based on your current location, similar to the functionality in the Rep Radar app.
 
 ## Description
-Capitol View is a web application designed to present legislative information in a visually engaging way, utilizing data from the Congress.gov API. It targets individuals interested in U.S. politics, providing them with up-to-date information on bills and legislators. The application features a dynamic timeline of the latest actions on bills in both the House and Senate, detailed views of bills, and comprehensive profiles of legislators.
+Article One is a web application designed to present legislative information in a visually engaging way, utilizing data from the Congress.gov API. It targets individuals interested in U.S. politics, providing them with up-to-date information on bills and legislators. The application features a dynamic timeline of the latest actions on bills in both the House and Senate, detailed views of bills, and comprehensive profiles of legislators.
 
 ## Tech Stack
 - **Frontend**: Next.js, React, Tailwind CSS for stylish and responsive design
@@ -44,7 +44,7 @@ _Screenshots coming soon!_
 
 ## Support
 
-For support, please open an issue in the GitHub issue tracker for Capitol View.
+For support, please open an issue in the GitHub issue tracker for Article One.
 
 ## License
 

@@ -6,6 +6,7 @@ import Cosponsors from "@/components/cosponsors";
 import Actions from "@/components/actions";
 import Text from "@/components/text";
 import { Inter } from "next/font/google";
+import Loading from "@/components/ui/Loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -82,11 +83,8 @@ export default function Bill({ params }) {
 
   if (isLoading) {
     return (
-      <main className="mx-auto max-w-4xl px-4 py-10">
-        <div className="flex justify-center items-center gap-2 text-blue-600 dark:text-blue-400">
-          <InlineSpinner size="sm" />
-          <span className="text-sm">Loading…</span>
-        </div>
+      <main className="mx-auto max-w-5xl px-4 py-10">
+        <Loading variant="block" size="lg" />
       </main>
     );
   }
@@ -132,8 +130,9 @@ export default function Bill({ params }) {
       <Link
         href="/"
         className="mb-4 inline-flex items-center gap-1 rounded-xl border px-3 py-1.5 text-[13px]
-                   text-blue-700 hover:text-blue-900 hover:bg-neutral-50
-                   dark:border-neutral-800 dark:text-blue-300 dark:hover:bg-neutral-800"
+             text-neutral-700 visited:text-neutral-700 hover:text-neutral-900 hover:bg-neutral-50
+             dark:border-neutral-800 dark:text-neutral-300 dark:visited:text-neutral-300 dark:hover:bg-neutral-800
+             transition-colors"
       >
         <span aria-hidden>←</span> Back to latest
       </Link>

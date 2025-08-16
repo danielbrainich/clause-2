@@ -1,4 +1,9 @@
-const Loading = () => {
-  return <div className="text-indigo-500">Loading</div>;
-};
-export default Loading;
+import Loading from "@/components/ui/Loading";
+
+export default function LoadingPage() {
+  return (
+    <main className="mx-auto max-w-7xl px-4 py-16">
+      <Loading variant="block" size="lg" />
+    </main>
+  );
+}

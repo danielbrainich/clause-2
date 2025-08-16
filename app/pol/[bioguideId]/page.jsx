@@ -1,34 +1,12 @@
-// app/pol/[bioguideId]/page.jsx
 "use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { cleanActionString } from "@/app/utils/utils";
 import { Inter } from "next/font/google";
+import Loading from "@/components/ui/Loading";
 
 const inter = Inter({ subsets: ["latin"] });
-
-// tiny CSS spinner (no SVG issues)
-function InlineSpinner({ size = "sm" }) {
-  const sizes = {
-    xs: "h-3 w-3 border",
-    sm: "h-4 w-4 border-2",
-    md: "h-6 w-6 border-2",
-  };
-  return (
-    <span
-      className="inline-flex items-center"
-      role="status"
-      aria-label="Loading"
-    >
-      <span
-        className={`${sizes[size]} animate-spin rounded-full border-t-transparent border-neutral-300 dark:border-neutral-700`}
-        aria-hidden="true"
-      />
-      <span className="sr-only">Loading…</span>
-    </span>
-  );
-}
 
 function formatDate(d) {
   if (!d) return "—";
@@ -135,10 +113,7 @@ export default function Representative({ params }) {
   if (isLoading) {
     return (
       <main className="mx-auto max-w-5xl px-4 py-10">
-        <div className="flex justify-center items-center gap-2 text-blue-600 dark:text-blue-400">
-          <InlineSpinner size="sm" />
-          <span className="text-sm">Loading…</span>
-        </div>
+        <Loading variant="block" size="lg" />
       </main>
     );
   }
@@ -239,8 +214,9 @@ export default function Representative({ params }) {
       <Link
         href="/"
         className="mb-4 inline-flex items-center gap-1 rounded-xl border px-3 py-1.5 text-[13px]
-                   text-blue-700 hover:text-blue-900 hover:bg-neutral-50
-                   dark:border-neutral-800 dark:text-blue-300 dark:hover:bg-neutral-800"
+             text-neutral-700 visited:text-neutral-700 hover:text-neutral-900 hover:bg-neutral-50
+             dark:border-neutral-800 dark:text-neutral-300 dark:visited:text-neutral-300 dark:hover:bg-neutral-800
+             transition-colors"
       >
         <span aria-hidden>←</span> Back to latest
       </Link>

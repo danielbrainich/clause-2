@@ -215,20 +215,25 @@ export default function Home() {
       {/* Load more */}
       <div className="mt-6 flex justify-center">
         <button
+          type="button"
           onClick={() => setOffset((prev) => prev + pageSize)}
-          className="inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-[13px] font-medium
-                      hover:text-blue-900 hover:bg-neutral-50
-                     dark:border-neutral-800 dark:text-blue-300 dark:hover:bg-neutral-800"
+          disabled={isLoading}
+          aria-busy={isLoading ? "true" : "false"}
+          className="inline-flex items-center gap-2 rounded-xl border px-3.5 py-1.5 text-[12.5px]
+               text-neutral-700 hover:text-neutral-9 00 hover:bg-neutral-50
+               disabled:opacity-60
+               dark:border-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-800"
         >
-          SHOW MORE
+          {isLoading && bills.length > 0 ? (
+            <>
+              <Spinner className="h-4 w-4" />
+              <span>Loading…</span>
+            </>
+          ) : (
+            <span>Show more</span>
+          )}
         </button>
       </div>
-
-      {isLoading && bills.length > 0 && (
-        <p className="mt-3 text-center text-[11px] text-neutral-500 dark:text-neutral-400">
-          Loading more…
-        </p>
-      )}
     </main>
   );
 }
