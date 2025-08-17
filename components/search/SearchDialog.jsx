@@ -320,10 +320,13 @@ export default function SearchDialog() {
                   <button
                     type="submit"
                     className="inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-[13px] font-medium
-                               text-blue-700 hover:text-blue-900 hover:bg-neutral-50
-                               dark:border-neutral-800 dark:text-blue-300 dark:hover:bg-neutral-800"
+             text-neutral-700 hover:text-neutral-900 hover:bg-neutral-50
+             dark:border-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-800
+             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400/40
+             disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-inherit"
+                    disabled={memLoading || !membersLoaded}
                   >
-                    {billLoading ? <InlineSpinner /> : null}
+                    {memLoading ? <InlineSpinner size="xs" /> : null}
                     Search
                   </button>
                 </div>
@@ -367,11 +370,13 @@ export default function SearchDialog() {
                   <button
                     type="submit"
                     className="inline-flex items-center gap-2 rounded-xl border px-4 py-2 text-[13px] font-medium
-                               text-blue-700 hover:text-blue-900 hover:bg-neutral-50
-                               dark:border-neutral-800 dark:text-blue-300 dark:hover:bg-neutral-800"
+             text-neutral-700 hover:text-neutral-900 hover:bg-neutral-50
+             dark:border-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-800
+             focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-neutral-400/40
+             disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-inherit"
                     disabled={memLoading || !membersLoaded}
                   >
-                    {memLoading ? <InlineSpinner /> : null}
+                    {memLoading ? <InlineSpinner size="xs" /> : null}
                     Search
                   </button>
                 </div>
@@ -470,7 +475,10 @@ function BillResultCard({ bill, onOpen }) {
               {billNo}
               {bill?.originChamber || bill?.chamber ? (
                 <span className="ml-2 text-[12px] font-normal text-neutral-600 dark:text-neutral-400">
-                  {bill.originChamber || bill.chamber}
+                  {(bill.originChamber || bill.chamber)?.toLowerCase() ===
+                  "house"
+                    ? "House of Representatives"
+                    : bill.originChamber || bill.chamber}
                 </span>
               ) : null}
             </h3>

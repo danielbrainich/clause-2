@@ -1,5 +1,6 @@
 {
-    "crons": [
-      { "path": "/api/discipline/cron", "schedule": "0 14 * * *" }
-    ]
+  "crons": [
+    { "path": "/api/cron/ethics-daily",  "schedule": "0 13 * * *" },  // 13:00 UTC (~6am PT) daily
+    { "path": "/api/cron/ethics-weekly", "schedule": "0 14 * * 0" }   // 14:00 UTC Sundays
+  ]
 }
