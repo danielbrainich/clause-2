@@ -1,143 +1,261 @@
+// app/page.jsx
 "use client";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { Inter } from "next/font/google";
 import { cleanActionString } from "@/app/utils/utils";
-import Spinner from "@/components/ui/Spinner";
 
+const inter = Inter({ subsets: ["latin"] });
+
+// tiny neutral spinner
+function InlineSpinner({ size = "sm" }) {
+  const sizes = {
+    xs: "h-3 w-3 border",
+    sm: "h-4 w-4 border-2",
+    md: "h-6 w-6 border-2",
+  };
+  return (
+    <span
+      className="inline-flex items-center"
+      role="status"
+      aria-label="Loading"
+    >
+      <span
+        className={`${sizes[size]} animate-spin rounded-full border-t-transparent border-neutral-300 dark:border-neutral-700`}
+        aria-hidden="true"
+      />
+      <span className="sr-only">Loading…</span>
+    </span>
+  );
+}
+
+function formatDate(d) {
+  if (!d) return "—";
+  const dt = new Date(d);
+  if (Number.isNaN(dt.getTime())) return "—";
+  return dt.toLocaleDateString("en-US", {
+    month: "short",
+    day: "2-digit",
+    year: "numeric",
+  });
+}
+function stageFromLatest(text = "") {
+  const t = String(text).toLowerCase();
+  if (/became public law|signed|presented to president/.test(t)) return "Law";
+  if (/passed (house|senate)/.test(t)) return "Passed";
+  if (/introduced/.test(t)) return "Introduced";
+  return "Active";
+}
+
+// UI primitives
+const StageBadge = ({ stage }) => (
+  <span className="inline-flex items-center rounded-full bg-neutral-100 px-2 py-0.5 text-[11px] font-medium text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300">
+    {stage}
+  </span>
+);
+const Card = ({ children, className = "" }) => (
+  <div
+    className={`group flex h-full flex-col rounded-2xl border bg-white shadow-sm transition-shadow hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900 ${className}`}
+  >
+    {children}
+  </div>
+);
+const CardHeader = ({ children, className = "" }) => (
+  <div
+    className="border-b p-4 dark:border-neutral-800"
+    style={{
+      minHeight: "88px",
+      display: "flex",
+      flexDirection: "column",
+      gap: "0.4rem",
+    }}
+  >
+    {children}
+  </div>
+);
+const CardContent = ({ children, className = "" }) => (
+  <div className={`flex grow flex-col p-4 ${className}`}>{children}</div>
+);
+
+// ---------- HOMEPAGE ----------
 export default function Home() {
-  const [bills, setBills] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [offset, setOffset] = useState(0);
-  const [error, setError] = useState(null);
-  const [pageSize, setPageSize] = useState(12); // keep in sync with API
+  const PAGE_SIZE = 12;
 
-  function formatDate(dateString) {
-    if (!dateString) return "—";
-    const date = new Date(dateString);
-    if (Number.isNaN(date.getTime())) return "—";
-    const day = String(date.getDate()).padStart(2, "0");
-    const month = date.toLocaleString("en-US", { month: "short" });
-    const year = date.getFullYear();
-    return `${month} ${day}, ${year}`;
+  const [bills, setBills] = useState([]); // what we render
+  const [nextCursor, setNextCursor] = useState(0);
+  const [total, setTotal] = useState(0);
+  const [stale, setStale] = useState(false);
+
+  const [loading, setLoading] = useState(true);
+  const [loadingMore, setLoadingMore] = useState(false);
+  const [err, setErr] = useState(null);
+
+  // Helper: fetch one feed page
+  async function fetchFeed(cursor) {
+    const res = await fetch(
+      `/api/discipline/feed/${cursor}?limit=${PAGE_SIZE}`,
+      { cache: "no-store" }
+    );
+    if (!res.ok) throw new Error(`Feed HTTP ${res.status}`);
+    const data = await res.json();
+    // Defensive shape
+    const items = Array.isArray(data?.items) ? data.items : [];
+    return {
+      items,
+      nextCursor: data?.nextCursor ?? null,
+      total: data?.total ?? 0,
+      stale: !!data?.stale,
+    };
   }
 
-  function stageFromLatest(text = "") {
-    const t = String(text).toLowerCase();
-    if (/became public law|presented to president|signed/.test(t)) return "Law";
-    if (/introduced/.test(t)) return "Introduced";
-    return "Active";
+  // Helper: dedupe client-side by normalized key (belt & suspenders)
+  function uniqueByKey(list) {
+    const seen = new Set();
+    const out = [];
+    for (const b of list) {
+      const k = `${b?.congress}-${String(b?.type || "").toUpperCase()}-${String(
+        b?.number || ""
+      )}`;
+      if (!seen.has(k)) {
+        seen.add(k);
+        out.push(b);
+      }
+    }
+    return out;
   }
 
+  // Fill up to at least `want` items by stitching subsequent pages if needed
+  async function fillAtLeast(want, startCursor = 0) {
+    let acc = [];
+    let cursor = startCursor;
+    let total = 0;
+    let staleFlag = false;
+
+    while (acc.length < want && cursor !== null) {
+      const page = await fetchFeed(cursor);
+      total = page.total;
+      staleFlag = page.stale;
+
+      // append & dedupe
+      acc = uniqueByKey(acc.concat(page.items));
+      cursor = page.nextCursor;
+      // If the feed ever returned fewer than requested but we still have nextCursor,
+      // loop will continue and stitch more until we reach `want` or run out.
+    }
+
+    return { acc, cursor, total, stale: staleFlag };
+  }
+
+  // INITIAL LOAD — always try to fill 12
   useEffect(() => {
     let cancelled = false;
-    const fetchBillsList = async () => {
+    (async () => {
       try {
-        setIsLoading(true);
-        setError(null);
-        const response = await fetch(`/api/list-bills/${offset}`);
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const data = await response.json();
-        if (!cancelled) {
-          setBills((prev) => [...prev, ...(data?.bills ?? [])]);
-          if (data?.pageSize) setPageSize(data.pageSize);
-        }
-      } catch (err) {
-        if (!cancelled) setError("Failed to load bills.");
-        console.error("Failed to fetch bills:", err);
+        setErr(null);
+        setLoading(true);
+        const { acc, cursor, total, stale } = await fillAtLeast(PAGE_SIZE, 0);
+        if (cancelled) return;
+        setBills(acc);
+        setNextCursor(cursor);
+        setTotal(total);
+        setStale(stale);
+      } catch (e) {
+        if (!cancelled) setErr(e?.message || String(e));
       } finally {
-        if (!cancelled) setIsLoading(false);
+        if (!cancelled) setLoading(false);
       }
-    };
-    fetchBillsList();
+    })();
     return () => {
       cancelled = true;
     };
-  }, [offset]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const StageBadge = ({ stage }) => {
-    const tones = {
-      Law: "bg-emerald-100 text-emerald-700 dark:bg-emerald-900/40 dark:text-emerald-300",
-      Introduced:
-        "bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300",
-      Active:
-        "bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300",
-      default:
-        "bg-neutral-100 text-neutral-800 dark:bg-neutral-800 dark:text-neutral-200",
-    };
-    const tone = tones[stage] || tones.default;
-    return (
-      <span
-        className={`inline-flex items-center rounded-full px-2 py-0.5 text-[11px] font-medium ${tone}`}
-      >
-        {stage}
-      </span>
-    );
-  };
+  // LOAD MORE — add another PAGE_SIZE visible items by stitching as needed
+  async function loadMore() {
+    if (nextCursor == null || loadingMore) return;
+    try {
+      setLoadingMore(true);
+      setErr(null);
 
-  const Card = ({ children, className = "" }) => (
-    <div
-      className={`flex h-full flex-col rounded-2xl border bg-white shadow-sm transition-all hover:shadow-md
-                  dark:border-neutral-800 dark:bg-neutral-900 ${className}`}
-    >
-      {children}
-    </div>
-  );
+      const target = bills.length + PAGE_SIZE;
 
-  // Tighter header; aligns divider across cards without extra height
-  const CardHeader = ({ children, className = "" }) => (
-    <div
-      className={`border-b p-4 dark:border-neutral-800 ${className}`}
-      style={{
-        minHeight: "88px", // ~1 number line + 2 clamped name lines
-        display: "flex",
-        flexDirection: "column",
-        gap: "0.4rem",
-      }}
-    >
-      {children}
-    </div>
-  );
+      let acc = bills.slice();
+      let cursor = nextCursor;
+      let currentTotal = total; 
+      let currentStale = stale;
 
-  const CardContent = ({ children, className = "" }) => (
-    <div className={`flex grow flex-col p-4 ${className}`}>{children}</div>
-  );
+      while (acc.length < target && cursor !== null) {
+        const page = await fetchFeed(cursor);
+        currentTotal = page.total;
+        currentStale = page.stale;
+        acc = uniqueByKey(acc.concat(page.items));
+        cursor = page.nextCursor;
+      }
 
-  if (isLoading && bills.length === 0) {
+      setBills(acc);
+      setNextCursor(cursor);
+      setTotal(currentTotal);
+      setStale(currentStale);
+    } catch (e) {
+      setErr(e?.message || String(e));
+    } finally {
+      setLoadingMore(false);
+    }
+  }
+
+  if (loading && bills.length === 0) {
     return (
       <main className="mx-auto max-w-7xl px-4 py-16">
-        <div className="flex justify-center items-center gap-3 text-blue-600 dark:text-blue-400">
-          <Spinner className="text-blue-600 dark:text-blue-400" />
-
+        <div className="flex items-center justify-center gap-2 text-neutral-600 dark:text-neutral-400">
+          <InlineSpinner size="md" />
           <span className="text-sm">Loading…</span>
         </div>
       </main>
     );
   }
 
-  if (error) {
+  if (err) {
     return (
       <main className="mx-auto max-w-7xl px-4 py-16">
         <div className="rounded-2xl border p-6 text-sm text-rose-600 dark:border-neutral-800 dark:text-rose-400">
-          {error}
+          {String(err)}
         </div>
       </main>
     );
   }
 
   return (
-    <main className="mx-auto max-w-7xl px-4 py-6">
-      {/* Page header */}
+    <main className={`${inter.className} mx-auto max-w-7xl px-4 py-6`}>
       <section className="mb-6">
         <h1 className="text-[22px] font-semibold tracking-[-0.01em]">
-          Latest actions
+          Capitol Drama
         </h1>
         <p className="text-[13px] text-neutral-600 dark:text-neutral-400">
-          Recently acted-on bills across the House and Senate.
+          Censures, reprimands, expulsions, and condemnations (H.Res./S.Res.),
+          newest first.
         </p>
+        {stale && (
+          <div className="mt-3 inline-flex items-center gap-2 rounded-xl border px-3 py-1.5 text-[12px] dark:border-neutral-800">
+            Feed is stale.&nbsp;
+            <a
+              href="/api/discipline/refresh?days=1825&pages=60&limit=200&strict=1"
+              className="underline hover:no-underline"
+              target="_blank"
+            >
+              Refresh now
+            </a>
+          </div>
+        )}
       </section>
 
-      {/* Responsive auto-fill grid */}
+      {bills.length === 0 ? (
+        <div className="rounded-2xl border p-6 text-sm text-neutral-600 dark:border-neutral-800 dark:text-neutral-400">
+          No discipline activity found yet. Try refresh.
+        </div>
+      ) : null}
+
       <div className="grid gap-5 [grid-template-columns:repeat(auto-fill,minmax(300px,1fr))]">
         {bills.map((bill, idx) => {
           const stage = stageFromLatest(bill?.latestAction?.text);
@@ -146,7 +264,6 @@ export default function Home() {
           const linkHref = `/bill/${bill.congress}/${bill.type}/${bill.number}`;
           const introduced =
             bill?.introducedDate ||
-            bill?.introduced ||
             bill?.introDate ||
             bill?.latestAction?.actionDate ||
             null;
@@ -156,9 +273,8 @@ export default function Home() {
               key={`${bill.congress}-${bill.type}-${bill.number}-${idx}`}
               href={linkHref}
             >
-              <Card className="group">
+              <Card>
                 <CardHeader>
-                  {/* Top line: number + chamber + stage badge */}
                   <div className="flex items-start justify-between gap-2">
                     <h3 className="text-[14px] font-semibold leading-tight tracking-[-0.01em]">
                       {billNo}
@@ -168,17 +284,15 @@ export default function Home() {
                     </h3>
                     <StageBadge stage={stage} />
                   </div>
-
-                  {/* Name under it — clamp to 2 lines with fixed height (short & uniform) */}
                   <p
-                    className="text-[14.5px] leading-snug font-medium"
+                    className="text-[14.5px] font-medium leading-snug"
                     title={bill?.title || billNo}
                     style={{
                       display: "-webkit-box",
                       WebkitLineClamp: 2,
                       WebkitBoxOrient: "vertical",
                       overflow: "hidden",
-                      minHeight: "2.6rem", // ~2 lines at leading-snug
+                      minHeight: "2.6rem",
                     }}
                   >
                     {bill?.title || billNo}
@@ -186,7 +300,6 @@ export default function Home() {
                 </CardHeader>
 
                 <CardContent>
-                  {/* Latest action — clamp to 3 lines, fixed height for uniform rows */}
                   <p
                     className="text-[13px] leading-5"
                     title={cleanActionString(bill?.latestAction?.text)}
@@ -195,13 +308,11 @@ export default function Home() {
                       WebkitLineClamp: 3,
                       WebkitBoxOrient: "vertical",
                       overflow: "hidden",
-                      minHeight: "3.75rem", // 3 * 1.25rem (leading-5)
+                      minHeight: "3.75rem",
                     }}
                   >
                     {cleanActionString(bill?.latestAction?.text)}
                   </p>
-
-                  {/* Footer pinned to bottom */}
                   <div className="mt-auto pt-3 text-[12px] text-neutral-600 dark:text-neutral-400">
                     Introduced {formatDate(introduced)}
                   </div>
@@ -212,27 +323,31 @@ export default function Home() {
         })}
       </div>
 
-      {/* Load more */}
       <div className="mt-6 flex justify-center">
-        <button
-          type="button"
-          onClick={() => setOffset((prev) => prev + pageSize)}
-          disabled={isLoading}
-          aria-busy={isLoading ? "true" : "false"}
-          className="inline-flex items-center gap-2 rounded-xl border px-3.5 py-1.5 text-[12.5px]
-               text-neutral-700 hover:text-neutral-9 00 hover:bg-neutral-50
-               disabled:opacity-60
-               dark:border-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-800"
-        >
-          {isLoading && bills.length > 0 ? (
-            <>
-              <Spinner className="h-4 w-4" />
-              <span>Loading…</span>
-            </>
-          ) : (
-            <span>Show more</span>
-          )}
-        </button>
+        {nextCursor != null ? (
+          <button
+            onClick={loadMore}
+            disabled={loadingMore}
+            aria-busy={loadingMore ? "true" : "false"}
+            className="inline-flex items-center gap-2 rounded-xl border px-3.5 py-1.5 text-[12.5px]
+                       text-neutral-700 hover:text-neutral-900 hover:bg-neutral-50
+                       disabled:cursor-not-allowed disabled:opacity-60
+                       dark:border-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-800"
+          >
+            {loadingMore ? (
+              <>
+                <InlineSpinner size="sm" />
+                <span>Loading…</span>
+              </>
+            ) : (
+              <span>Show more</span>
+            )}
+          </button>
+        ) : (
+          <div className="text-[12px] text-neutral-500 dark:text-neutral-400">
+            End of feed
+          </div>
+        )}
       </div>
     </main>
   );

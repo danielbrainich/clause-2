@@ -1,0 +1,878 @@
+{
+  "lastUpdated": 1755405403841,
+  "bills": [
+    {
+      "congress": 119,
+      "type": "HRES",
+      "number": "647",
+      "title": "Condemning remarks made by Representative Delia Ramirez of Illinois declaring her allegiance to the Republic of Guatemala before the United States of America.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2025-08-12",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-08-13",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/119/hres/647?format=json"
+    },
+    {
+      "congress": 119,
+      "type": "HRES",
+      "number": "539",
+      "title": "Censuring Representative LaMonica McIver and removing her from the Committee on Homeland Security.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2025-07-23",
+        "actionTime": "16:20:08",
+        "text": "NOTIFICATION OF INTENT TO OFFER RESOLUTION - Mr. Higgins (LA) notified the House of his intent to offer a privileged resolution pursuant to clause 2(a)(1) of rule IX. The Chair announced that a determination will be made at the time designated for consideration of the resolution."
+      },
+      "updateDate": "2025-07-29",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/119/hres/539?format=json"
+    },
+    {
+      "congress": 119,
+      "type": "HRES",
+      "number": "576",
+      "title": "Censuring Representative Andy Ogles.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2025-07-10",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-07-24",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/119/hres/576?format=json"
+    },
+    {
+      "congress": 119,
+      "type": "HRES",
+      "number": "553",
+      "title": "Censuring Representative Andrew Ogles.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2025-06-27",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-08-01",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/119/hres/553?format=json"
+    },
+    {
+      "congress": 119,
+      "type": "HRES",
+      "number": "439",
+      "title": "Providing for the expulsion of Representative LaMonica McIver from the United States House of Representatives.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2025-05-21",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-05-28",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/119/hres/439?format=json"
+    },
+    {
+      "congress": 119,
+      "type": "HRES",
+      "number": "408",
+      "title": "Censuring Representative LaMonica McIver of New Jersey.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2025-05-13",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-05-22",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/119/hres/408?format=json"
+    },
+    {
+      "congress": 119,
+      "type": "HRES",
+      "number": "258",
+      "title": "Censuring Representative Jasmine Crockett of Texas.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2025-03-26",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-05-09",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/119/hres/258?format=json"
+    },
+    {
+      "congress": 119,
+      "type": "HRES",
+      "number": "202",
+      "title": "Censuring Representative Lauren Boebert of Colorado for her recent disparaging and derogatory comments about Representative Al Green of Texas.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2025-03-10",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-05-07",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/119/hres/202?format=json"
+    },
+    {
+      "congress": 119,
+      "type": "HRES",
+      "number": "189",
+      "title": "Censuring Representative Al Green of Texas.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2025-03-06",
+        "actionTime": "10:30:45",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "updateDate": "2025-06-23",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/119/hres/189?format=json"
+    },
+    {
+      "congress": 119,
+      "type": "HRES",
+      "number": "193",
+      "title": "Censuring Representative Al Green of Texas.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2025-03-05",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-08-13",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/119/hres/193?format=json"
+    },
+    {
+      "congress": 119,
+      "type": "HRES",
+      "number": "197",
+      "title": "Censuring Representative Al Green of Texas.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2025-03-05",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-08-12",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/119/hres/197?format=json"
+    },
+    {
+      "congress": 119,
+      "type": "HRES",
+      "number": "132",
+      "title": "Censuring Representative Robert Garcia of California for inciting violence against a special government employee.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2025-02-13",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-02-18",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/119/hres/132?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "1599",
+      "title": "Condemning the death threats against Representative Nancy Mace.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2024-11-26",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "updateDate": "2024-12-16",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/1599?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "1500",
+      "title": "Censuring Representative Glen Clay Higgins of the 3rd Congressional District of Louisiana.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2024-09-25",
+        "actionTime": "17:52:21",
+        "text": "NOTIFICATION OF INTENT TO OFFER RESOLUTION - Mr. Horsford notified the House of his intent to offer a privileged resolution pursuant to clause 2(a)(1) of rule IX. The Chair announced that a determination will be made at the time designated for consideration of the resolution."
+      },
+      "updateDate": "2024-12-16",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/1500?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "1463",
+      "title": "Censuring Representative Bennie Thompson for inciting violence, including two assassination attempts, against President Donald Trump.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2024-09-18",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-05-27",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/1463?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "1207",
+      "title": "Censuring Representative Ilhan Omar of Minnesota for her recent hateful comments and history of antisemitism.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2024-05-07",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2024-08-13",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/1207?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "970",
+      "title": "Censuring Representative Elise Stefanik of the 21st Congressional District of New York.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2024-01-17",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2024-07-24",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/970?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "914",
+      "title": "Censuring Representative Jamaal Bowman.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-12-07",
+        "actionTime": "10:56:08",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "updateDate": "2025-08-12",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/914?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "912",
+      "title": "Censuring Representative Jamaal Bowman.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-12-05",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-08-12",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/912?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "878",
+      "title": "Providing for the expulsion of Representative George Santos from the United States House of Representatives.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-12-01",
+        "actionTime": "11:01:00",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "updateDate": "2024-07-24",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/878?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "845",
+      "title": "Censuring Representative Rashida Tlaib for promoting false narratives regarding the October 7, 2023, Hamas attack on Israel and for calling for the destruction of the state of Israel.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-11-07",
+        "actionTime": "22:28:29",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "updateDate": "2024-07-24",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/845?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "846",
+      "title": "Censuring Representative Brian Mast.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-11-06",
+        "actionTime": "18:33:56",
+        "text": "NOTIFICATION OF INTENT TO OFFER RESOLUTION - Ms. Jacobs notified the House of her intent to offer a privileged resolution pursuant to clause 2(a)(1) of rule IX. The Chair announced that a determination will be made at the time designated for consideration of the resolution."
+      },
+      "updateDate": "2024-12-20",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/846?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "841",
+      "title": "Censuring Representative Rashida Tlaib and condemning antisemitism.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-11-02",
+        "text": "Referred to the Committee on Ethics, and in addition to the Committees on the Judiciary, and Foreign Affairs, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "updateDate": "2024-12-20",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/841?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "773",
+      "title": "Providing for the expulsion of Representative George Santos from the House of Representatives.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-11-01",
+        "actionTime": "19:50:28",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "updateDate": "2024-07-24",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/773?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "829",
+      "title": "Censuring Representative Rashida Tlaib for antisemitic activity, sympathizing with terrorist organizations, and leading an insurrection at the United States Capitol Complex.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-11-01",
+        "actionTime": "19:11:49",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "updateDate": "2025-01-03",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/829?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "835",
+      "title": "Condemning the statements of Representative Rashida Tlaib of Michigan.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-11-01",
+        "text": "Referred to the Committee on Ethics, and in addition to the Committee on the Judiciary, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "updateDate": "2024-12-20",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/835?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "610",
+      "title": "Censuring Representative Marjorie Taylor Greene.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-10-26",
+        "actionTime": "16:28:42",
+        "text": "NOTIFICATION OF INTENT TO OFFER RESOLUTION - Ms. Balint notified the House of her intent to offer a privileged resolution pursuant to clause 2(a)(1) of rule IX. The Chair announced that a determination will be made at the time designated for consideration of the resolution."
+      },
+      "updateDate": "2024-07-24",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/610?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "807",
+      "title": "Censuring Representative Rashida Tlaib for antisemitic activity, sympathizing with terrorist organizations, and leading an insurrection at the United States Capitol Complex.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-10-25",
+        "text": "Referred to the Committee on Ethics, and in addition to the Committee on Foreign Affairs, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "updateDate": "2024-07-24",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/807?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "772",
+      "title": "Censuring Representative Rashida Tlaib.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-10-25",
+        "text": "Referred to the Committee on Ethics, and in addition to the Committee on Foreign Affairs, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "updateDate": "2024-12-20",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/772?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "812",
+      "title": "Censuring Representative Jamaal Bowman.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-10-25",
+        "text": "Referred to the Committee on Ethics, and in addition to the Committee on Rules, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "updateDate": "2025-05-27",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/812?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "755",
+      "title": "Providing for the expulsion of Representative Jamaal Bowman from the House of Representatives.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-10-02",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-05-27",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/755?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "623",
+      "title": "Censuring Paul Gosar, Representative of the 9th Congressional District of Arizona.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-07-27",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2024-11-22",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/623?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "626",
+      "title": "Censuring Representative Andy Ogles.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-07-27",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2024-11-22",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/626?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "606",
+      "title": "Censuring Pramila Jayapal, Representative of the 7th Congressional District of Washington.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-07-20",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2024-11-22",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/606?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "592",
+      "title": "Censuring Representative George Santos.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-07-17",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2024-11-22",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/592?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "521",
+      "title": "Censuring Adam Schiff, Representative of the 30th Congressional District of California.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-06-21",
+        "actionTime": "18:47:09",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "updateDate": "2025-05-27",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/521?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "512",
+      "title": "Censuring and condemning Adam Schiff, Representative of California's 30th Congressional District.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-06-15",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-08-13",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/512?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "489",
+      "title": "Censuring and condemning Adam Schiff, Representative of California's 30th Congressional District.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-06-14",
+        "actionTime": "16:25:50",
+        "text": "On motion to table the measure Agreed to by the Yeas and Nays: 225 - 196, 7 Present (Roll no. 269)."
+      },
+      "updateDate": "2025-08-13",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/489?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "479",
+      "title": "Censuring Representative Bennie Thompson.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-06-07",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2024-07-24",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/479?format=json"
+    },
+    {
+      "congress": 118,
+      "type": "HRES",
+      "number": "437",
+      "title": "Censuring and condemning Adam Schiff, Representative of California's 30th Congressional District.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2023-05-23",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2024-07-24",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/118/hres/437?format=json"
+    },
+    {
+      "congress": 117,
+      "type": "HRES",
+      "number": "431",
+      "title": "Condemning the statements of Representative Pramila Jayapal of Washington.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "updateDate": "2025-01-03",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/117/hres/431?format=json"
+    },
+    {
+      "congress": 117,
+      "type": "HRES",
+      "number": "1164",
+      "title": "Condemning Charles \"Chuck\" Schumer, Senator of New York.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2022-11-01",
+        "text": "Referred to the Subcommittee on Courts, Intellectual Property, and the Internet."
+      },
+      "updateDate": "2025-01-16",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/117/hres/1164?format=json"
+    },
+    {
+      "congress": 117,
+      "type": "HRES",
+      "number": "1410",
+      "title": "Condemning and censuring Representative Marjorie Taylor Greene of Georgia.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2022-09-29",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2024-02-06",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/117/hres/1410?format=json"
+    },
+    {
+      "congress": 117,
+      "type": "HRES",
+      "number": "789",
+      "title": "Censuring Representative Paul Gosar.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2021-11-17",
+        "actionTime": "16:31:43",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "updateDate": "2025-04-07",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/117/hres/789?format=json"
+    },
+    {
+      "congress": 117,
+      "type": "HRES",
+      "number": "795",
+      "title": "Providing for consideration of the resolution (H. Res. 789) censuring Representative Paul Gosar.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2021-11-17",
+        "actionTime": "14:11:18",
+        "text": "Motion to reconsider laid on the table Agreed to without objection."
+      },
+      "updateDate": "2025-04-07",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/117/hres/795?format=json"
+    },
+    {
+      "congress": 117,
+      "type": "HRES",
+      "number": "697",
+      "title": "Condemning and censuring Representative Maxine Waters of California.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2021-09-30",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-01-03",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/117/hres/697?format=json"
+    },
+    {
+      "congress": 117,
+      "type": "HRES",
+      "number": "474",
+      "title": "Condemning and censuring Representative Alexandria Ocasio-Cortez of New York, Representative Rashida Tlaib of Michigan, Representative Ilhan Omar of Minnesota, and Representative Ayanna Pressley of Massachusetts for defending foreign terrorist organizations and inciting anti-Semitic attacks across the United States.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2021-06-14",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-01-03",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/117/hres/474?format=json"
+    },
+    {
+      "congress": 117,
+      "type": "HRES",
+      "number": "421",
+      "title": "Censuring Representative Jody Hice of Georgia.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2021-05-20",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-01-03",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/117/hres/421?format=json"
+    },
+    {
+      "congress": 117,
+      "type": "HRES",
+      "number": "420",
+      "title": "Censuring Representative Paul Gosar of Arizona.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2021-05-20",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-01-03",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/117/hres/420?format=json"
+    },
+    {
+      "congress": 117,
+      "type": "HRES",
+      "number": "419",
+      "title": "Censuring Representative Andrew Clyde of Georgia.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2021-05-20",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-01-03",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/117/hres/419?format=json"
+    },
+    {
+      "congress": 117,
+      "type": "HRES",
+      "number": "83",
+      "title": "Condemning and censuring Representative Marjorie Taylor Greene of Georgia.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2021-02-01",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-01-03",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/117/hres/83?format=json"
+    },
+    {
+      "congress": 117,
+      "type": "HRES",
+      "number": "31",
+      "title": "Condemning and censuring Representative Mo Brooks of Alabama.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2021-01-11",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-01-03",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/117/hres/31?format=json"
+    },
+    {
+      "congress": 117,
+      "type": "HRES",
+      "number": "19",
+      "title": "Condemning and censuring Representative Louie Gohmert of Texas.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2021-01-05",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-01-03",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/117/hres/19?format=json"
+    },
+    {
+      "congress": 116,
+      "type": "HRES",
+      "number": "1241",
+      "title": "Censuring Representative Bill Pascrell of New Jersey.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2020-11-27",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-01-03",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/116/hres/1241?format=json"
+    },
+    {
+      "congress": 116,
+      "type": "HRES",
+      "number": "1047",
+      "title": "Condemning the statements of Representative Ilhan Omar of Minnesota.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2020-07-16",
+        "text": "Referred to the Committee on Ethics, and in addition to the Committee on the Judiciary, for a period to be subsequently determined by the Speaker, in each case for consideration of such provisions as fall within the jurisdiction of the committee concerned."
+      },
+      "updateDate": "2025-01-03",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/116/hres/1047?format=json"
+    },
+    {
+      "congress": 116,
+      "type": "HRES",
+      "number": "886",
+      "title": "Condemning Charles \"Chuck\" Schumer, Senator of New York.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2020-03-05",
+        "text": "Referred to the House Committee on the Judiciary."
+      },
+      "updateDate": "2025-01-03",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/116/hres/886?format=json"
+    },
+    {
+      "congress": 116,
+      "type": "SRES",
+      "number": "532",
+      "title": "A resolution condemning and censuring the Senator from New York, Mr. Schumer.",
+      "originChamber": "Senate",
+      "latestAction": {
+        "actionDate": "2020-03-05",
+        "text": "Referred to the Select Committee on Ethics. (text: CR S1600-1601)"
+      },
+      "updateDate": "2025-01-14",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/116/sres/532?format=json"
+    },
+    {
+      "congress": 116,
+      "type": "HRES",
+      "number": "868",
+      "title": "Condemning the comments of Senator and Democratic Socialist Presidential candidate, Bernie Sanders (I-VT), disregarding the history of systemic human rights abuses, forced indoctrination, and authoritarian actions of the literacy and education policies of the Communist Castro dictatorship in Cuba.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2020-02-27",
+        "text": "Referred to the House Committee on Foreign Affairs."
+      },
+      "updateDate": "2025-01-03",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/116/hres/868?format=json"
+    },
+    {
+      "congress": 116,
+      "type": "HRES",
+      "number": "784",
+      "title": "Condemning and censuring Nancy D'Alessandro Pelosi, Representative of California's 12th Congressional District.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2020-01-09",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-01-03",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/116/hres/784?format=json"
+    },
+    {
+      "congress": 116,
+      "type": "SRES",
+      "number": "142",
+      "title": "A resolution condemning the Government of the Philippines for its continued detention of Senator Leila De Lima, calling for her immediate release, and for other purposes.",
+      "originChamber": "Senate",
+      "latestAction": {
+        "actionDate": "2020-01-08",
+        "text": "Resolution agreed to in Senate with an amendment and an amended preamble by Voice Vote. (consideration: CR S79-80; text: CR S79-80)"
+      },
+      "updateDate": "2025-01-14",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/116/sres/142?format=json"
+    },
+    {
+      "congress": 116,
+      "type": "HRES",
+      "number": "630",
+      "title": "Condemning and censuring Adam Schiff, Representative of California's 28th Congressional District.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2019-10-15",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-08-13",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/116/hres/630?format=json"
+    },
+    {
+      "congress": 116,
+      "type": "HRES",
+      "number": "604",
+      "title": "Condemning and censuring Adam Schiff, Representative of California's 28th Congressional District.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2019-09-27",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-01-03",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/116/hres/604?format=json"
+    },
+    {
+      "congress": 116,
+      "type": "HRES",
+      "number": "241",
+      "title": "Condemning the anti-Semitic comments of Representative Ilhan Omar from Minnesota.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2019-04-08",
+        "text": "Referred to the Subcommittee on the Constitution, Civil Rights, and Civil Liberties."
+      },
+      "updateDate": "2025-01-03",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/116/hres/241?format=json"
+    },
+    {
+      "congress": 116,
+      "type": "HRES",
+      "number": "233",
+      "title": "Condemning the Government of the Philippines for its continued detention of Senator Leila De Lima, calling for her immediate release, and for other purposes.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2019-04-02",
+        "text": "Referred to the Subcommittee on Asia, the Pacific and Nonproliferation."
+      },
+      "updateDate": "2025-01-23",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/116/hres/233?format=json"
+    },
+    {
+      "congress": 116,
+      "type": "HRES",
+      "number": "40",
+      "title": "Condemning and censuring Representative Steve King of Iowa.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2019-01-14",
+        "actionTime": "19:23:00",
+        "text": "NOTIFICATION OF INTENT TO OFFER RESOLUTION - Mr. Ryan notified the House of his intent to offer a privileged resolution in the form of H. Res. 40 pursuant to clause 2(a)(1) of rule IX."
+      },
+      "updateDate": "2025-01-03",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/116/hres/40?format=json"
+    },
+    {
+      "congress": 115,
+      "type": "HRES",
+      "number": "962",
+      "title": "Condemning and censuring Maxine Waters, Representative of California's 43d Congressional District.",
+      "originChamber": "House",
+      "latestAction": {
+        "actionDate": "2018-06-25",
+        "text": "Referred to the House Committee on Ethics."
+      },
+      "updateDate": "2025-01-03",
+      "congressdotgov_url": "https://api.congress.gov/v3/bill/115/hres/962?format=json"
+    }
+  ]
+}
