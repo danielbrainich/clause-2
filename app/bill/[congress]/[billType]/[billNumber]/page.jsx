@@ -33,6 +33,9 @@ export default function Bill({ params }) {
   const [oneBill, setOneBill] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
+  const latestActionText =
+    oneBill?.latestAction?.text ?? oneBill?.latestAction ?? "";
+  const latestActionDate = oneBill?.latestAction?.actionDate ?? null;
 
   useEffect(() => {
     let cancelled = false;
@@ -98,7 +101,9 @@ export default function Bill({ params }) {
     (/^S/i.test(oneBill?.type ?? billType) ? "Senate" : "House");
 
   const chamber =
-    chamberRaw?.toLowerCase() === "house" ? "House of Representatives" : chamberRaw;
+    chamberRaw?.toLowerCase() === "house"
+      ? "House of Representatives"
+      : chamberRaw;
 
   const latestAction =
     oneBill?.latestAction?.text ?? oneBill?.latestAction ?? "";
@@ -180,12 +185,11 @@ export default function Bill({ params }) {
             </div>
           )}
 
-          {latestAction && (
+          {latestActionText && (
             <div>
               <div className="mb-1 text-[13px] font-semibold tracking-[-0.01em]">
                 Latest action
               </div>
-              {/* No minHeight here → no blank space */}
               <p
                 className="text-[14px] leading-5"
                 style={{
@@ -194,8 +198,11 @@ export default function Bill({ params }) {
                   WebkitBoxOrient: "vertical",
                   overflow: "hidden",
                 }}
+                title={latestActionText}
               >
-                {latestAction}
+                {latestActionDate ? `${formatDate(latestActionDate)}` : ""}
+                : {latestActionText}
+
               </p>
             </div>
           )}

@@ -159,14 +159,15 @@ export default function Home() {
 
   return (
     <main className={`${inter.className} mx-auto max-w-7xl px-4 py-6`}>
-
-
       <div className="grid gap-5 [grid-template-columns:repeat(auto-fill,minmax(300px,1fr))]">
         {items.map((bill, idx) => {
+          const lastActionText = cleanActionString(bill?.latestAction?.text);
+          const lastActionDate = bill?.latestAction?.actionDate || null;
           const stage = stageFromLatest(bill?.latestAction?.text);
           const billNo = `${bill.type}-${bill.number}`;
           const chamberRaw = bill.originChamber || bill.chamber || "—";
-          const chamber = chamberRaw === "House" ? "House of Representatives" : chamberRaw;
+          const chamber =
+            chamberRaw === "House" ? "House of Representatives" : chamberRaw;
           const linkHref = `/bill/${bill.congress}/${bill.type}/${bill.number}`;
           const introduced =
             bill?.introducedDate ||
@@ -206,9 +207,16 @@ export default function Home() {
                   </p>
                 </CardHeader>
                 <CardContent>
+                  {/* Label + date */}
+                  <div className="mb-1 text-[12px] text-neutral-500 dark:text-neutral-400">
+                    Latest Action
+                    {lastActionDate ? ` • ${formatDate(lastActionDate)}` : ""}
+                  </div>
+
+                  {/* Action text (clamped) */}
                   <p
                     className="text-[13px] leading-5"
-                    title={cleanActionString(bill?.latestAction?.text)}
+                    title={lastActionText}
                     style={{
                       display: "-webkit-box",
                       WebkitLineClamp: 3,
@@ -217,8 +225,10 @@ export default function Home() {
                       minHeight: "3.75rem",
                     }}
                   >
-                    {cleanActionString(bill?.latestAction?.text)}
+                    {lastActionText || "—"}
                   </p>
+
+                  {/* Introduced line stays as-is */}
                   <div className="mt-auto pt-3 text-[12px] text-neutral-600 dark:text-neutral-400">
                     Introduced {formatDate(introduced)}
                   </div>

@@ -8,6 +8,8 @@ function SearchProvider({ children }) {
   const [open, setOpen] = useState(false);
   const openDialog = useCallback(() => setOpen(true), []);
   const closeDialog = useCallback(() => setOpen(false), []);
+
+
   return (
     <SearchCtx.Provider value={{ open, openDialog, closeDialog }}>
       {children}

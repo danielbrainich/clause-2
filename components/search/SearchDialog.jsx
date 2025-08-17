@@ -456,7 +456,9 @@ function BillResultCard({ bill, onOpen }) {
     bill?.introDate ||
     bill?.latestAction?.actionDate ||
     null;
-  const latest = clean(bill?.latestAction?.text || bill?.latestAction || "");
+
+  const lastActionText = clean(bill?.latestAction?.text || bill?.latestAction || "");
+  const lastActionDate = bill?.latestAction?.actionDate || null;
 
   return (
     <Link href={href} onClick={onOpen}>
@@ -475,14 +477,14 @@ function BillResultCard({ bill, onOpen }) {
               {billNo}
               {bill?.originChamber || bill?.chamber ? (
                 <span className="ml-2 text-[12px] font-normal text-neutral-600 dark:text-neutral-400">
-                  {(bill.originChamber || bill.chamber)?.toLowerCase() ===
-                  "house"
+                  {(bill.originChamber || bill.chamber)?.toLowerCase() === "house"
                     ? "House of Representatives"
                     : bill.originChamber || bill.chamber}
                 </span>
               ) : null}
             </h3>
           </div>
+
           {/* Title clamped to 2 lines */}
           <p
             className="text-[14.5px] leading-snug font-medium"
@@ -499,8 +501,15 @@ function BillResultCard({ bill, onOpen }) {
         </div>
 
         <div className="flex grow flex-col p-4">
+          {/* Label + date (match list view style) */}
+          <div className="mb-1 text-[12px] text-neutral-500 dark:text-neutral-400">
+            Latest Action{lastActionDate ? ` • ${formatDate(lastActionDate)}` : ""}
+          </div>
+
+          {/* Action text (clamped) */}
           <p
             className="text-[13px] leading-5"
+            title={lastActionText}
             style={{
               display: "-webkit-box",
               WebkitLineClamp: 3,
@@ -509,8 +518,10 @@ function BillResultCard({ bill, onOpen }) {
               minHeight: "3.75rem",
             }}
           >
-            {latest || "—"}
+            {lastActionText || "—"}
           </p>
+
+          {/* Introduced line */}
           <div className="mt-auto pt-3 text-[12px] text-neutral-600 dark:text-neutral-400">
             Introduced {formatDate(introduced)}
           </div>

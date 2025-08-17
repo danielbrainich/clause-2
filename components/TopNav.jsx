@@ -9,7 +9,7 @@ export default function TopNav() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
         <section className="my-2">
           <h1 className="text-[26px] font-semibold tracking-[-0.01em]">
-            Capitol Drama
+            Capitol Ethics
           </h1>
           <p className="text-[13px] text-neutral-600 dark:text-neutral-400">
             A live feed of House & Senate ethics actions{" "}
