@@ -1,3 +1,4 @@
+// app/api/ethics/refresh/route.js
 import { NextResponse } from "next/server";
 import { ETHICS_COMMITTEES, billKey } from "@/lib/ethicsCommittee";
 import { loadStore, saveStore } from "@/lib/ethicsCommitteeStore";
@@ -10,7 +11,6 @@ async function fetchJSON(url, opts = {}) {
 
 function isoFromDays(days) {
   const d = new Date(Date.now() - days * 86400000);
-  // Congress.gov wants Zulu midnight; looseness here is fine
   return `${d.toISOString().slice(0, 10)}T00:00:00Z`;
 }
 
@@ -34,9 +34,7 @@ export async function GET(req) {
       const offset = page * limit;
       const listURL =
         `https://api.congress.gov/v3/committee/${chamber}/${code}/bills` +
-        `?format=json&limit=${limit}&offset=${offset}&fromDateTime=${encodeURIComponent(
-          fromDateTime
-        )}` +
+        `?format=json&limit=${limit}&offset=${offset}&fromDateTime=${encodeURIComponent(fromDateTime)}` +
         `&api_key=${apiKey}`;
 
       let data;
@@ -48,14 +46,7 @@ export async function GET(req) {
       }
 
       const bills = data?.["committee-bills"]?.bills ?? [];
-      if (log)
-        console.log(
-          "[ethics/refresh] %s/%s page=%d rows=%d",
-          chamber,
-          code,
-          page,
-          bills.length
-        );
+      if (log) console.log("[ethics/refresh] %s/%s page=%d rows=%d", chamber, code, page, bills.length);
       if (bills.length === 0) break;
 
       for (const row of bills) {
@@ -64,9 +55,9 @@ export async function GET(req) {
           type: String(row.type || "").toUpperCase(),
           number: row.number,
           relationshipType: row.relationshipType || null, // "Referred to", etc.
-          committeeActionDate: row.actionDate || null, // when it hit the committee
+          committeeActionDate: row.actionDate || null,   // when it hit the committee
           committee: { chamber, code },
-          // will enrich below:
+          // enrichment targets:
           title: null,
           latestAction: null,
           originChamber: null,
@@ -75,13 +66,21 @@ export async function GET(req) {
           detailUrl: row.url || null,
         };
 
-        // Optional enrichment: fetch bill detail for title/latestAction
-        if (wide && base.detailUrl) {
+        // Compute key FIRST, then look up what we already have
+        const key = billKey(base);
+        const prev = store.map.get(key);
+
+        // Decide if we need a detail fetch (only when wide && changed updateDate)
+        const needsDetail =
+          wide &&
+          !!base.detailUrl &&
+          (!prev || prev.updateDate !== base.updateDate);
+
+        if (needsDetail) {
           try {
-            const detail = await fetchJSON(
-              `${base.detailUrl}&api_key=${apiKey}`,
-              { next: { revalidate: 900 } }
-            );
+            const detail = await fetchJSON(`${base.detailUrl}&api_key=${apiKey}`, {
+              next: { revalidate: 900 },
+            });
             const b = detail?.bill ?? detail ?? {};
             base.title = b.title || b.titleWithoutNumber || null;
             base.latestAction = b.latestAction || null;
@@ -91,12 +90,26 @@ export async function GET(req) {
           } catch (e) {
             if (log) console.warn("[ethics/refresh] detail err:", e.message);
           }
+        } else {
+          // No detail fetch — keep any previously enriched fields
+          if (prev) {
+            base.title = prev.title ?? base.title;
+            base.latestAction = prev.latestAction ?? base.latestAction;
+            base.originChamber = prev.originChamber ?? base.originChamber;
+            base.originChamberCode = prev.originChamberCode ?? base.originChamberCode;
+            // keep the most recent updateDate we know about
+            base.updateDate = prev.updateDate ?? base.updateDate;
+          }
         }
 
-        const key = billKey(base);
-        const prev = store.map.get(key);
-        // make sure we keep the most recent committeeActionDate we’ve seen
-        const merged = { ...(prev || {}), ...base, lastCached: Date.now() };
+        // Merge with any existing record; keep the newest committeeActionDate
+        const merged = {
+          ...(prev || {}),
+          ...base,
+          committeeActionDate: newerDate(prev?.committeeActionDate, base.committeeActionDate),
+          lastCached: Date.now(),
+        };
+
         store.map.set(key, merged);
         addedOrUpdated++;
       }
@@ -104,6 +117,7 @@ export async function GET(req) {
   }
 
   if (confirm) await saveStore(store);
+
   return NextResponse.json({
     ok: true,
     mode: "ethics-committee-refresh",
@@ -112,4 +126,11 @@ export async function GET(req) {
     confirm,
     addedOrUpdated,
   });
+}
+
+// Helper: return the later of two ISO date strings (or whichever exists)
+function newerDate(a, b) {
+  if (!a) return b || null;
+  if (!b) return a || null;
+  return a > b ? a : b;
 }
