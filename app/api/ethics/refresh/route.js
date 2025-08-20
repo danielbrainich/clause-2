@@ -1,149 +1,115 @@
 import { NextResponse } from "next/server";
-import {
-  pickBillFields,
-  quickEthicsFromList,
-  ETHICS_COMMITTEE_NAME_RE,
-  isCongressType,
-} from "@/lib/ethics-filter";
-import { fetchBillCommittees } from "@/lib/congress-utils";
-import { upsertManyFile } from "@/lib/discipline-store-file";
+import { ETHICS_COMMITTEES, billKey } from "@/lib/ethicsCommittee";
+import { loadStore, saveStore } from "@/lib/ethicsCommitteeStore";
 
-export const dynamic = "force-dynamic";
+async function fetchJSON(url, opts = {}) {
+  const r = await fetch(url, opts);
+  if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
+  return r.json();
+}
 
-const API_BASE = "https://api.congress.gov/v3";
+function isoFromDays(days) {
+  const d = new Date(Date.now() - days * 86400000);
+  // Congress.gov wants Zulu midnight; looseness here is fine
+  return `${d.toISOString().slice(0, 10)}T00:00:00Z`;
+}
 
 export async function GET(req) {
-  const apiKey = process.env.CONGRESS_GOV_API_KEY;
-  if (!apiKey) {
-    return NextResponse.json(
-      { ok: false, error: "Missing CONGRESS_GOV_API_KEY" },
-      { status: 500 }
-    );
-  }
+  const { searchParams } = new URL(req.url);
+  const days = Number(searchParams.get("days") ?? 30);
+  const limit = Number(searchParams.get("limit") ?? 250);
+  const pages = Number(searchParams.get("pages") ?? 200);
+  const confirm = searchParams.get("confirm") === "1";
+  const wide = searchParams.get("wide") === "1";
+  const log = searchParams.get("log") === "1";
 
-  const url = new URL(req.url);
-  const wide = url.searchParams.get("wide") === "1"; // opt-in to year-long windows
-  const MAX_DAYS = wide ? 365 : 30; // default cap is 30d unless wide=1
-  const DAYS = Math.max(
-    1,
-    Math.min(MAX_DAYS, Number(url.searchParams.get("days") || 2))
-  );
+  const fromDateTime = searchParams.get("fromDateTime") || isoFromDays(days);
+  const apiKey = process.env.CONGRESS_GOV_API_KEY || "";
 
-  const LIMIT = Math.max(
-    10,
-    Math.min(250, Number(url.searchParams.get("limit") || 200))
-  );
-  const PAGES = Math.max(
-    1,
-    Math.min(40, Number(url.searchParams.get("pages") || 4))
-  );
+  const store = await loadStore();
+  let addedOrUpdated = 0;
 
-  const CONFIRM = url.searchParams.get("confirm") === "1"; // committee-verify (slower, more accurate)
-  const TYPES = (url.searchParams.get("types") || "hres,sres")
-    .split(",")
-    .map((t) => t.trim().toLowerCase())
-    .filter(Boolean);
+  for (const { chamber, code } of ETHICS_COMMITTEES) {
+    for (let page = 0; page < pages; page++) {
+      const offset = page * limit;
+      const listURL =
+        `https://api.congress.gov/v3/committee/${chamber}/${code}/bills` +
+        `?format=json&limit=${limit}&offset=${offset}&fromDateTime=${encodeURIComponent(
+          fromDateTime
+        )}` +
+        `&api_key=${apiKey}`;
 
-  const LOG = url.searchParams.get("log") === "1";
-  const log = (...args) => {
-    if (LOG) console.log("[ethics/refresh]", ...args);
-  };
-
-  const since = new Date(Date.now() - DAYS * 86_400_000);
-  const found = [];
-  const seen = new Set();
-
-  for (const type of TYPES) {
-    let offset = 0;
-    for (let page = 0; page < PAGES; page++) {
-      const u = new URL(`${API_BASE}/bill`);
-      u.searchParams.set("billType", type.toLowerCase()); // e.g., hres, sres
-      u.searchParams.set("api_key", apiKey);
-      u.searchParams.set("format", "json");
-      u.searchParams.set("limit", String(LIMIT));
-      u.searchParams.set("offset", String(offset));
-      u.searchParams.set("sort", "updateDate+desc");
-
-      const r = await fetch(u.toString(), { cache: "no-store" });
-      if (!r.ok) {
-        const sample = await r
-          .text()
-          .then((s) => s.slice(0, 300))
-          .catch(() => "");
-        log(`list fetch failed type=${type} status=${r.status}`);
-        return NextResponse.json(
-          { ok: false, where: "list", status: r.status, sample },
-          { status: 502 }
-        );
+      let data;
+      try {
+        data = await fetchJSON(listURL, { cache: "no-store" });
+      } catch (e) {
+        if (log) console.warn("[ethics/refresh] list err:", e.message);
+        break;
       }
 
-      const j = await r.json();
-      const bills = Array.isArray(j?.bills) ? j.bills : [];
-      log(`type=${type} page=${page} offset=${offset} rows=${bills.length}`);
+      const bills = data?.["committee-bills"]?.bills ?? [];
+      if (log)
+        console.log(
+          "[ethics/refresh] %s/%s page=%d rows=%d",
+          chamber,
+          code,
+          page,
+          bills.length
+        );
       if (bills.length === 0) break;
 
-      let anyInWindow = false;
-      let keptThisPage = 0;
+      for (const row of bills) {
+        const base = {
+          congress: row.congress,
+          type: String(row.type || "").toUpperCase(),
+          number: row.number,
+          relationshipType: row.relationshipType || null, // "Referred to", etc.
+          committeeActionDate: row.actionDate || null, // when it hit the committee
+          committee: { chamber, code },
+          // will enrich below:
+          title: null,
+          latestAction: null,
+          originChamber: null,
+          originChamberCode: null,
+          updateDate: row.updateDate || null,
+          detailUrl: row.url || null,
+        };
 
-      for (const b of bills) {
-        try {
-          if (!isCongressType(b?.type)) continue;
-
-          const ladStr = b?.latestAction?.actionDate;
-          const lad = ladStr ? new Date(ladStr) : null;
-          if (!lad || lad < since) continue;
-          anyInWindow = true;
-
-          let keep = quickEthicsFromList(b); // fast: matches latestAction for Ethics referral
-
-          // If not obvious from latestAction, optionally confirm via committees subresource
-          if (!keep && CONFIRM) {
-            const committees = await fetchBillCommittees({
-              congress: b.congress,
-              type: b.type,
-              number: b.number,
-              apiKey,
-            });
-            if (
-              Array.isArray(committees) &&
-              committees.some((c) =>
-                ETHICS_COMMITTEE_NAME_RE.test(String(c?.name || ""))
-              )
-            ) {
-              keep = true;
-            }
+        // Optional enrichment: fetch bill detail for title/latestAction
+        if (wide && base.detailUrl) {
+          try {
+            const detail = await fetchJSON(
+              `${base.detailUrl}&api_key=${apiKey}`,
+              { next: { revalidate: 900 } }
+            );
+            const b = detail?.bill ?? detail ?? {};
+            base.title = b.title || b.titleWithoutNumber || null;
+            base.latestAction = b.latestAction || null;
+            base.originChamber = b.originChamber || b.chamber || null;
+            base.originChamberCode = b.originChamberCode || null;
+            base.updateDate = b.updateDate || base.updateDate;
+          } catch (e) {
+            if (log) console.warn("[ethics/refresh] detail err:", e.message);
           }
-
-          if (!keep) continue;
-
-          const key = `${b.congress}-${String(b.type).toUpperCase()}-${
-            b.number
-          }`;
-          if (seen.has(key)) continue;
-          seen.add(key);
-
-          found.push(pickBillFields(b));
-          keptThisPage++;
-        } catch {
-          // ignore row errors
         }
-      }
 
-      log(`keptThisPage=${keptThisPage} anyInWindow=${anyInWindow}`);
-      if (!anyInWindow) break;
-      offset += LIMIT;
+        const key = billKey(base);
+        const prev = store.map.get(key);
+        // make sure we keep the most recent committeeActionDate we’ve seen
+        const merged = { ...(prev || {}), ...base, lastCached: Date.now() };
+        store.map.set(key, merged);
+        addedOrUpdated++;
+      }
     }
   }
 
-  if (found.length) {
-    await upsertManyFile(found); // add/update items in your cache
-  }
-
+  if (confirm) await saveStore(store);
   return NextResponse.json({
     ok: true,
-    mode: "ethics-refresh",
-    days: DAYS,
-    confirm: CONFIRM,
-    addedOrUpdated: found.length,
+    mode: "ethics-committee-refresh",
+    days,
+    fromDateTime,
+    confirm,
+    addedOrUpdated,
   });
 }
