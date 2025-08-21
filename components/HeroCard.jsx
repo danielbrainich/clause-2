@@ -26,7 +26,7 @@ export default function HeroCard({
               />
             </div>
             <figcaption className="mt-2 text-center text-[12px] text-neutral-500 dark:text-neutral-400">
-              Pictured: Expelled U.S. Representative {" "}
+              Pictured: Disgraced U.S. Representative{" "}
               <a
                 href="https://thehill.com/homenews/house/4338365-george-santoss-historic-rise-fall/"
                 target="_blank"
@@ -51,7 +51,7 @@ export default function HeroCard({
             Committee on Ethics.
           </p>
           <p className="mt-2 text-[13.5px] leading-6 text-neutral-700 dark:text-neutral-300">
-            This app provides a live feed of the activities of these two
+            This app provides a live feed of the activities of those two
             committees. It includes expulsions, censures, reprimands, rule
             changes, and more. Click any item in the feed for bill details and
             full text. Search for any Senator or Representative to see if
@@ -59,8 +59,8 @@ export default function HeroCard({
           </p>
           <p className="mt-2 text-[13.5px] leading-6 text-neutral-700 dark:text-neutral-300">
             Because transparency and accountability are essential to a
-            functioning republic. And because Capitol Hill drama is fun
-            to follow 🍿
+            functioning republic. And because Capitol Hill drama is fun to
+            follow 🍿
           </p>
 
           {/* Full clause quote */}
