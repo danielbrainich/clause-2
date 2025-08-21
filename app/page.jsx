@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import { cleanActionString } from "@/app/utils/utils";
+import HeroCard from "@/components/HeroCard";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -159,6 +160,8 @@ export default function Home() {
 
   return (
     <main className={`${inter.className} mx-auto max-w-7xl px-4 py-6`}>
+      <HeroCard />
+
       <div className="grid gap-5 [grid-template-columns:repeat(auto-fill,minmax(300px,1fr))]">
         {items.map((bill, idx) => {
           const lastActionText = cleanActionString(bill?.latestAction?.text);
