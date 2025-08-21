@@ -8,7 +8,7 @@ import SearchProvider from "@/components/search/SearchProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Article One",
+  title: "Clause 2",
   description: "Legislative tracking",
 };
 

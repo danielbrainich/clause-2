@@ -18,7 +18,7 @@ export default function TopNav() {
             <Image
               src="/clause-2-small.png"
               alt="Clause 2"
-              width={160} // tweak as needed
+              width={160}
               height={36}
               priority
               className="h-8 w-auto"
