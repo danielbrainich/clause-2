@@ -41,6 +41,11 @@ export default function HeroCard({
 
         {/* Text (2/3 on lg+) */}
         <div className="lg:col-span-2">
+          <div className="justify-self-center">
+            <p className="sm:block text-[13px] md:text-[15px] font-semibold tracking-[-0.01em] text-neutral-700 dark:text-neutral-200">
+              Clause 2 - A live feed of House and Senate ethics actions
+            </p>
+          </div>
           <p className="mt-2 text-[13.5px] leading-6 text-neutral-700 dark:text-neutral-300">
             <span className="whitespace-nowrap">
               Article I, Section 5, Clause 2
@@ -58,9 +63,8 @@ export default function HeroCard({
             they’ve sponsored or faced a censure of their own.
           </p>
           <p className="mt-2 text-[13.5px] leading-6 text-neutral-700 dark:text-neutral-300">
-            Transparency and accountability are essential to a
-            functioning republic. And  Capitol Hill drama is fun to
-            follow 🍿
+            Transparency and accountability are essential to a functioning
+            republic. And Capitol Hill drama is fun to follow 🍿
           </p>
 
           {/* Full clause quote */}
