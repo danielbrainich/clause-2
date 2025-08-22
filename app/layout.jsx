@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100`}>
+      <body className={`light bg-neutral-50 text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100`}>
         <ThemeProvider>
           <SearchProvider>
             <TopNav />
