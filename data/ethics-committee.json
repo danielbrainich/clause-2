@@ -1,5 +1,5 @@
 {
-  "lastUpdated": 1755659838804,
+  "lastUpdated": 1755825651853,
   "map": {
     "112:HR:3774": {
       "congress": 112,
@@ -20,7 +20,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-14T14:18:50Z",
       "detailUrl": "https://api.congress.gov/v3/bill/112/hr/3774?format=json",
-      "lastCached": 1755659712143
+      "lastCached": 1755790627818,
+      "sponsorIds": [
+        "J000285"
+      ],
+      "cosponsorIds": []
     },
     "109:HR:2412": {
       "congress": 109,
@@ -41,7 +45,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-15T18:00:38Z",
       "detailUrl": "https://api.congress.gov/v3/bill/109/hr/2412?format=json",
-      "lastCached": 1755659712512
+      "lastCached": 1755790627818,
+      "sponsorIds": [
+        "M000627"
+      ],
+      "cosponsorIds": []
     },
     "109:HR:4575": {
       "congress": 109,
@@ -62,7 +70,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-15T17:58:17Z",
       "detailUrl": "https://api.congress.gov/v3/bill/109/hr/4575?format=json",
-      "lastCached": 1755659712846
+      "lastCached": 1755790627819,
+      "sponsorIds": [
+        "S001144"
+      ],
+      "cosponsorIds": []
     },
     "109:HRES:686": {
       "congress": 109,
@@ -83,7 +95,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T13:31:28Z",
       "detailUrl": "https://api.congress.gov/v3/bill/109/hres/686?format=json",
-      "lastCached": 1755659713151
+      "lastCached": 1755790627820,
+      "sponsorIds": [
+        "S000480"
+      ],
+      "cosponsorIds": []
     },
     "109:HR:4667": {
       "congress": 109,
@@ -104,7 +120,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-15T17:56:55Z",
       "detailUrl": "https://api.congress.gov/v3/bill/109/hr/4667?format=json",
-      "lastCached": 1755659713461
+      "lastCached": 1755790627820,
+      "sponsorIds": [
+        "F000451"
+      ],
+      "cosponsorIds": []
     },
     "109:HRES:659": {
       "congress": 109,
@@ -125,7 +145,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T13:31:28Z",
       "detailUrl": "https://api.congress.gov/v3/bill/109/hres/659?format=json",
-      "lastCached": 1755659713766
+      "lastCached": 1755790627821,
+      "sponsorIds": [
+        "O000007"
+      ],
+      "cosponsorIds": []
     },
     "109:HR:4682": {
       "congress": 109,
@@ -146,7 +170,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-15T18:00:17Z",
       "detailUrl": "https://api.congress.gov/v3/bill/109/hr/4682?format=json",
-      "lastCached": 1755659714073
+      "lastCached": 1755790627821,
+      "sponsorIds": [
+        "P000197"
+      ],
+      "cosponsorIds": []
     },
     "109:HR:4988": {
       "congress": 109,
@@ -167,7 +195,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-15T17:57:57Z",
       "detailUrl": "https://api.congress.gov/v3/bill/109/hr/4988?format=json",
-      "lastCached": 1755659714381
+      "lastCached": 1755790627822,
+      "sponsorIds": [
+        "H000444"
+      ],
+      "cosponsorIds": []
     },
     "109:HR:4975": {
       "congress": 109,
@@ -189,7 +221,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T13:33:51Z",
       "detailUrl": "https://api.congress.gov/v3/bill/109/hr/4975?format=json",
-      "lastCached": 1755659714694
+      "lastCached": 1755790627825,
+      "sponsorIds": [
+        "D000492"
+      ],
+      "cosponsorIds": []
     },
     "109:HR:5667": {
       "congress": 109,
@@ -210,7 +246,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-15T17:57:01Z",
       "detailUrl": "https://api.congress.gov/v3/bill/109/hr/5667?format=json",
-      "lastCached": 1755659714965
+      "lastCached": 1755790627826,
+      "sponsorIds": [
+        "S000749"
+      ],
+      "cosponsorIds": []
     },
     "109:HRES:1065": {
       "congress": 109,
@@ -231,7 +271,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T13:31:39Z",
       "detailUrl": "https://api.congress.gov/v3/bill/109/hres/1065?format=json",
-      "lastCached": 1755659715275
+      "lastCached": 1755790627826,
+      "sponsorIds": [
+        "P000197"
+      ],
+      "cosponsorIds": []
     },
     "107:HRES:387": {
       "congress": 107,
@@ -252,7 +296,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T13:38:33Z",
       "detailUrl": "https://api.congress.gov/v3/bill/107/hres/387?format=json",
-      "lastCached": 1755659715521
+      "lastCached": 1755790627827,
+      "sponsorIds": [
+        "S000244"
+      ],
+      "cosponsorIds": []
     },
     "107:HRES:389": {
       "congress": 107,
@@ -273,7 +321,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T16:42:56Z",
       "detailUrl": "https://api.congress.gov/v3/bill/107/hres/389?format=json",
-      "lastCached": 1755659716065
+      "lastCached": 1755790627828,
+      "sponsorIds": [
+        "S000030"
+      ],
+      "cosponsorIds": []
     },
     "107:HRES:495": {
       "congress": 107,
@@ -295,7 +347,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T13:40:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/107/hres/495?format=json",
-      "lastCached": 1755659716279
+      "lastCached": 1755790627828,
+      "sponsorIds": [
+        "H000444"
+      ],
+      "cosponsorIds": []
     },
     "111:HRES:276": {
       "congress": 111,
@@ -316,7 +372,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:18:40Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hres/276?format=json",
-      "lastCached": 1755659716636
+      "lastCached": 1755790627829,
+      "sponsorIds": [
+        "N000181"
+      ],
+      "cosponsorIds": []
     },
     "111:HR:1679": {
       "congress": 111,
@@ -337,7 +397,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:36:10Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hr/1679?format=json",
-      "lastCached": 1755659717495
+      "lastCached": 1755790627832,
+      "sponsorIds": [
+        "B001227"
+      ],
+      "cosponsorIds": []
     },
     "111:HRES:85": {
       "congress": 111,
@@ -358,7 +422,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hres/85?format=json",
-      "lastCached": 1755659716970
+      "lastCached": 1755790627830,
+      "sponsorIds": [
+        "F000444"
+      ],
+      "cosponsorIds": []
     },
     "111:HR:682": {
       "congress": 111,
@@ -379,7 +447,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-14T16:15:07Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hr/682?format=json",
-      "lastCached": 1755659717239
+      "lastCached": 1755790627831,
+      "sponsorIds": [
+        "B001229"
+      ],
+      "cosponsorIds": []
     },
     "111:HRES:100": {
       "congress": 111,
@@ -400,7 +472,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:18:40Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hres/100?format=json",
-      "lastCached": 1755659717495
+      "lastCached": 1755790627831,
+      "sponsorIds": [
+        "P000586"
+      ],
+      "cosponsorIds": []
     },
     "111:HRES:440": {
       "congress": 111,
@@ -421,7 +497,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:18:40Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hres/440?format=json",
-      "lastCached": 1755659717750
+      "lastCached": 1755790627833,
+      "sponsorIds": [
+        "C001075"
+      ],
+      "cosponsorIds": []
     },
     "111:HR:3268": {
       "congress": 111,
@@ -442,7 +522,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-14T16:16:17Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hr/3268?format=json",
-      "lastCached": 1755659726571
+      "lastCached": 1755790627833,
+      "sponsorIds": [
+        "R000578"
+      ],
+      "cosponsorIds": []
     },
     "111:HRES:687": {
       "congress": 111,
@@ -463,7 +547,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:18:40Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hres/687?format=json",
-      "lastCached": 1755659726988
+      "lastCached": 1755790627834,
+      "sponsorIds": [
+        "A000361"
+      ],
+      "cosponsorIds": []
     },
     "111:HRES:805": {
       "congress": 111,
@@ -485,7 +573,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T16:19:54Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hres/805?format=json",
-      "lastCached": 1755659727154
+      "lastCached": 1755790627835,
+      "sponsorIds": [
+        "C001051"
+      ],
+      "cosponsorIds": []
     },
     "111:HRES:1164": {
       "congress": 111,
@@ -506,7 +598,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T16:20:24Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hres/1164?format=json",
-      "lastCached": 1755659727489
+      "lastCached": 1755790627836,
+      "sponsorIds": [
+        "B000589"
+      ],
+      "cosponsorIds": []
     },
     "111:HRES:1220": {
       "congress": 111,
@@ -528,7 +624,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T16:20:16Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hres/1220?format=json",
-      "lastCached": 1755659727795
+      "lastCached": 1755790627837,
+      "sponsorIds": [
+        "F000444"
+      ],
+      "cosponsorIds": []
     },
     "111:HRES:1221": {
       "congress": 111,
@@ -549,7 +649,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:18:40Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hres/1221?format=json",
-      "lastCached": 1755659728103
+      "lastCached": 1755790627837,
+      "sponsorIds": [
+        "C001076"
+      ],
+      "cosponsorIds": []
     },
     "111:HR:4983": {
       "congress": 111,
@@ -570,7 +674,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-14T16:17:03Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hr/4983?format=json",
-      "lastCached": 1755659728409
+      "lastCached": 1755790627838,
+      "sponsorIds": [
+        "Q000023"
+      ],
+      "cosponsorIds": []
     },
     "111:HRES:1193": {
       "congress": 111,
@@ -592,7 +700,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T16:20:24Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hres/1193?format=json",
-      "lastCached": 1755659728724
+      "lastCached": 1755790627838,
+      "sponsorIds": [
+        "F000444"
+      ],
+      "cosponsorIds": []
     },
     "111:HRES:1147": {
       "congress": 111,
@@ -613,7 +725,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T16:20:24Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hres/1147?format=json",
-      "lastCached": 1755659729017
+      "lastCached": 1755790627839,
+      "sponsorIds": [
+        "S001175"
+      ],
+      "cosponsorIds": []
     },
     "111:HRES:1249": {
       "congress": 111,
@@ -635,7 +751,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hres/1249?format=json",
-      "lastCached": 1755659729328
+      "lastCached": 1755790627840,
+      "sponsorIds": [
+        "B000589"
+      ],
+      "cosponsorIds": []
     },
     "111:HRES:1255": {
       "congress": 111,
@@ -657,7 +777,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hres/1255?format=json",
-      "lastCached": 1755659729637
+      "lastCached": 1755790627840,
+      "sponsorIds": [
+        "F000444"
+      ],
+      "cosponsorIds": []
     },
     "111:HRES:1287": {
       "congress": 111,
@@ -679,7 +803,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hres/1287?format=json",
-      "lastCached": 1755659729999
+      "lastCached": 1755790627841,
+      "sponsorIds": [
+        "F000444"
+      ],
+      "cosponsorIds": []
     },
     "111:HR:5997": {
       "congress": 111,
@@ -700,7 +828,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-14T16:17:36Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hr/5997?format=json",
-      "lastCached": 1755659730404
+      "lastCached": 1755790627841,
+      "sponsorIds": [
+        "T000463"
+      ],
+      "cosponsorIds": []
     },
     "111:HRES:1542": {
       "congress": 111,
@@ -721,7 +853,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T16:20:33Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hres/1542?format=json",
-      "lastCached": 1755659730665
+      "lastCached": 1755790627842,
+      "sponsorIds": [
+        "P000597"
+      ],
+      "cosponsorIds": []
     },
     "111:HRES:1737": {
       "congress": 111,
@@ -743,7 +879,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:36:31Z",
       "detailUrl": "https://api.congress.gov/v3/bill/111/hres/1737?format=json",
-      "lastCached": 1755659730978
+      "lastCached": 1755790627843,
+      "sponsorIds": [
+        "L000397"
+      ],
+      "cosponsorIds": []
     },
     "110:HR:97": {
       "congress": 110,
@@ -764,7 +904,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-14T18:07:50Z",
       "detailUrl": "https://api.congress.gov/v3/bill/110/hr/97?format=json",
-      "lastCached": 1755659731297
+      "lastCached": 1755790627843,
+      "sponsorIds": [
+        "C000243"
+      ],
+      "cosponsorIds": []
     },
     "108:HR:5101": {
       "congress": 108,
@@ -785,7 +929,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-18T19:02:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/108/hr/5101?format=json",
-      "lastCached": 1755659731603
+      "lastCached": 1755790627845,
+      "sponsorIds": [
+        "M000627"
+      ],
+      "cosponsorIds": []
     },
     "110:HRES:170": {
       "congress": 110,
@@ -806,7 +954,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T16:18:45Z",
       "detailUrl": "https://api.congress.gov/v3/bill/110/hres/170?format=json",
-      "lastCached": 1755659731900
+      "lastCached": 1755790627846,
+      "sponsorIds": [
+        "P000258"
+      ],
+      "cosponsorIds": []
     },
     "110:HRES:92": {
       "congress": 110,
@@ -827,7 +979,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/110/hres/92?format=json",
-      "lastCached": 1755659732224
+      "lastCached": 1755790627846,
+      "sponsorIds": [
+        "I000056"
+      ],
+      "cosponsorIds": []
     },
     "110:HRES:363": {
       "congress": 110,
@@ -849,7 +1005,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:34:46Z",
       "detailUrl": "https://api.congress.gov/v3/bill/110/hres/363?format=json",
-      "lastCached": 1755659732454
+      "lastCached": 1755790627847,
+      "sponsorIds": [
+        "P000258"
+      ],
+      "cosponsorIds": []
     },
     "110:HR:2341": {
       "congress": 110,
@@ -870,7 +1030,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-14T18:08:56Z",
       "detailUrl": "https://api.congress.gov/v3/bill/110/hr/2341?format=json",
-      "lastCached": 1755659732812
+      "lastCached": 1755790627848,
+      "sponsorIds": [
+        "B001229"
+      ],
+      "cosponsorIds": []
     },
     "110:HRES:1072": {
       "congress": 110,
@@ -891,7 +1055,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/110/hres/1072?format=json",
-      "lastCached": 1755659733119
+      "lastCached": 1755790627849,
+      "sponsorIds": [
+        "B001258"
+      ],
+      "cosponsorIds": []
     },
     "110:HR:6608": {
       "congress": 110,
@@ -912,7 +1080,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:34:46Z",
       "detailUrl": "https://api.congress.gov/v3/bill/110/hr/6608?format=json",
-      "lastCached": 1755659733224
+      "lastCached": 1755790627850,
+      "sponsorIds": [
+        "B001227"
+      ],
+      "cosponsorIds": []
     },
     "113:HR:4245": {
       "congress": 113,
@@ -933,7 +1105,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-12T18:39:53Z",
       "detailUrl": "https://api.congress.gov/v3/bill/113/hr/4245?format=json",
-      "lastCached": 1755659733530
+      "lastCached": 1755790627850,
+      "sponsorIds": [
+        "Q000023"
+      ],
+      "cosponsorIds": []
     },
     "103:HRES:376": {
       "congress": 103,
@@ -954,7 +1130,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/103/hres/376?format=json",
-      "lastCached": 1755659733837
+      "lastCached": 1755790627852,
+      "sponsorIds": [
+        "J000177"
+      ],
+      "cosponsorIds": []
     },
     "103:HR:2735": {
       "congress": 103,
@@ -975,7 +1155,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T17:25:26Z",
       "detailUrl": "https://api.congress.gov/v3/bill/103/hr/2735?format=json",
-      "lastCached": 1755659734147
+      "lastCached": 1755790627853,
+      "sponsorIds": [
+        "L000420"
+      ],
+      "cosponsorIds": []
     },
     "103:HRES:231": {
       "congress": 103,
@@ -996,7 +1180,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/103/hres/231?format=json",
-      "lastCached": 1755659734447
+      "lastCached": 1755790627855,
+      "sponsorIds": [
+        "O000007"
+      ],
+      "cosponsorIds": []
     },
     "103:HR:2835": {
       "congress": 103,
@@ -1017,7 +1205,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T17:25:39Z",
       "detailUrl": "https://api.congress.gov/v3/bill/103/hr/2835?format=json",
-      "lastCached": 1755659734717
+      "lastCached": 1755790627856,
+      "sponsorIds": [
+        "S000332"
+      ],
+      "cosponsorIds": []
     },
     "113:HCONRES:113": {
       "congress": 113,
@@ -1038,7 +1230,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T02:11:40Z",
       "detailUrl": "https://api.congress.gov/v3/bill/113/hconres/113?format=json",
-      "lastCached": 1755659734988
+      "lastCached": 1755790627856,
+      "sponsorIds": [
+        "C001075"
+      ],
+      "cosponsorIds": []
     },
     "116:HRES:157": {
       "congress": 116,
@@ -1059,7 +1255,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T02:50:39Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hres/157?format=json",
-      "lastCached": 1755659735282
+      "lastCached": 1755790627857,
+      "sponsorIds": [
+        "C001119"
+      ],
+      "cosponsorIds": []
     },
     "104:HR:119": {
       "congress": 104,
@@ -1080,7 +1280,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T17:33:59Z",
       "detailUrl": "https://api.congress.gov/v3/bill/104/hr/119?format=json",
-      "lastCached": 1755659735600
+      "lastCached": 1755790627858,
+      "sponsorIds": [
+        "B000997"
+      ],
+      "cosponsorIds": []
     },
     "103:HRES:448": {
       "congress": 103,
@@ -1101,7 +1305,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/103/hres/448?format=json",
-      "lastCached": 1755659735988
+      "lastCached": 1755790627859,
+      "sponsorIds": [
+        "R000178"
+      ],
+      "cosponsorIds": []
     },
     "104:HRES:40": {
       "congress": 104,
@@ -1122,7 +1330,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:27:46Z",
       "detailUrl": "https://api.congress.gov/v3/bill/104/hres/40?format=json",
-      "lastCached": 1755659736602
+      "lastCached": 1755790627860,
+      "sponsorIds": [
+        "B000997"
+      ],
+      "cosponsorIds": []
     },
     "110:HRES:1515": {
       "congress": 110,
@@ -1143,7 +1355,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:24:57Z",
       "detailUrl": "https://api.congress.gov/v3/bill/110/hres/1515?format=json",
-      "lastCached": 1755659736952
+      "lastCached": 1755790627861,
+      "sponsorIds": [
+        "S001167"
+      ],
+      "cosponsorIds": []
     },
     "104:HR:2072": {
       "congress": 104,
@@ -1164,7 +1380,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-02-04T16:54:13Z",
       "detailUrl": "https://api.congress.gov/v3/bill/104/hr/2072?format=json",
-      "lastCached": 1755659737318
+      "lastCached": 1755790627862,
+      "sponsorIds": [
+        "S000587"
+      ],
+      "cosponsorIds": []
     },
     "104:HRES:214": {
       "congress": 104,
@@ -1185,7 +1405,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:27:46Z",
       "detailUrl": "https://api.congress.gov/v3/bill/104/hres/214?format=json",
-      "lastCached": 1755659737829
+      "lastCached": 1755790627863,
+      "sponsorIds": [
+        "G000408"
+      ],
+      "cosponsorIds": []
     },
     "104:HCONRES:99": {
       "congress": 104,
@@ -1206,7 +1430,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T17:32:50Z",
       "detailUrl": "https://api.congress.gov/v3/bill/104/hconres/99?format=json",
-      "lastCached": 1755659738135
+      "lastCached": 1755790627864,
+      "sponsorIds": [
+        "B000997"
+      ],
+      "cosponsorIds": []
     },
     "104:HR:2261": {
       "congress": 104,
@@ -1227,7 +1455,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T17:36:50Z",
       "detailUrl": "https://api.congress.gov/v3/bill/104/hr/2261?format=json",
-      "lastCached": 1755659738383
+      "lastCached": 1755790627865,
+      "sponsorIds": [
+        "B000997"
+      ],
+      "cosponsorIds": []
     },
     "105:HRES:599": {
       "congress": 105,
@@ -1248,7 +1480,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T17:44:43Z",
       "detailUrl": "https://api.congress.gov/v3/bill/105/hres/599?format=json",
-      "lastCached": 1755659738753
+      "lastCached": 1755790627868,
+      "sponsorIds": [
+        "R000252"
+      ],
+      "cosponsorIds": []
     },
     "104:HRES:300": {
       "congress": 104,
@@ -1269,7 +1505,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T17:33:09Z",
       "detailUrl": "https://api.congress.gov/v3/bill/104/hres/300?format=json",
-      "lastCached": 1755659739069
+      "lastCached": 1755790627868,
+      "sponsorIds": [
+        "S000244"
+      ],
+      "cosponsorIds": []
     },
     "104:HRES:255": {
       "congress": 104,
@@ -1290,7 +1530,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T17:33:09Z",
       "detailUrl": "https://api.congress.gov/v3/bill/104/hres/255?format=json",
-      "lastCached": 1755659739366
+      "lastCached": 1755790627870,
+      "sponsorIds": [
+        "R000281"
+      ],
+      "cosponsorIds": []
     },
     "104:HRES:264": {
       "congress": 104,
@@ -1311,7 +1555,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T17:33:15Z",
       "detailUrl": "https://api.congress.gov/v3/bill/104/hres/264?format=json",
-      "lastCached": 1755659739669
+      "lastCached": 1755790627872,
+      "sponsorIds": [
+        "B001149"
+      ],
+      "cosponsorIds": []
     },
     "112:HR:1148": {
       "congress": 112,
@@ -1332,7 +1580,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-14T14:22:55Z",
       "detailUrl": "https://api.congress.gov/v3/bill/112/hr/1148?format=json",
-      "lastCached": 1755659801114
+      "lastCached": 1755790628216,
+      "sponsorIds": [
+        "W000799"
+      ],
+      "cosponsorIds": []
     },
     "104:HRES:432": {
       "congress": 104,
@@ -1353,7 +1605,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T17:33:23Z",
       "detailUrl": "https://api.congress.gov/v3/bill/104/hres/432?format=json",
-      "lastCached": 1755659740388
+      "lastCached": 1755790627874,
+      "sponsorIds": [
+        "R000281"
+      ],
+      "cosponsorIds": []
     },
     "104:HRES:433": {
       "congress": 104,
@@ -1374,7 +1630,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T17:33:23Z",
       "detailUrl": "https://api.congress.gov/v3/bill/104/hres/433?format=json",
-      "lastCached": 1755659740651
+      "lastCached": 1755790627875,
+      "sponsorIds": [
+        "M000933"
+      ],
+      "cosponsorIds": []
     },
     "104:HRES:439": {
       "congress": 104,
@@ -1395,7 +1655,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T17:33:23Z",
       "detailUrl": "https://api.congress.gov/v3/bill/104/hres/439?format=json",
-      "lastCached": 1755659741008
+      "lastCached": 1755790627875,
+      "sponsorIds": [
+        "S000587"
+      ],
+      "cosponsorIds": []
     },
     "104:HRES:134": {
       "congress": 104,
@@ -1416,7 +1680,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:27:46Z",
       "detailUrl": "https://api.congress.gov/v3/bill/104/hres/134?format=json",
-      "lastCached": 1755659741273
+      "lastCached": 1755790627876,
+      "sponsorIds": [
+        "G000408"
+      ],
+      "cosponsorIds": []
     },
     "104:HRES:66": {
       "congress": 104,
@@ -1437,7 +1705,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:27:46Z",
       "detailUrl": "https://api.congress.gov/v3/bill/104/hres/66?format=json",
-      "lastCached": 1755659741620
+      "lastCached": 1755790627876,
+      "sponsorIds": [
+        "S000587"
+      ],
+      "cosponsorIds": []
     },
     "102:HRES:395": {
       "congress": 102,
@@ -1458,7 +1730,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/102/hres/395?format=json",
-      "lastCached": 1755659742029
+      "lastCached": 1755790627878,
+      "sponsorIds": [
+        "J000163"
+      ],
+      "cosponsorIds": []
     },
     "100:HRES:119": {
       "congress": 100,
@@ -1479,7 +1755,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-07T14:47:33Z",
       "detailUrl": "https://api.congress.gov/v3/bill/100/hres/119?format=json",
-      "lastCached": 1755659742309
+      "lastCached": 1755790627879,
+      "sponsorIds": [
+        "M000834"
+      ],
+      "cosponsorIds": []
     },
     "102:HRES:393": {
       "congress": 102,
@@ -1501,7 +1781,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/102/hres/393?format=json",
-      "lastCached": 1755659742644
+      "lastCached": 1755790627880,
+      "sponsorIds": [
+        "M000473"
+      ],
+      "cosponsorIds": []
     },
     "101:HRES:440": {
       "congress": 101,
@@ -1523,7 +1807,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/101/hres/440?format=json",
-      "lastCached": 1755659742949
+      "lastCached": 1755790627881,
+      "sponsorIds": [
+        "D000373"
+      ],
+      "cosponsorIds": []
     },
     "102:HRES:476": {
       "congress": 102,
@@ -1544,7 +1832,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/102/hres/476?format=json",
-      "lastCached": 1755659743256
+      "lastCached": 1755790627882,
+      "sponsorIds": [
+        "M000404"
+      ],
+      "cosponsorIds": []
     },
     "101:HR:3660": {
       "congress": 101,
@@ -1565,7 +1857,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-02-04T16:54:13Z",
       "detailUrl": "https://api.congress.gov/v3/bill/101/hr/3660?format=json",
-      "lastCached": 1755659744896
+      "lastCached": 1755790627883,
+      "sponsorIds": [
+        "F000239"
+      ],
+      "cosponsorIds": []
     },
     "101:HR:1709": {
       "congress": 101,
@@ -1586,7 +1882,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-02T18:20:16Z",
       "detailUrl": "https://api.congress.gov/v3/bill/101/hr/1709?format=json",
-      "lastCached": 1755659745201
+      "lastCached": 1755790627884,
+      "sponsorIds": [
+        "R000482"
+      ],
+      "cosponsorIds": []
     },
     "100:HRES:252": {
       "congress": 100,
@@ -1607,7 +1907,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-07T14:47:33Z",
       "detailUrl": "https://api.congress.gov/v3/bill/100/hres/252?format=json",
-      "lastCached": 1755659745510
+      "lastCached": 1755790627885,
+      "sponsorIds": [
+        "W000068"
+      ],
+      "cosponsorIds": []
     },
     "100:HRES:335": {
       "congress": 100,
@@ -1628,7 +1932,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/100/hres/335?format=json",
-      "lastCached": 1755659745819
+      "lastCached": 1755790627886,
+      "sponsorIds": [
+        "D000373"
+      ],
+      "cosponsorIds": []
     },
     "100:HRES:380": {
       "congress": 100,
@@ -1649,7 +1957,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/100/hres/380?format=json",
-      "lastCached": 1755659746118
+      "lastCached": 1755790627887,
+      "sponsorIds": [
+        "D000373"
+      ],
+      "cosponsorIds": []
     },
     "100:HRES:170": {
       "congress": 100,
@@ -1670,7 +1982,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/100/hres/170?format=json",
-      "lastCached": 1755659746335
+      "lastCached": 1755790627888,
+      "sponsorIds": [
+        "M000834"
+      ],
+      "cosponsorIds": []
     },
     "96:HRES:378": {
       "congress": 96,
@@ -1691,7 +2007,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/96/hres/378?format=json",
-      "lastCached": 1755659746599
+      "lastCached": 1755790627889,
+      "sponsorIds": [
+        "B000371"
+      ],
+      "cosponsorIds": []
     },
     "96:HRES:27": {
       "congress": 96,
@@ -1712,7 +2032,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/96/hres/27?format=json",
-      "lastCached": 1755659746848
+      "lastCached": 1755790627891,
+      "sponsorIds": [
+        "K000319"
+      ],
+      "cosponsorIds": []
     },
     "98:HRES:265": {
       "congress": 98,
@@ -1733,7 +2057,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/98/hres/265?format=json",
-      "lastCached": 1755659747147
+      "lastCached": 1755790627892,
+      "sponsorIds": [
+        "S000948"
+      ],
+      "cosponsorIds": []
     },
     "98:HRES:266": {
       "congress": 98,
@@ -1754,7 +2082,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/98/hres/266?format=json",
-      "lastCached": 1755659747661
+      "lastCached": 1755790627892,
+      "sponsorIds": [
+        "S000948"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:4637": {
       "congress": 94,
@@ -1775,7 +2107,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:25:23Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/4637?format=json",
-      "lastCached": 1755659748221
+      "lastCached": 1755790627895,
+      "sponsorIds": [
+        "M000834"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:4636": {
       "congress": 94,
@@ -1796,7 +2132,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:25:23Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/4636?format=json",
-      "lastCached": 1755659748221
+      "lastCached": 1755790627894,
+      "sponsorIds": [
+        "M000834"
+      ],
+      "cosponsorIds": []
     },
     "94:HRES:46": {
       "congress": 94,
@@ -1817,7 +2157,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:20:34Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hres/46?format=json",
-      "lastCached": 1755659758539
+      "lastCached": 1755790627938,
+      "sponsorIds": [
+        "P000522"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:7238": {
       "congress": 94,
@@ -1838,7 +2182,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:27:07Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/7238?format=json",
-      "lastCached": 1755659748887
+      "lastCached": 1755790627897,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:2926": {
       "congress": 94,
@@ -1859,7 +2207,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:24:16Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/2926?format=json",
-      "lastCached": 1755659749195
+      "lastCached": 1755790627898,
+      "sponsorIds": [
+        "S000841"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:5627": {
       "congress": 94,
@@ -1880,7 +2232,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:26:03Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/5627?format=json",
-      "lastCached": 1755659749709
+      "lastCached": 1755790627899,
+      "sponsorIds": [
+        "S000841"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:5516": {
       "congress": 94,
@@ -1901,7 +2257,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:25:57Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/5516?format=json",
-      "lastCached": 1755659750120
+      "lastCached": 1755790627901,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:5613": {
       "congress": 94,
@@ -1922,7 +2282,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:26:03Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/5613?format=json",
-      "lastCached": 1755659750439
+      "lastCached": 1755790627903,
+      "sponsorIds": [
+        "R000012"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:6942": {
       "congress": 94,
@@ -1943,7 +2307,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:26:55Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/6942?format=json",
-      "lastCached": 1755659750733
+      "lastCached": 1755790627904,
+      "sponsorIds": [
+        "L000221"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:6943": {
       "congress": 94,
@@ -1964,7 +2332,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:26:55Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/6943?format=json",
-      "lastCached": 1755659751051
+      "lastCached": 1755790627905,
+      "sponsorIds": [
+        "L000221"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:1112": {
       "congress": 94,
@@ -1985,7 +2357,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:22:51Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/1112?format=json",
-      "lastCached": 1755659751286
+      "lastCached": 1755790627906,
+      "sponsorIds": [
+        "T000110"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:1117": {
       "congress": 94,
@@ -2006,7 +2382,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:22:51Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/1117?format=json",
-      "lastCached": 1755659751655
+      "lastCached": 1755790627908,
+      "sponsorIds": [
+        "T000200"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:3756": {
       "congress": 94,
@@ -2027,7 +2407,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:24:43Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/3756?format=json",
-      "lastCached": 1755659752370
+      "lastCached": 1755790627910,
+      "sponsorIds": [
+        "B000890"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:3788": {
       "congress": 94,
@@ -2048,7 +2432,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:24:43Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/3788?format=json",
-      "lastCached": 1755659752370
+      "lastCached": 1755790627911,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:5180": {
       "congress": 94,
@@ -2069,7 +2457,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:25:49Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/5180?format=json",
-      "lastCached": 1755659752630
+      "lastCached": 1755790627912,
+      "sponsorIds": [
+        "O000006"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:3277": {
       "congress": 94,
@@ -2090,7 +2482,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:24:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/3277?format=json",
-      "lastCached": 1755659753153
+      "lastCached": 1755790627914,
+      "sponsorIds": [
+        "R000012"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:3250": {
       "congress": 94,
@@ -2111,7 +2507,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:24:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/3250?format=json",
-      "lastCached": 1755659753153
+      "lastCached": 1755790627914,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:3249": {
       "congress": 94,
@@ -2132,7 +2532,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:24:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/3249?format=json",
-      "lastCached": 1755659753431
+      "lastCached": 1755790627915,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:4324": {
       "congress": 94,
@@ -2153,7 +2557,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:25:02Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/4324?format=json",
-      "lastCached": 1755659753694
+      "lastCached": 1755790627917,
+      "sponsorIds": [
+        "R000012"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:7466": {
       "congress": 94,
@@ -2174,7 +2582,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:27:19Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/7466?format=json",
-      "lastCached": 1755659753947
+      "lastCached": 1755790627918,
+      "sponsorIds": [
+        "R000012"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:1240": {
       "congress": 94,
@@ -2195,7 +2607,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:22:57Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/1240?format=json",
-      "lastCached": 1755659754200
+      "lastCached": 1755790627919,
+      "sponsorIds": [
+        "B000451"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:2053": {
       "congress": 94,
@@ -2216,7 +2632,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:23:33Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/2053?format=json",
-      "lastCached": 1755659754476
+      "lastCached": 1755790627921,
+      "sponsorIds": [
+        "S000841"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:3046": {
       "congress": 94,
@@ -2237,7 +2657,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:24:16Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/3046?format=json",
-      "lastCached": 1755659755444
+      "lastCached": 1755790627924,
+      "sponsorIds": [
+        "R000012"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:3048": {
       "congress": 94,
@@ -2258,7 +2682,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:24:17Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/3048?format=json",
-      "lastCached": 1755659755688
+      "lastCached": 1755790627925,
+      "sponsorIds": [
+        "R000012"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:3045": {
       "congress": 94,
@@ -2279,7 +2707,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:24:16Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/3045?format=json",
-      "lastCached": 1755659755443
+      "lastCached": 1755790627923,
+      "sponsorIds": [
+        "R000012"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:3047": {
       "congress": 94,
@@ -2300,7 +2732,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:24:16Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/3047?format=json",
-      "lastCached": 1755659755688
+      "lastCached": 1755790627925,
+      "sponsorIds": [
+        "R000012"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:4739": {
       "congress": 94,
@@ -2321,7 +2757,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:25:23Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/4739?format=json",
-      "lastCached": 1755659755954
+      "lastCached": 1755790627926,
+      "sponsorIds": [
+        "A000222"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:4740": {
       "congress": 94,
@@ -2342,7 +2782,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:25:23Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/4740?format=json",
-      "lastCached": 1755659756205
+      "lastCached": 1755790627928,
+      "sponsorIds": [
+        "A000222"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:5268": {
       "congress": 94,
@@ -2363,7 +2807,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:25:49Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/5268?format=json",
-      "lastCached": 1755659757529
+      "lastCached": 1755790627933,
+      "sponsorIds": [
+        "R000012"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:5251": {
       "congress": 94,
@@ -2384,7 +2832,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:25:49Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/5251?format=json",
-      "lastCached": 1755659756875
+      "lastCached": 1755790627930,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:5250": {
       "congress": 94,
@@ -2405,7 +2857,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:25:49Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/5250?format=json",
-      "lastCached": 1755659757285
+      "lastCached": 1755790627931,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:5249": {
       "congress": 94,
@@ -2426,7 +2882,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:25:49Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/5249?format=json",
-      "lastCached": 1755659757529
+      "lastCached": 1755790627932,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HRES:80": {
       "congress": 94,
@@ -2447,7 +2907,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:20:34Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hres/80?format=json",
-      "lastCached": 1755659757902
+      "lastCached": 1755790627934,
+      "sponsorIds": [
+        "M000349"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:3442": {
       "congress": 94,
@@ -2468,7 +2932,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:24:35Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/3442?format=json",
-      "lastCached": 1755659758538
+      "lastCached": 1755790627937,
+      "sponsorIds": [
+        "K000302"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:3464": {
       "congress": 94,
@@ -2489,7 +2957,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:24:35Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/3464?format=json",
-      "lastCached": 1755659758538
+      "lastCached": 1755790627936,
+      "sponsorIds": [
+        "M000930"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:6271": {
       "congress": 94,
@@ -2510,7 +2982,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:26:24Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/6271?format=json",
-      "lastCached": 1755659758842
+      "lastCached": 1755790627939,
+      "sponsorIds": [
+        "K000302"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:1330": {
       "congress": 94,
@@ -2531,7 +3007,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:23:04Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/1330?format=json",
-      "lastCached": 1755659759110
+      "lastCached": 1755790627940,
+      "sponsorIds": [
+        "K000302"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:4873": {
       "congress": 94,
@@ -2552,7 +3032,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:25:33Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/4873?format=json",
-      "lastCached": 1755659759641
+      "lastCached": 1755790627943,
+      "sponsorIds": [
+        "R000012"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:4909": {
       "congress": 94,
@@ -2573,7 +3057,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:25:33Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/4909?format=json",
-      "lastCached": 1755659759641
+      "lastCached": 1755790627942,
+      "sponsorIds": [
+        "H000438"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:4886": {
       "congress": 94,
@@ -2594,7 +3082,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:25:33Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/4886?format=json",
-      "lastCached": 1755659759935
+      "lastCached": 1755790627945,
+      "sponsorIds": [
+        "Y000014"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:15": {
       "congress": 94,
@@ -2615,7 +3107,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T14:20:21Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/15?format=json",
-      "lastCached": 1755659760157
+      "lastCached": 1755790627945,
+      "sponsorIds": [
+        "R000012"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:110": {
       "congress": 94,
@@ -2636,7 +3132,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:22:20Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/110?format=json",
-      "lastCached": 1755659760461
+      "lastCached": 1755790627947,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:299": {
       "congress": 94,
@@ -2657,7 +3157,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:22:27Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/299?format=json",
-      "lastCached": 1755659760766
+      "lastCached": 1755790627949,
+      "sponsorIds": [
+        "C000164"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:778": {
       "congress": 94,
@@ -2678,7 +3182,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:22:41Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/778?format=json",
-      "lastCached": 1755659761075
+      "lastCached": 1755790627950,
+      "sponsorIds": [
+        "M001098"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:929": {
       "congress": 94,
@@ -2699,7 +3207,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:22:41Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/929?format=json",
-      "lastCached": 1755659761327
+      "lastCached": 1755790627951,
+      "sponsorIds": [
+        "R000262"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:5877": {
       "congress": 94,
@@ -2720,7 +3232,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:26:09Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/5877?format=json",
-      "lastCached": 1755659761604
+      "lastCached": 1755790627952,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:6803": {
       "congress": 94,
@@ -2741,7 +3257,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:26:45Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/6803?format=json",
-      "lastCached": 1755659761963
+      "lastCached": 1755790627954,
+      "sponsorIds": [
+        "P000273"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:18": {
       "congress": 94,
@@ -2762,7 +3282,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:22:11Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/18?format=json",
-      "lastCached": 1755659762178
+      "lastCached": 1755790627955,
+      "sponsorIds": [
+        "B000371"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:1734": {
       "congress": 94,
@@ -2783,7 +3307,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:23:23Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/1734?format=json",
-      "lastCached": 1755659762509
+      "lastCached": 1755790627956,
+      "sponsorIds": [
+        "R000374"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:2685": {
       "congress": 94,
@@ -2804,7 +3332,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:24:03Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/2685?format=json",
-      "lastCached": 1755659762815
+      "lastCached": 1755790627957,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:2684": {
       "congress": 94,
@@ -2825,7 +3357,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:24:03Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/2684?format=json",
-      "lastCached": 1755659763124
+      "lastCached": 1755790627959,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HRES:250": {
       "congress": 94,
@@ -2846,7 +3382,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:20:42Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hres/250?format=json",
-      "lastCached": 1755659763390
+      "lastCached": 1755790627960,
+      "sponsorIds": [
+        "C000567"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:3640": {
       "congress": 94,
@@ -2867,7 +3407,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:24:43Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/3640?format=json",
-      "lastCached": 1755659763683
+      "lastCached": 1755790627961,
+      "sponsorIds": [
+        "F000381"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:5931": {
       "congress": 94,
@@ -2888,7 +3432,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:26:17Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/5931?format=json",
-      "lastCached": 1755659763895
+      "lastCached": 1755790627963,
+      "sponsorIds": [
+        "R000012"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:6784": {
       "congress": 94,
@@ -2909,7 +3457,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:26:45Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/6784?format=json",
-      "lastCached": 1755659764217
+      "lastCached": 1755790627964,
+      "sponsorIds": [
+        "R000012"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:44": {
       "congress": 94,
@@ -2930,7 +3482,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:22:11Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/44?format=json",
-      "lastCached": 1755659764458
+      "lastCached": 1755790627965,
+      "sponsorIds": [
+        "P000522"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:6362": {
       "congress": 94,
@@ -2951,7 +3507,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:26:33Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/6362?format=json",
-      "lastCached": 1755659764780
+      "lastCached": 1755790627967,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:3305": {
       "congress": 94,
@@ -2972,7 +3532,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:24:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/3305?format=json",
-      "lastCached": 1755659765094
+      "lastCached": 1755790627968,
+      "sponsorIds": [
+        "F000286"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:5034": {
       "congress": 94,
@@ -2993,7 +3557,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:25:40Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/5034?format=json",
-      "lastCached": 1755659765683
+      "lastCached": 1755790627970,
+      "sponsorIds": [
+        "W000317"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:5033": {
       "congress": 94,
@@ -3014,7 +3582,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:25:40Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/5033?format=json",
-      "lastCached": 1755659765684
+      "lastCached": 1755790627971,
+      "sponsorIds": [
+        "W000317"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:1470": {
       "congress": 94,
@@ -3035,7 +3607,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:23:04Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/1470?format=json",
-      "lastCached": 1755659765991
+      "lastCached": 1755790627972,
+      "sponsorIds": [
+        "P000272"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:4162": {
       "congress": 94,
@@ -3056,7 +3632,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:25:02Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/4162?format=json",
-      "lastCached": 1755659766402
+      "lastCached": 1755790627973,
+      "sponsorIds": [
+        "H000114"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:6864": {
       "congress": 94,
@@ -3077,7 +3657,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:26:45Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/6864?format=json",
-      "lastCached": 1755659766670
+      "lastCached": 1755790627974,
+      "sponsorIds": [
+        "C000567"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:2359": {
       "congress": 94,
@@ -3098,7 +3682,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:23:44Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/2359?format=json",
-      "lastCached": 1755659766982
+      "lastCached": 1755790627975,
+      "sponsorIds": [
+        "S000841"
+      ],
+      "cosponsorIds": []
     },
     "95:HRES:351": {
       "congress": 95,
@@ -3119,7 +3707,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:56:16Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hres/351?format=json",
-      "lastCached": 1755659767249
+      "lastCached": 1755790627976,
+      "sponsorIds": [
+        "H000114"
+      ],
+      "cosponsorIds": []
     },
     "95:HRES:367": {
       "congress": 95,
@@ -3140,7 +3732,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:56:12Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hres/367?format=json",
-      "lastCached": 1755659767513
+      "lastCached": 1755790627978,
+      "sponsorIds": [
+        "F000380"
+      ],
+      "cosponsorIds": []
     },
     "95:HR:3829": {
       "congress": 95,
@@ -3161,7 +3757,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-06-06T14:17:56Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hr/3829?format=json",
-      "lastCached": 1755659767771
+      "lastCached": 1755790627979,
+      "sponsorIds": [
+        "S000142"
+      ],
+      "cosponsorIds": []
     },
     "95:HRES:364": {
       "congress": 95,
@@ -3182,7 +3782,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:56:14Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hres/364?format=json",
-      "lastCached": 1755659768141
+      "lastCached": 1755790627980,
+      "sponsorIds": [
+        "F000380"
+      ],
+      "cosponsorIds": []
     },
     "95:HRES:452": {
       "congress": 95,
@@ -3203,7 +3807,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:56:19Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hres/452?format=json",
-      "lastCached": 1755659768388
+      "lastCached": 1755790627982,
+      "sponsorIds": [
+        "B000862"
+      ],
+      "cosponsorIds": []
     },
     "95:HR:7106": {
       "congress": 95,
@@ -3224,7 +3832,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T20:01:45Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hr/7106?format=json",
-      "lastCached": 1755659768659
+      "lastCached": 1755790627983,
+      "sponsorIds": [
+        "C000638"
+      ],
+      "cosponsorIds": []
     },
     "95:HR:4454": {
       "congress": 95,
@@ -3245,7 +3857,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-06-06T14:17:56Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hr/4454?format=json",
-      "lastCached": 1755659768959
+      "lastCached": 1755790627984,
+      "sponsorIds": [
+        "R000374"
+      ],
+      "cosponsorIds": []
     },
     "95:HRES:257": {
       "congress": 95,
@@ -3266,7 +3882,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:56:12Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hres/257?format=json",
-      "lastCached": 1755659769677
+      "lastCached": 1755790627986,
+      "sponsorIds": [
+        "P000047"
+      ],
+      "cosponsorIds": []
     },
     "95:HRES:287": {
       "congress": 95,
@@ -3287,7 +3907,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:28:32Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hres/287?format=json",
-      "lastCached": 1755659772855
+      "lastCached": 1755790628109,
+      "sponsorIds": [
+        "H000114"
+      ],
+      "cosponsorIds": []
     },
     "95:HRES:332": {
       "congress": 95,
@@ -3308,7 +3932,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:56:14Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hres/332?format=json",
-      "lastCached": 1755659772442
+      "lastCached": 1755790628106,
+      "sponsorIds": [
+        "H000114"
+      ],
+      "cosponsorIds": []
     },
     "95:HRES:331": {
       "congress": 95,
@@ -3329,7 +3957,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:56:15Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hres/331?format=json",
-      "lastCached": 1755659770282
+      "lastCached": 1755790627988,
+      "sponsorIds": [
+        "H000114"
+      ],
+      "cosponsorIds": []
     },
     "95:HRES:330": {
       "congress": 95,
@@ -3350,7 +3982,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:56:15Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hres/330?format=json",
-      "lastCached": 1755659772442
+      "lastCached": 1755790628106,
+      "sponsorIds": [
+        "F000380"
+      ],
+      "cosponsorIds": []
     },
     "95:HRES:299": {
       "congress": 95,
@@ -3371,7 +4007,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:56:15Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hres/299?format=json",
-      "lastCached": 1755659772855
+      "lastCached": 1755790628108,
+      "sponsorIds": [
+        "F000380"
+      ],
+      "cosponsorIds": []
     },
     "95:HRES:344": {
       "congress": 95,
@@ -3392,7 +4032,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:56:12Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hres/344?format=json",
-      "lastCached": 1755659773010
+      "lastCached": 1755790628110,
+      "sponsorIds": [
+        "P000047"
+      ],
+      "cosponsorIds": []
     },
     "95:HRES:341": {
       "congress": 95,
@@ -3413,7 +4057,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:56:15Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hres/341?format=json",
-      "lastCached": 1755659773387
+      "lastCached": 1755790628111,
+      "sponsorIds": [
+        "H000114"
+      ],
+      "cosponsorIds": []
     },
     "95:HRES:356": {
       "congress": 95,
@@ -3434,7 +4082,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:56:12Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hres/356?format=json",
-      "lastCached": 1755659773633
+      "lastCached": 1755790628112,
+      "sponsorIds": [
+        "P000047"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:7803": {
       "congress": 94,
@@ -3455,7 +4107,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:27:27Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/7803?format=json",
-      "lastCached": 1755659773942
+      "lastCached": 1755790628114,
+      "sponsorIds": [
+        "R000012"
+      ],
+      "cosponsorIds": []
     },
     "96:HRES:660": {
       "congress": 96,
@@ -3476,7 +4132,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/96/hres/660?format=json",
-      "lastCached": 1755659774306
+      "lastCached": 1755790628114,
+      "sponsorIds": [
+        "B000371"
+      ],
+      "cosponsorIds": []
     },
     "96:HRES:590": {
       "congress": 96,
@@ -3497,7 +4157,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/96/hres/590?format=json",
-      "lastCached": 1755659774436
+      "lastCached": 1755790628115,
+      "sponsorIds": [
+        "C000618"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:7876": {
       "congress": 94,
@@ -3518,7 +4182,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:27:37Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/7876?format=json",
-      "lastCached": 1755659774678
+      "lastCached": 1755790628117,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "96:HRES:794": {
       "congress": 96,
@@ -3539,7 +4207,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/96/hres/794?format=json",
-      "lastCached": 1755659774966
+      "lastCached": 1755790628118,
+      "sponsorIds": [
+        "B000371"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:7965": {
       "congress": 94,
@@ -3560,7 +4232,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:27:37Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/7965?format=json",
-      "lastCached": 1755659775268
+      "lastCached": 1755790628119,
+      "sponsorIds": [
+        "C000409"
+      ],
+      "cosponsorIds": []
     },
     "95:HRES:1337": {
       "congress": 95,
@@ -3581,7 +4257,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:56:49Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hres/1337?format=json",
-      "lastCached": 1755659775524
+      "lastCached": 1755790628120,
+      "sponsorIds": [
+        "T000110"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:8131": {
       "congress": 94,
@@ -3602,7 +4282,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:27:45Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/8131?format=json",
-      "lastCached": 1755659775814
+      "lastCached": 1755790628121,
+      "sponsorIds": [
+        "R000012"
+      ],
+      "cosponsorIds": []
     },
     "95:HRES:1414": {
       "congress": 95,
@@ -3623,7 +4307,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:56:49Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hres/1414?format=json",
-      "lastCached": 1755659776126
+      "lastCached": 1755790628122,
+      "sponsorIds": [
+        "F000229"
+      ],
+      "cosponsorIds": []
     },
     "95:HRES:1415": {
       "congress": 95,
@@ -3644,7 +4332,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:56:49Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hres/1415?format=json",
-      "lastCached": 1755659776312
+      "lastCached": 1755790628123,
+      "sponsorIds": [
+        "F000229"
+      ],
+      "cosponsorIds": []
     },
     "95:HRES:1416": {
       "congress": 95,
@@ -3665,7 +4357,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:56:49Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/hres/1416?format=json",
-      "lastCached": 1755659776595
+      "lastCached": 1755790628123,
+      "sponsorIds": [
+        "F000229"
+      ],
+      "cosponsorIds": []
     },
     "96:HRES:461": {
       "congress": 96,
@@ -3686,7 +4382,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/96/hres/461?format=json",
-      "lastCached": 1755659776845
+      "lastCached": 1755790628124,
+      "sponsorIds": [
+        "L000517"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:15364": {
       "congress": 94,
@@ -3707,7 +4407,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:33:10Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/15364?format=json",
-      "lastCached": 1755659777199
+      "lastCached": 1755790628125,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "93:HR:15873": {
       "congress": 93,
@@ -3728,7 +4432,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:38:02Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hr/15873?format=json",
-      "lastCached": 1755659777410
+      "lastCached": 1755790628127,
+      "sponsorIds": [
+        "R000262"
+      ],
+      "cosponsorIds": []
     },
     "94:HRES:1392": {
       "congress": 94,
@@ -3749,7 +4457,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T14:20:18Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hres/1392?format=json",
-      "lastCached": 1755659787084
+      "lastCached": 1755790628166,
+      "sponsorIds": [
+        "W000448"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:15738": {
       "congress": 94,
@@ -3770,7 +4482,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:33:39Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/15738?format=json",
-      "lastCached": 1755659777955
+      "lastCached": 1755790628129,
+      "sponsorIds": [
+        "W000647"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:15538": {
       "congress": 94,
@@ -3791,7 +4507,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:33:29Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/15538?format=json",
-      "lastCached": 1755659778280
+      "lastCached": 1755790628130,
+      "sponsorIds": [
+        "B000371"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:15225": {
       "congress": 94,
@@ -3812,7 +4532,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:33:10Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/15225?format=json",
-      "lastCached": 1755659778587
+      "lastCached": 1755790628131,
+      "sponsorIds": [
+        "R000012"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:15199": {
       "congress": 94,
@@ -3833,7 +4557,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:33:10Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/15199?format=json",
-      "lastCached": 1755659778830
+      "lastCached": 1755790628133,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:15857": {
       "congress": 94,
@@ -3854,7 +4582,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:33:39Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/15857?format=json",
-      "lastCached": 1755659779112
+      "lastCached": 1755790628134,
+      "sponsorIds": [
+        "W000647"
+      ],
+      "cosponsorIds": []
     },
     "93:HR:2087": {
       "congress": 93,
@@ -3875,7 +4607,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:29:14Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hr/2087?format=json",
-      "lastCached": 1755659779511
+      "lastCached": 1755790628135,
+      "sponsorIds": [
+        "M000286"
+      ],
+      "cosponsorIds": []
     },
     "93:HR:2676": {
       "congress": 93,
@@ -3896,7 +4632,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:29:30Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hr/2676?format=json",
-      "lastCached": 1755659779814
+      "lastCached": 1755790628137,
+      "sponsorIds": [
+        "H000438"
+      ],
+      "cosponsorIds": []
     },
     "93:HR:44": {
       "congress": 93,
@@ -3917,7 +4657,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:27:57Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hr/44?format=json",
-      "lastCached": 1755659780147
+      "lastCached": 1755790628138,
+      "sponsorIds": [
+        "P000522"
+      ],
+      "cosponsorIds": []
     },
     "93:HR:85": {
       "congress": 93,
@@ -3938,7 +4682,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:27:57Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hr/85?format=json",
-      "lastCached": 1755659780539
+      "lastCached": 1755790628139,
+      "sponsorIds": [
+        "A000215"
+      ],
+      "cosponsorIds": []
     },
     "93:HR:4978": {
       "congress": 93,
@@ -3959,7 +4707,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:30:49Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hr/4978?format=json",
-      "lastCached": 1755659780725
+      "lastCached": 1755790628140,
+      "sponsorIds": [
+        "P000546"
+      ],
+      "cosponsorIds": []
     },
     "93:HR:97": {
       "congress": 93,
@@ -3980,7 +4732,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:27:57Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hr/97?format=json",
-      "lastCached": 1755659781045
+      "lastCached": 1755790628142,
+      "sponsorIds": [
+        "B000371"
+      ],
+      "cosponsorIds": []
     },
     "93:HRES:128": {
       "congress": 93,
@@ -4001,7 +4757,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:26:30Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hres/128?format=json",
-      "lastCached": 1755659785399
+      "lastCached": 1755790628159,
+      "sponsorIds": [
+        "P000522"
+      ],
+      "cosponsorIds": []
     },
     "93:HR:6039": {
       "congress": 93,
@@ -4022,7 +4782,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:31:31Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hr/6039?format=json",
-      "lastCached": 1755659781716
+      "lastCached": 1755790628143,
+      "sponsorIds": [
+        "G000528"
+      ],
+      "cosponsorIds": []
     },
     "93:HR:4121": {
       "congress": 93,
@@ -4043,7 +4807,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:30:22Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hr/4121?format=json",
-      "lastCached": 1755659781956
+      "lastCached": 1755790628145,
+      "sponsorIds": [
+        "T000110"
+      ],
+      "cosponsorIds": []
     },
     "93:HR:6596": {
       "congress": 93,
@@ -4064,7 +4832,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:31:43Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hr/6596?format=json",
-      "lastCached": 1755659782224
+      "lastCached": 1755790628146,
+      "sponsorIds": [
+        "T000110"
+      ],
+      "cosponsorIds": []
     },
     "93:HR:303": {
       "congress": 93,
@@ -4085,7 +4857,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:28:03Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hr/303?format=json",
-      "lastCached": 1755659782580
+      "lastCached": 1755790628147,
+      "sponsorIds": [
+        "B000371"
+      ],
+      "cosponsorIds": []
     },
     "93:HR:4622": {
       "congress": 93,
@@ -4106,7 +4882,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:30:40Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hr/4622?format=json",
-      "lastCached": 1755659782865
+      "lastCached": 1755790628149,
+      "sponsorIds": [
+        "F000381"
+      ],
+      "cosponsorIds": []
     },
     "93:HR:4623": {
       "congress": 93,
@@ -4127,7 +4907,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:30:40Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hr/4623?format=json",
-      "lastCached": 1755659783184
+      "lastCached": 1755790628150,
+      "sponsorIds": [
+        "F000381"
+      ],
+      "cosponsorIds": []
     },
     "93:HR:1497": {
       "congress": 93,
@@ -4148,7 +4932,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:28:47Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hr/1497?format=json",
-      "lastCached": 1755659783447
+      "lastCached": 1755790628151,
+      "sponsorIds": [
+        "F000381"
+      ],
+      "cosponsorIds": []
     },
     "93:HR:4624": {
       "congress": 93,
@@ -4169,7 +4957,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:30:32Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hr/4624?format=json",
-      "lastCached": 1755659783811
+      "lastCached": 1755790628152,
+      "sponsorIds": [
+        "F000381"
+      ],
+      "cosponsorIds": []
     },
     "93:HR:10026": {
       "congress": 93,
@@ -4190,7 +4982,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:34:06Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hr/10026?format=json",
-      "lastCached": 1755659784116
+      "lastCached": 1755790628153,
+      "sponsorIds": [
+        "W000035"
+      ],
+      "cosponsorIds": []
     },
     "93:HR:11426": {
       "congress": 93,
@@ -4211,7 +5007,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:34:59Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hr/11426?format=json",
-      "lastCached": 1755659784424
+      "lastCached": 1755790628155,
+      "sponsorIds": [
+        "H000906"
+      ],
+      "cosponsorIds": []
     },
     "93:HRES:1007": {
       "congress": 93,
@@ -4232,7 +5032,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:26:57Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hres/1007?format=json",
-      "lastCached": 1755659784833
+      "lastCached": 1755790628156,
+      "sponsorIds": [
+        "E000204"
+      ],
+      "cosponsorIds": []
     },
     "93:HR:9735": {
       "congress": 93,
@@ -4253,7 +5057,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:33:48Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hr/9735?format=json",
-      "lastCached": 1755659785138
+      "lastCached": 1755790628157,
+      "sponsorIds": [
+        "W000035"
+      ],
+      "cosponsorIds": []
     },
     "93:HR:14365": {
       "congress": 93,
@@ -4274,7 +5082,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:37:03Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hr/14365?format=json",
-      "lastCached": 1755659785399
+      "lastCached": 1755790628158,
+      "sponsorIds": [
+        "B000890"
+      ],
+      "cosponsorIds": []
     },
     "93:HRES:1116": {
       "congress": 93,
@@ -4295,7 +5107,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:26:57Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hres/1116?format=json",
-      "lastCached": 1755659785672
+      "lastCached": 1755790628160,
+      "sponsorIds": [
+        "M000349"
+      ],
+      "cosponsorIds": []
     },
     "93:HRES:430": {
       "congress": 93,
@@ -4316,7 +5132,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T18:26:38Z",
       "detailUrl": "https://api.congress.gov/v3/bill/93/hres/430?format=json",
-      "lastCached": 1755659786164
+      "lastCached": 1755790628161,
+      "sponsorIds": [
+        "C000567"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:9794": {
       "congress": 94,
@@ -4337,7 +5157,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:29:00Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/9794?format=json",
-      "lastCached": 1755659786469
+      "lastCached": 1755790628163,
+      "sponsorIds": [
+        "P000134"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:11305": {
       "congress": 94,
@@ -4358,7 +5182,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:30:12Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/11305?format=json",
-      "lastCached": 1755659786744
+      "lastCached": 1755790628164,
+      "sponsorIds": [
+        "M000796"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:13547": {
       "congress": 94,
@@ -4379,7 +5207,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:31:48Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/13547?format=json",
-      "lastCached": 1755659787084
+      "lastCached": 1755790628165,
+      "sponsorIds": [
+        "P000513"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:9405": {
       "congress": 94,
@@ -4400,7 +5232,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:28:42Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/9405?format=json",
-      "lastCached": 1755659787352
+      "lastCached": 1755790628167,
+      "sponsorIds": [
+        "R000012"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:15067": {
       "congress": 94,
@@ -4421,7 +5257,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:32:59Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/15067?format=json",
-      "lastCached": 1755659787702
+      "lastCached": 1755790628168,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:9901": {
       "congress": 94,
@@ -4442,7 +5282,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:29:00Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/9901?format=json",
-      "lastCached": 1755659788054
+      "lastCached": 1755790628169,
+      "sponsorIds": [
+        "R000374"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:10703": {
       "congress": 94,
@@ -4463,7 +5307,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:29:42Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/10703?format=json",
-      "lastCached": 1755659788418
+      "lastCached": 1755790628170,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:S:2477": {
       "congress": 94,
@@ -4484,7 +5332,11 @@
       "originChamberCode": "S",
       "updateDate": "2025-01-14T19:03:55Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/s/2477?format=json",
-      "lastCached": 1755659788724
+      "lastCached": 1755790628172,
+      "sponsorIds": [
+        "R000191"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:13239": {
       "congress": 94,
@@ -4505,7 +5357,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:31:34Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/13239?format=json",
-      "lastCached": 1755659789030
+      "lastCached": 1755790628173,
+      "sponsorIds": [
+        "M001128"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:14784": {
       "congress": 94,
@@ -4526,7 +5382,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:32:48Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/14784?format=json",
-      "lastCached": 1755659789337
+      "lastCached": 1755790628175,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:14795": {
       "congress": 94,
@@ -4547,7 +5407,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:32:51Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/14795?format=json",
-      "lastCached": 1755659789675
+      "lastCached": 1755790628176,
+      "sponsorIds": [
+        "H001011"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:9559": {
       "congress": 94,
@@ -4568,7 +5432,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:28:51Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/9559?format=json",
-      "lastCached": 1755659790260
+      "lastCached": 1755790628178,
+      "sponsorIds": [
+        "H000392"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:9558": {
       "congress": 94,
@@ -4589,7 +5457,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:28:51Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/9558?format=json",
-      "lastCached": 1755659790260
+      "lastCached": 1755790628178,
+      "sponsorIds": [
+        "H000392"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:11961": {
       "congress": 94,
@@ -4610,7 +5482,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:30:37Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/11961?format=json",
-      "lastCached": 1755659790592
+      "lastCached": 1755790628179,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HRES:1161": {
       "congress": 94,
@@ -4631,7 +5507,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:21:05Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hres/1161?format=json",
-      "lastCached": 1755659790883
+      "lastCached": 1755790628181,
+      "sponsorIds": [
+        "P000121"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:9121": {
       "congress": 94,
@@ -4652,7 +5532,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:28:33Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/9121?format=json",
-      "lastCached": 1755659791285
+      "lastCached": 1755790628182,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:10021": {
       "congress": 94,
@@ -4673,7 +5557,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:29:06Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/10021?format=json",
-      "lastCached": 1755659791592
+      "lastCached": 1755790628184,
+      "sponsorIds": [
+        "P000134"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:10009": {
       "congress": 94,
@@ -4694,7 +5582,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:29:06Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/10009?format=json",
-      "lastCached": 1755659791903
+      "lastCached": 1755790628185,
+      "sponsorIds": [
+        "F000151"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:14141": {
       "congress": 94,
@@ -4715,7 +5607,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:32:20Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/14141?format=json",
-      "lastCached": 1755659792178
+      "lastCached": 1755790628186,
+      "sponsorIds": [
+        "S000841"
+      ],
+      "cosponsorIds": []
     },
     "94:HRES:1421": {
       "congress": 94,
@@ -4736,7 +5632,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:21:22Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hres/1421?format=json",
-      "lastCached": 1755659792511
+      "lastCached": 1755790628186,
+      "sponsorIds": [
+        "F000229"
+      ],
+      "cosponsorIds": []
     },
     "94:S:495": {
       "congress": 94,
@@ -4757,7 +5657,11 @@
       "originChamberCode": "S",
       "updateDate": "2025-07-21T19:32:26Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/s/495?format=json",
-      "lastCached": 1755659792818
+      "lastCached": 1755790628188,
+      "sponsorIds": [
+        "R000191"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:8827": {
       "congress": 94,
@@ -4778,7 +5682,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:28:13Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/8827?format=json",
-      "lastCached": 1755659793091
+      "lastCached": 1755790628189,
+      "sponsorIds": [
+        "R000012"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:9672": {
       "congress": 94,
@@ -4799,7 +5707,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:28:51Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/9672?format=json",
-      "lastCached": 1755659793435
+      "lastCached": 1755790628190,
+      "sponsorIds": [
+        "P000280"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:11599": {
       "congress": 94,
@@ -4820,7 +5732,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:30:21Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/11599?format=json",
-      "lastCached": 1755659793742
+      "lastCached": 1755790628192,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:9685": {
       "congress": 94,
@@ -4841,7 +5757,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:28:51Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/9685?format=json",
-      "lastCached": 1755659793990
+      "lastCached": 1755790628193,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:10472": {
       "congress": 94,
@@ -4862,7 +5782,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:29:22Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/10472?format=json",
-      "lastCached": 1755659794261
+      "lastCached": 1755790628194,
+      "sponsorIds": [
+        "P000134"
+      ],
+      "cosponsorIds": []
     },
     "94:HRES:1367": {
       "congress": 94,
@@ -4883,7 +5807,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:21:15Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hres/1367?format=json",
-      "lastCached": 1755659794525
+      "lastCached": 1755790628195,
+      "sponsorIds": [
+        "S001134"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:14573": {
       "congress": 94,
@@ -4904,7 +5832,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:32:37Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/14573?format=json",
-      "lastCached": 1755659794821
+      "lastCached": 1755790628196,
+      "sponsorIds": [
+        "A000215"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:8896": {
       "congress": 94,
@@ -4925,7 +5857,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:28:13Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/8896?format=json",
-      "lastCached": 1755659795156
+      "lastCached": 1755790628197,
+      "sponsorIds": [
+        "P000134"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:9729": {
       "congress": 94,
@@ -4946,7 +5882,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:29:00Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/9729?format=json",
-      "lastCached": 1755659795426
+      "lastCached": 1755790628199,
+      "sponsorIds": [
+        "H000840"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:10912": {
       "congress": 94,
@@ -4967,7 +5907,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:29:42Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/10912?format=json",
-      "lastCached": 1755659795699
+      "lastCached": 1755790628200,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "94:HRES:1169": {
       "congress": 94,
@@ -4988,7 +5932,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:21:05Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hres/1169?format=json",
-      "lastCached": 1755659795981
+      "lastCached": 1755790628202,
+      "sponsorIds": [
+        "H000166"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:8902": {
       "congress": 94,
@@ -5009,7 +5957,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:28:22Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/8902?format=json",
-      "lastCached": 1755659796197
+      "lastCached": 1755790628203,
+      "sponsorIds": [
+        "W000215"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:9340": {
       "congress": 94,
@@ -5030,7 +5982,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:28:33Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/9340?format=json",
-      "lastCached": 1755659796507
+      "lastCached": 1755790628204,
+      "sponsorIds": [
+        "R000012"
+      ],
+      "cosponsorIds": []
     },
     "94:HR:11708": {
       "congress": 94,
@@ -5051,7 +6007,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-01T19:30:28Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/hr/11708?format=json",
-      "lastCached": 1755659796814
+      "lastCached": 1755790628205,
+      "sponsorIds": [
+        "K000020"
+      ],
+      "cosponsorIds": []
     },
     "114:HR:1381": {
       "congress": 114,
@@ -5072,7 +6032,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-12T14:10:10Z",
       "detailUrl": "https://api.congress.gov/v3/bill/114/hr/1381?format=json",
-      "lastCached": 1755659797121
+      "lastCached": 1755790628206,
+      "sponsorIds": [
+        "Q000023"
+      ],
+      "cosponsorIds": []
     },
     "114:HRES:428": {
       "congress": 114,
@@ -5093,7 +6057,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T00:16:46Z",
       "detailUrl": "https://api.congress.gov/v3/bill/114/hres/428?format=json",
-      "lastCached": 1755659797361
+      "lastCached": 1755790628206,
+      "sponsorIds": [
+        "H001034"
+      ],
+      "cosponsorIds": []
     },
     "116:HR:1": {
       "congress": 116,
@@ -5112,9 +6080,13 @@
       },
       "originChamber": "House",
       "originChamberCode": "H",
-      "updateDate": "2025-08-19T17:13:07Z",
+      "updateDate": "2025-08-20T03:21:54Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hr/1?format=json",
-      "lastCached": 1755659801801
+      "lastCached": 1755790628220,
+      "sponsorIds": [
+        "S001168"
+      ],
+      "cosponsorIds": []
     },
     "115:HR:4822": {
       "congress": 115,
@@ -5135,7 +6107,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-11T16:35:00Z",
       "detailUrl": "https://api.congress.gov/v3/bill/115/hr/4822?format=json",
-      "lastCached": 1755659798018
+      "lastCached": 1755790628208,
+      "sponsorIds": [
+        "H001045"
+      ],
+      "cosponsorIds": []
     },
     "115:HR:4504": {
       "congress": 115,
@@ -5156,7 +6132,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-11T16:34:45Z",
       "detailUrl": "https://api.congress.gov/v3/bill/115/hr/4504?format=json",
-      "lastCached": 1755659798351
+      "lastCached": 1755790628208,
+      "sponsorIds": [
+        "Q000023"
+      ],
+      "cosponsorIds": []
     },
     "115:HRES:1003": {
       "congress": 115,
@@ -5177,7 +6157,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T01:14:36Z",
       "detailUrl": "https://api.congress.gov/v3/bill/115/hres/1003?format=json",
-      "lastCached": 1755659798657
+      "lastCached": 1755790628209,
+      "sponsorIds": [
+        "N000127"
+      ],
+      "cosponsorIds": []
     },
     "116:HRES:40": {
       "congress": 116,
@@ -5199,7 +6183,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T01:23:50Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hres/40?format=json",
-      "lastCached": 1755659798962
+      "lastCached": 1755790628210,
+      "sponsorIds": [
+        "R000577"
+      ],
+      "cosponsorIds": []
     },
     "115:HRES:604": {
       "congress": 115,
@@ -5220,7 +6208,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-11T16:34:32Z",
       "detailUrl": "https://api.congress.gov/v3/bill/115/hres/604?format=json",
-      "lastCached": 1755659799281
+      "lastCached": 1755790628211,
+      "sponsorIds": [
+        "S001175"
+      ],
+      "cosponsorIds": []
     },
     "115:HRES:966": {
       "congress": 115,
@@ -5241,7 +6233,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T01:13:23Z",
       "detailUrl": "https://api.congress.gov/v3/bill/115/hres/966?format=json",
-      "lastCached": 1755659799553
+      "lastCached": 1755790628211,
+      "sponsorIds": [
+        "N000190"
+      ],
+      "cosponsorIds": []
     },
     "116:HRES:53": {
       "congress": 116,
@@ -5262,7 +6258,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T01:24:16Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hres/53?format=json",
-      "lastCached": 1755659799781
+      "lastCached": 1755790628212,
+      "sponsorIds": [
+        "R000515"
+      ],
+      "cosponsorIds": []
     },
     "115:HRES:724": {
       "congress": 115,
@@ -5284,7 +6284,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:21:39Z",
       "detailUrl": "https://api.congress.gov/v3/bill/115/hres/724?format=json",
-      "lastCached": 1755659800194
+      "lastCached": 1755790628213,
+      "sponsorIds": [
+        "H001045"
+      ],
+      "cosponsorIds": []
     },
     "115:HR:5845": {
       "congress": 115,
@@ -5305,7 +6309,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-11T16:35:58Z",
       "detailUrl": "https://api.congress.gov/v3/bill/115/hr/5845?format=json",
-      "lastCached": 1755659800520
+      "lastCached": 1755790628213,
+      "sponsorIds": [
+        "T000193"
+      ],
+      "cosponsorIds": []
     },
     "115:HRES:962": {
       "congress": 115,
@@ -5326,7 +6334,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T01:13:17Z",
       "detailUrl": "https://api.congress.gov/v3/bill/115/hres/962?format=json",
-      "lastCached": 1755659800805
+      "lastCached": 1755790628214,
+      "sponsorIds": [
+        "B001302"
+      ],
+      "cosponsorIds": []
     },
     "112:HRES:280": {
       "congress": 112,
@@ -5347,7 +6359,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/112/hres/280?format=json",
-      "lastCached": 1755659801113
+      "lastCached": 1755790628215,
+      "sponsorIds": [
+        "M001143"
+      ],
+      "cosponsorIds": []
     },
     "112:HR:2340": {
       "congress": 112,
@@ -5368,7 +6384,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-14T14:22:49Z",
       "detailUrl": "https://api.congress.gov/v3/bill/112/hr/2340?format=json",
-      "lastCached": 1755659801523
+      "lastCached": 1755790628217,
+      "sponsorIds": [
+        "Q000023"
+      ],
+      "cosponsorIds": []
     },
     "112:HRES:480": {
       "congress": 112,
@@ -5389,7 +6409,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/112/hres/480?format=json",
-      "lastCached": 1755659801801
+      "lastCached": 1755790628219,
+      "sponsorIds": [
+        "C001082"
+      ],
+      "cosponsorIds": []
     },
     "116:HR:1612": {
       "congress": 116,
@@ -5410,7 +6434,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-02-04T16:54:13Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hr/1612?format=json",
-      "lastCached": 1755659802054
+      "lastCached": 1755790628220,
+      "sponsorIds": [
+        "F000466"
+      ],
+      "cosponsorIds": []
     },
     "116:HRES:241": {
       "congress": 116,
@@ -5431,7 +6459,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T02:53:03Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hres/241?format=json",
-      "lastCached": 1755659802318
+      "lastCached": 1755790628221,
+      "sponsorIds": [
+        "S001214"
+      ],
+      "cosponsorIds": []
     },
     "116:HRES:306": {
       "congress": 116,
@@ -5452,7 +6484,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T02:56:14Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hres/306?format=json",
-      "lastCached": 1755659802586
+      "lastCached": 1755790628222,
+      "sponsorIds": [
+        "G000578"
+      ],
+      "cosponsorIds": []
     },
     "116:HR:3419": {
       "congress": 116,
@@ -5473,7 +6509,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:07:23Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hr/3419?format=json",
-      "lastCached": 1755659802847
+      "lastCached": 1755790628222,
+      "sponsorIds": [
+        "C001119"
+      ],
+      "cosponsorIds": []
     },
     "116:HRES:556": {
       "congress": 116,
@@ -5494,7 +6534,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-07-21T19:44:15Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hres/556?format=json",
-      "lastCached": 1755659803115
+      "lastCached": 1755790628223,
+      "sponsorIds": [
+        "V000131"
+      ],
+      "cosponsorIds": []
     },
     "116:HRES:582": {
       "congress": 116,
@@ -5515,7 +6559,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T03:12:04Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hres/582?format=json",
-      "lastCached": 1755659803470
+      "lastCached": 1755790628224,
+      "sponsorIds": [
+        "G000589"
+      ],
+      "cosponsorIds": []
     },
     "116:HRES:604": {
       "congress": 116,
@@ -5536,7 +6584,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T03:12:47Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hres/604?format=json",
-      "lastCached": 1755659803777
+      "lastCached": 1755790628224,
+      "sponsorIds": [
+        "B001302"
+      ],
+      "cosponsorIds": []
     },
     "116:HRES:620": {
       "congress": 116,
@@ -5557,7 +6609,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:07:23Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hres/620?format=json",
-      "lastCached": 1755659804084
+      "lastCached": 1755790628225,
+      "sponsorIds": [
+        "A000374"
+      ],
+      "cosponsorIds": []
     },
     "116:HRES:630": {
       "congress": 116,
@@ -5578,7 +6634,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-19T23:52:20Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hres/630?format=json",
-      "lastCached": 1755659804392
+      "lastCached": 1755790628225,
+      "sponsorIds": [
+        "B001302"
+      ],
+      "cosponsorIds": []
     },
     "116:HRES:633": {
       "congress": 116,
@@ -5599,7 +6659,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:07:23Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hres/633?format=json",
-      "lastCached": 1755659804802
+      "lastCached": 1755790628226,
+      "sponsorIds": [
+        "B001274"
+      ],
+      "cosponsorIds": []
     },
     "116:HR:5150": {
       "congress": 116,
@@ -5620,7 +6684,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:07:33Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hr/5150?format=json",
-      "lastCached": 1755659805108
+      "lastCached": 1755790628226,
+      "sponsorIds": [
+        "Q000023"
+      ],
+      "cosponsorIds": []
     },
     "116:HRES:780": {
       "congress": 116,
@@ -5641,7 +6709,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:07:23Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hres/780?format=json",
-      "lastCached": 1755659805348
+      "lastCached": 1755790628227,
+      "sponsorIds": [
+        "M001187"
+      ],
+      "cosponsorIds": []
     },
     "116:HRES:784": {
       "congress": 116,
@@ -5662,7 +6734,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T03:19:57Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hres/784?format=json",
-      "lastCached": 1755659805617
+      "lastCached": 1755790628228,
+      "sponsorIds": [
+        "B001289"
+      ],
+      "cosponsorIds": []
     },
     "116:HRES:832": {
       "congress": 116,
@@ -5684,7 +6760,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T03:21:20Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hres/832?format=json",
-      "lastCached": 1755659805927
+      "lastCached": 1755790628229,
+      "sponsorIds": [
+        "G000377"
+      ],
+      "cosponsorIds": []
     },
     "116:HRES:836": {
       "congress": 116,
@@ -5705,7 +6785,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T03:21:23Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hres/836?format=json",
-      "lastCached": 1755659806234
+      "lastCached": 1755790628229,
+      "sponsorIds": [
+        "G000565"
+      ],
+      "cosponsorIds": []
     },
     "116:HRES:1047": {
       "congress": 116,
@@ -5726,7 +6810,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T03:33:26Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hres/1047?format=json",
-      "lastCached": 1755659806541
+      "lastCached": 1755790628230,
+      "sponsorIds": [
+        "B001302"
+      ],
+      "cosponsorIds": []
     },
     "116:HRES:1114": {
       "congress": 116,
@@ -5747,7 +6835,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-07-21T19:44:15Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hres/1114?format=json",
-      "lastCached": 1755659806833
+      "lastCached": 1755790628231,
+      "sponsorIds": [
+        "V000131"
+      ],
+      "cosponsorIds": []
     },
     "116:HRES:1194": {
       "congress": 116,
@@ -5768,7 +6860,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T03:40:28Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hres/1194?format=json",
-      "lastCached": 1755659807073
+      "lastCached": 1755790628231,
+      "sponsorIds": [
+        "C001093"
+      ],
+      "cosponsorIds": []
     },
     "116:HRES:1241": {
       "congress": 116,
@@ -5789,7 +6885,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T03:42:06Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/hres/1241?format=json",
-      "lastCached": 1755659807300
+      "lastCached": 1755790628232,
+      "sponsorIds": [
+        "B001302"
+      ],
+      "cosponsorIds": []
     },
     "117:HR:1": {
       "congress": 117,
@@ -5810,7 +6910,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-07-21T19:44:15Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hr/1?format=json",
-      "lastCached": 1755659807666
+      "lastCached": 1755790628232,
+      "sponsorIds": [
+        "S001168"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:19": {
       "congress": 117,
@@ -5831,7 +6935,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T03:44:48Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/19?format=json",
-      "lastCached": 1755659807975
+      "lastCached": 1755790628233,
+      "sponsorIds": [
+        "W000797"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:28": {
       "congress": 117,
@@ -5852,7 +6960,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T04:41:18Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/28?format=json",
-      "lastCached": 1755659808231
+      "lastCached": 1755790628234,
+      "sponsorIds": [
+        "E000297"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:31": {
       "congress": 117,
@@ -5873,7 +6985,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T04:41:18Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/31?format=json",
-      "lastCached": 1755659808585
+      "lastCached": 1755790628234,
+      "sponsorIds": [
+        "M001203"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:42": {
       "congress": 117,
@@ -5894,7 +7010,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:05:08Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/42?format=json",
-      "lastCached": 1755659808832
+      "lastCached": 1755790628235,
+      "sponsorIds": [
+        "D000624"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:46": {
       "congress": 117,
@@ -5915,7 +7035,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T04:41:33Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/46?format=json",
-      "lastCached": 1755659809099
+      "lastCached": 1755790628235,
+      "sponsorIds": [
+        "J000288"
+      ],
+      "cosponsorIds": []
     },
     "117:HR:459": {
       "congress": 117,
@@ -5936,7 +7060,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:05:08Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hr/459?format=json",
-      "lastCached": 1755659809346
+      "lastCached": 1755790628236,
+      "sponsorIds": [
+        "C001119"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:72": {
       "congress": 117,
@@ -5958,7 +7086,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:05:08Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/72?format=json",
-      "lastCached": 1755659809612
+      "lastCached": 1755790628237,
+      "sponsorIds": [
+        "W000797"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:82": {
       "congress": 117,
@@ -5979,7 +7111,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T04:43:44Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/82?format=json",
-      "lastCached": 1755659809858
+      "lastCached": 1755790628237,
+      "sponsorIds": [
+        "W000797"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:83": {
       "congress": 117,
@@ -6000,7 +7136,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T04:43:44Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/83?format=json",
-      "lastCached": 1755659810113
+      "lastCached": 1755790628238,
+      "sponsorIds": [
+        "W000788"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:181": {
       "congress": 117,
@@ -6021,7 +7161,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T04:49:19Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/181?format=json",
-      "lastCached": 1755659810433
+      "lastCached": 1755790628239,
+      "sponsorIds": [
+        "C001119"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:243": {
       "congress": 117,
@@ -6043,7 +7187,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T04:53:04Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/243?format=json",
-      "lastCached": 1755659810740
+      "lastCached": 1755790628240,
+      "sponsorIds": [
+        "M001165"
+      ],
+      "cosponsorIds": []
     },
     "117:HR:2055": {
       "congress": 117,
@@ -6064,7 +7212,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:05:08Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hr/2055?format=json",
-      "lastCached": 1755659811047
+      "lastCached": 1755790628240,
+      "sponsorIds": [
+        "Q000023"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:260": {
       "congress": 117,
@@ -6085,7 +7237,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T04:53:46Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/260?format=json",
-      "lastCached": 1755659811354
+      "lastCached": 1755790628241,
+      "sponsorIds": [
+        "G000585"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:327": {
       "congress": 117,
@@ -6106,7 +7262,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T04:57:59Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/327?format=json",
-      "lastCached": 1755659811607
+      "lastCached": 1755790628241,
+      "sponsorIds": [
+        "G000596"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:328": {
       "congress": 117,
@@ -6127,7 +7287,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T04:57:57Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/328?format=json",
-      "lastCached": 1755659811850
+      "lastCached": 1755790628242,
+      "sponsorIds": [
+        "G000596"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:331": {
       "congress": 117,
@@ -6149,7 +7313,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/331?format=json",
-      "lastCached": 1755659812114
+      "lastCached": 1755790628242,
+      "sponsorIds": [
+        "M001165"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:419": {
       "congress": 117,
@@ -6170,7 +7338,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T05:04:02Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/419?format=json",
-      "lastCached": 1755659812389
+      "lastCached": 1755790628243,
+      "sponsorIds": [
+        "C001084"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:420": {
       "congress": 117,
@@ -6191,7 +7363,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T05:04:02Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/420?format=json",
-      "lastCached": 1755659812685
+      "lastCached": 1755790628244,
+      "sponsorIds": [
+        "C001084"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:421": {
       "congress": 117,
@@ -6212,7 +7388,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T05:04:03Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/421?format=json",
-      "lastCached": 1755659812933
+      "lastCached": 1755790628244,
+      "sponsorIds": [
+        "C001084"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:431": {
       "congress": 117,
@@ -6233,7 +7413,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T05:04:29Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/431?format=json",
-      "lastCached": 1755659813300
+      "lastCached": 1755790628245,
+      "sponsorIds": [
+        "R000610"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:474": {
       "congress": 117,
@@ -6254,7 +7438,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T05:07:34Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/474?format=json",
-      "lastCached": 1755659813606
+      "lastCached": 1755790628245,
+      "sponsorIds": [
+        "W000823"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:697": {
       "congress": 117,
@@ -6275,7 +7463,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T07:30:33Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/697?format=json",
-      "lastCached": 1755659813898
+      "lastCached": 1755790628246,
+      "sponsorIds": [
+        "O000086"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:700": {
       "congress": 117,
@@ -6296,7 +7488,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-19T17:23:08Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/700?format=json",
-      "lastCached": 1755659814170
+      "lastCached": 1755790628247,
+      "sponsorIds": [
+        "V000131"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:789": {
       "congress": 117,
@@ -6318,7 +7514,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:05:08Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/789?format=json",
-      "lastCached": 1755659814458
+      "lastCached": 1755790628248,
+      "sponsorIds": [
+        "S001175"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:845": {
       "congress": 117,
@@ -6339,7 +7539,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T07:36:49Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/845?format=json",
-      "lastCached": 1755659814705
+      "lastCached": 1755790628248,
+      "sponsorIds": [
+        "P000617"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:873": {
       "congress": 117,
@@ -6360,7 +7564,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-01-03T07:38:58Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/873?format=json",
-      "lastCached": 1755659815004
+      "lastCached": 1755790628249,
+      "sponsorIds": [
+        "C001119"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:1077": {
       "congress": 117,
@@ -6381,7 +7589,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-04-07T15:05:08Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/1077?format=json",
-      "lastCached": 1755659815301
+      "lastCached": 1755790628250,
+      "sponsorIds": [
+        "G000595"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:1394": {
       "congress": 117,
@@ -6402,7 +7614,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-07-21T19:44:15Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/1394?format=json",
-      "lastCached": 1755659815656
+      "lastCached": 1755790628250,
+      "sponsorIds": [
+        "V000131"
+      ],
+      "cosponsorIds": []
     },
     "117:HRES:1410": {
       "congress": 117,
@@ -6423,7 +7639,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-02-06T19:29:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/117/hres/1410?format=json",
-      "lastCached": 1755659816076
+      "lastCached": 1755790628251,
+      "sponsorIds": [
+        "S001190"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:18": {
       "congress": 118,
@@ -6444,7 +7664,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-05-27T14:12:17Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/18?format=json",
-      "lastCached": 1755659816217
+      "lastCached": 1755790628251,
+      "sponsorIds": [
+        "G000595"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:40": {
       "congress": 118,
@@ -6465,7 +7689,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-06-12T18:20:56Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/40?format=json",
-      "lastCached": 1755659816460
+      "lastCached": 1755790628252,
+      "sponsorIds": [
+        "E000297"
+      ],
+      "cosponsorIds": []
     },
     "118:HR:507": {
       "congress": 118,
@@ -6486,7 +7714,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-05-27T14:12:17Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hr/507?format=json",
-      "lastCached": 1755659816710
+      "lastCached": 1755790628252,
+      "sponsorIds": [
+        "C001119"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:64": {
       "congress": 118,
@@ -6507,7 +7739,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-07-24T15:24:07Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/64?format=json",
-      "lastCached": 1755659816973
+      "lastCached": 1755790628253,
+      "sponsorIds": [
+        "G000578"
+      ],
+      "cosponsorIds": []
     },
     "118:HR:626": {
       "congress": 118,
@@ -6528,7 +7764,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-07-21T19:44:15Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hr/626?format=json",
-      "lastCached": 1755659817290
+      "lastCached": 1755790628254,
+      "sponsorIds": [
+        "D000623"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:76": {
       "congress": 118,
@@ -6550,7 +7790,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-05-27T14:15:31Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/76?format=json",
-      "lastCached": 1755659817535
+      "lastCached": 1755790628254,
+      "sponsorIds": [
+        "M001222"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:114": {
       "congress": 118,
@@ -6572,7 +7816,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-20T01:24:48Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/114?format=json",
-      "lastCached": 1755659833049
+      "lastCached": 1755790628369,
+      "sponsorIds": [
+        "G000598"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:1454": {
       "congress": 118,
@@ -6593,7 +7841,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-12-16T19:13:00Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/1454?format=json",
-      "lastCached": 1755659818213
+      "lastCached": 1755790628255,
+      "sponsorIds": [
+        "G000596"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:1463": {
       "congress": 118,
@@ -6614,7 +7866,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-05-27T14:12:08Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/1463?format=json",
-      "lastCached": 1755659818497
+      "lastCached": 1755790628256,
+      "sponsorIds": [
+        "G000596"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:1500": {
       "congress": 118,
@@ -6636,7 +7892,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-12-16T19:18:57Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/1500?format=json",
-      "lastCached": 1755659818828
+      "lastCached": 1755790628257,
+      "sponsorIds": [
+        "H001066"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:1584": {
       "congress": 118,
@@ -6657,7 +7917,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-12-16T19:25:48Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/1584?format=json",
-      "lastCached": 1755659819098
+      "lastCached": 1755790628258,
+      "sponsorIds": [
+        "C001068"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:1603": {
       "congress": 118,
@@ -6678,7 +7942,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-20T02:30:27Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/1603?format=json",
-      "lastCached": 1755659819339
+      "lastCached": 1755790628258,
+      "sponsorIds": [
+        "C001068"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:1609": {
       "congress": 118,
@@ -6700,7 +7968,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-20T02:30:27Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/1609?format=json",
-      "lastCached": 1755659819605
+      "lastCached": 1755790628260,
+      "sponsorIds": [
+        "C001068"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:1608": {
       "congress": 118,
@@ -6722,7 +7994,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-12-16T19:29:24Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/1608?format=json",
-      "lastCached": 1755659819879
+      "lastCached": 1755790628262,
+      "sponsorIds": [
+        "C001117"
+      ],
+      "cosponsorIds": []
     },
     "119:HR:185": {
       "congress": 119,
@@ -6743,7 +8019,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-07-21T19:44:15Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hr/185?format=json",
-      "lastCached": 1755659820174
+      "lastCached": 1755790628263,
+      "sponsorIds": [
+        "M000312"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:491": {
       "congress": 119,
@@ -6764,7 +8044,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-06-24T13:53:21Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/491?format=json",
-      "lastCached": 1755659820867
+      "lastCached": 1755790628336,
+      "sponsorIds": [
+        "C001119"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:406": {
       "congress": 119,
@@ -6785,7 +8069,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-05-21T12:49:42Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/406?format=json",
-      "lastCached": 1755659821185
+      "lastCached": 1755790628337,
+      "sponsorIds": [
+        "C001103"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:408": {
       "congress": 119,
@@ -6806,7 +8094,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-05-22T12:56:34Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/408?format=json",
-      "lastCached": 1755659821492
+      "lastCached": 1755790628338,
+      "sponsorIds": [
+        "T000480"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:132": {
       "congress": 119,
@@ -6827,7 +8119,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-02-18T16:21:51Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/132?format=json",
-      "lastCached": 1755659821564
+      "lastCached": 1755790628338,
+      "sponsorIds": [
+        "M000194"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:439": {
       "congress": 119,
@@ -6848,7 +8144,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-05-28T12:41:08Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/439?format=json",
-      "lastCached": 1755659821636
+      "lastCached": 1755790628339,
+      "sponsorIds": [
+        "M000194"
+      ],
+      "cosponsorIds": []
     },
     "119:HR:1834": {
       "congress": 119,
@@ -6869,7 +8169,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-07-21T19:44:15Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hr/1834?format=json",
-      "lastCached": 1755659821907
+      "lastCached": 1755790628340,
+      "sponsorIds": [
+        "M000312"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:197": {
       "congress": 119,
@@ -6890,7 +8194,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-19T23:52:21Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/197?format=json",
-      "lastCached": 1755659821980
+      "lastCached": 1755790628340,
+      "sponsorIds": [
+        "N000026"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:189": {
       "congress": 119,
@@ -6912,7 +8220,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-06-23T14:15:48Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/189?format=json",
-      "lastCached": 1755659822061
+      "lastCached": 1755790628341,
+      "sponsorIds": [
+        "N000189"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:193": {
       "congress": 119,
@@ -6933,7 +8245,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-19T19:14:10Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/193?format=json",
-      "lastCached": 1755659822144
+      "lastCached": 1755790628342,
+      "sponsorIds": [
+        "C001132"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:201": {
       "congress": 119,
@@ -6954,7 +8270,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-03-11T08:07:11Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/201?format=json",
-      "lastCached": 1755659822516
+      "lastCached": 1755790628343,
+      "sponsorIds": [
+        "O000175"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:202": {
       "congress": 119,
@@ -6975,7 +8295,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-05-07T14:31:48Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/202?format=json",
-      "lastCached": 1755659822828
+      "lastCached": 1755790628343,
+      "sponsorIds": [
+        "H001085"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:204": {
       "congress": 119,
@@ -6996,7 +8320,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-03-12T13:10:38Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/204?format=json",
-      "lastCached": 1755659823130
+      "lastCached": 1755790628344,
+      "sponsorIds": [
+        "C001132"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:216": {
       "congress": 119,
@@ -7017,7 +8345,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-03-25T08:05:46Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/216?format=json",
-      "lastCached": 1755659823540
+      "lastCached": 1755790628345,
+      "sponsorIds": [
+        "G000587"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:258": {
       "congress": 119,
@@ -7038,7 +8370,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-05-09T15:51:20Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/258?format=json",
-      "lastCached": 1755659823950
+      "lastCached": 1755790628346,
+      "sponsorIds": [
+        "W000814"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:471": {
       "congress": 119,
@@ -7059,7 +8395,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-07-15T08:06:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/471?format=json",
-      "lastCached": 1755659824013
+      "lastCached": 1755790628347,
+      "sponsorIds": [
+        "C001119"
+      ],
+      "cosponsorIds": []
     },
     "119:HR:2624": {
       "congress": 119,
@@ -7080,7 +8420,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-06-14T20:41:11Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hr/2624?format=json",
-      "lastCached": 1755659824288
+      "lastCached": 1755790628347,
+      "sponsorIds": [
+        "C001119"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:504": {
       "congress": 119,
@@ -7101,7 +8445,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-06-26T14:43:29Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/504?format=json",
-      "lastCached": 1755659824358
+      "lastCached": 1755790628348,
+      "sponsorIds": [
+        "L000596"
+      ],
+      "cosponsorIds": []
     },
     "119:HR:3001": {
       "congress": 119,
@@ -7122,7 +8470,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-07-21T19:44:15Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hr/3001?format=json",
-      "lastCached": 1755659824593
+      "lastCached": 1755790628349,
+      "sponsorIds": [
+        "F000466"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:643": {
       "congress": 119,
@@ -7143,7 +8495,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-09T08:18:24Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/643?format=json",
-      "lastCached": 1755659824702
+      "lastCached": 1755790628349,
+      "sponsorIds": [
+        "G000593"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:647": {
       "congress": 119,
@@ -7164,7 +8520,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-13T08:18:32Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/647?format=json",
-      "lastCached": 1755659824763
+      "lastCached": 1755790628350,
+      "sponsorIds": [
+        "C001103"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:156": {
       "congress": 118,
@@ -7185,7 +8545,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-07-24T15:23:50Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/156?format=json",
-      "lastCached": 1755659825038
+      "lastCached": 1755790628350,
+      "sponsorIds": [
+        "C001119"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:412": {
       "congress": 118,
@@ -7206,7 +8570,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-07-24T15:22:19Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/412?format=json",
-      "lastCached": 1755659825472
+      "lastCached": 1755790628351,
+      "sponsorIds": [
+        "L000596"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:437": {
       "congress": 118,
@@ -7227,7 +8595,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-07-24T15:22:12Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/437?format=json",
-      "lastCached": 1755659825753
+      "lastCached": 1755790628352,
+      "sponsorIds": [
+        "L000596"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:479": {
       "congress": 118,
@@ -7248,7 +8620,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-07-24T15:22:00Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/479?format=json",
-      "lastCached": 1755659826028
+      "lastCached": 1755790628352,
+      "sponsorIds": [
+        "G000578"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:489": {
       "congress": 118,
@@ -7270,7 +8646,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-19T23:52:18Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/489?format=json",
-      "lastCached": 1755659826314
+      "lastCached": 1755790628353,
+      "sponsorIds": [
+        "L000596"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:512": {
       "congress": 118,
@@ -7291,7 +8671,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-19T23:52:19Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/512?format=json",
-      "lastCached": 1755659826571
+      "lastCached": 1755790628353,
+      "sponsorIds": [
+        "L000596"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:521": {
       "congress": 118,
@@ -7313,7 +8697,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-05-27T14:12:26Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/521?format=json",
-      "lastCached": 1755659826842
+      "lastCached": 1755790628354,
+      "sponsorIds": [
+        "L000596"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:531": {
       "congress": 118,
@@ -7334,7 +8722,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-12-23T13:28:51Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/531?format=json",
-      "lastCached": 1755659827090
+      "lastCached": 1755790628355,
+      "sponsorIds": [
+        "L000601"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:592": {
       "congress": 118,
@@ -7355,7 +8747,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-11-22T17:39:15Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/592?format=json",
-      "lastCached": 1755659827392
+      "lastCached": 1755790628356,
+      "sponsorIds": [
+        "T000486"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:606": {
       "congress": 118,
@@ -7376,7 +8772,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-11-22T20:07:22Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/606?format=json",
-      "lastCached": 1755659827702
+      "lastCached": 1755790628357,
+      "sponsorIds": [
+        "O000175"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:610": {
       "congress": 118,
@@ -7398,7 +8798,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-07-24T15:21:23Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/610?format=json",
-      "lastCached": 1755659828046
+      "lastCached": 1755790628357,
+      "sponsorIds": [
+        "B001318"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:623": {
       "congress": 118,
@@ -7419,7 +8823,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-11-22T20:09:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/623?format=json",
-      "lastCached": 1755659828378
+      "lastCached": 1755790628358,
+      "sponsorIds": [
+        "W000797"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:626": {
       "congress": 118,
@@ -7440,7 +8848,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-11-22T20:20:38Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/626?format=json",
-      "lastCached": 1755659828597
+      "lastCached": 1755790628359,
+      "sponsorIds": [
+        "C001130"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:650": {
       "congress": 118,
@@ -7461,7 +8873,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-20T01:24:50Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/650?format=json",
-      "lastCached": 1755659828968
+      "lastCached": 1755790628359,
+      "sponsorIds": [
+        "G000599"
+      ],
+      "cosponsorIds": []
     },
     "118:HR:5673": {
       "congress": 118,
@@ -7482,7 +8898,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-07-21T19:44:15Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hr/5673?format=json",
-      "lastCached": 1755659829274
+      "lastCached": 1755790628360,
+      "sponsorIds": [
+        "M000312"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:755": {
       "congress": 118,
@@ -7503,7 +8923,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-05-27T14:14:34Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/755?format=json",
-      "lastCached": 1755659829584
+      "lastCached": 1755790628360,
+      "sponsorIds": [
+        "M000317"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:812": {
       "congress": 118,
@@ -7524,7 +8948,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-05-27T14:12:17Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/812?format=json",
-      "lastCached": 1755659829887
+      "lastCached": 1755790628361,
+      "sponsorIds": [
+        "M001136"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:772": {
       "congress": 118,
@@ -7545,7 +8973,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-12-20T12:37:55Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/772?format=json",
-      "lastCached": 1755659830196
+      "lastCached": 1755790628362,
+      "sponsorIds": [
+        "B001301"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:773": {
       "congress": 118,
@@ -7567,7 +8999,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-07-24T15:20:04Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/773?format=json",
-      "lastCached": 1755659830502
+      "lastCached": 1755790628362,
+      "sponsorIds": [
+        "D000632"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:807": {
       "congress": 118,
@@ -7588,7 +9024,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-07-24T15:20:04Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/807?format=json",
-      "lastCached": 1755659830811
+      "lastCached": 1755790628363,
+      "sponsorIds": [
+        "G000596"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:835": {
       "congress": 118,
@@ -7609,7 +9049,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-12-20T13:37:22Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/835?format=json",
-      "lastCached": 1755659831139
+      "lastCached": 1755790628363,
+      "sponsorIds": [
+        "M001212"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:841": {
       "congress": 118,
@@ -7630,7 +9074,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-12-20T13:42:30Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/841?format=json",
-      "lastCached": 1755659831394
+      "lastCached": 1755790628364,
+      "sponsorIds": [
+        "M001222"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:845": {
       "congress": 118,
@@ -7652,7 +9100,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-07-24T15:19:56Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/845?format=json",
-      "lastCached": 1755659831732
+      "lastCached": 1755790628365,
+      "sponsorIds": [
+        "M001218"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:846": {
       "congress": 118,
@@ -7674,7 +9126,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-12-20T14:54:02Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/846?format=json",
-      "lastCached": 1755659832042
+      "lastCached": 1755790628366,
+      "sponsorIds": [
+        "J000305"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:878": {
       "congress": 118,
@@ -7696,7 +9152,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-07-24T15:19:45Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/878?format=json",
-      "lastCached": 1755659832346
+      "lastCached": 1755790628367,
+      "sponsorIds": [
+        "G000591"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:912": {
       "congress": 118,
@@ -7717,7 +9177,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-19T23:52:18Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/912?format=json",
-      "lastCached": 1755659832781
+      "lastCached": 1755790628367,
+      "sponsorIds": [
+        "M001136"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:970": {
       "congress": 118,
@@ -7738,7 +9202,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-07-24T15:19:25Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/970?format=json",
-      "lastCached": 1755659833048
+      "lastCached": 1755790628368,
+      "sponsorIds": [
+        "G000599"
+      ],
+      "cosponsorIds": []
     },
     "118:HRES:1207": {
       "congress": 118,
@@ -7759,7 +9227,11 @@
       "originChamberCode": "H",
       "updateDate": "2024-08-13T12:15:08Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hres/1207?format=json",
-      "lastCached": 1755659833265
+      "lastCached": 1755790628370,
+      "sponsorIds": [
+        "B001298"
+      ],
+      "cosponsorIds": []
     },
     "118:HR:8597": {
       "congress": 118,
@@ -7780,7 +9252,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-05-27T14:12:17Z",
       "detailUrl": "https://api.congress.gov/v3/bill/118/hr/8597?format=json",
-      "lastCached": 1755659833332
+      "lastCached": 1755790628370,
+      "sponsorIds": [
+        "Q000023"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:539": {
       "congress": 119,
@@ -7802,7 +9278,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-07-29T18:16:24Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/539?format=json",
-      "lastCached": 1755659833427
+      "lastCached": 1755790628371,
+      "sponsorIds": [
+        "H001077"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:553": {
       "congress": 119,
@@ -7823,7 +9303,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-08-01T15:59:13Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/553?format=json",
-      "lastCached": 1755659833505
+      "lastCached": 1755790628372,
+      "sponsorIds": [
+        "T000488"
+      ],
+      "cosponsorIds": []
     },
     "119:HRES:576": {
       "congress": 119,
@@ -7844,7 +9328,11 @@
       "originChamberCode": "H",
       "updateDate": "2025-07-24T13:53:20Z",
       "detailUrl": "https://api.congress.gov/v3/bill/119/hres/576?format=json",
-      "lastCached": 1755659833569
+      "lastCached": 1755790628372,
+      "sponsorIds": [
+        "T000486"
+      ],
+      "cosponsorIds": []
     },
     "103:SRES:153": {
       "congress": 103,
@@ -7865,7 +9353,11 @@
       "originChamberCode": "S",
       "updateDate": "2025-01-14T17:14:00Z",
       "detailUrl": "https://api.congress.gov/v3/bill/103/sres/153?format=json",
-      "lastCached": 1755659834347
+      "lastCached": 1755790628516,
+      "sponsorIds": [
+        "B000993"
+      ],
+      "cosponsorIds": []
     },
     "101:SRES:311": {
       "congress": 101,
@@ -7886,7 +9378,11 @@
       "originChamberCode": "S",
       "updateDate": "2025-01-14T17:14:00Z",
       "detailUrl": "https://api.congress.gov/v3/bill/101/sres/311?format=json",
-      "lastCached": 1755659834703
+      "lastCached": 1755790628517,
+      "sponsorIds": [
+        "H000445"
+      ],
+      "cosponsorIds": []
     },
     "97:SRES:204": {
       "congress": 97,
@@ -7907,7 +9403,11 @@
       "originChamberCode": "S",
       "updateDate": "2025-01-14T17:14:00Z",
       "detailUrl": "https://api.congress.gov/v3/bill/97/sres/204?format=json",
-      "lastCached": 1755659835148
+      "lastCached": 1755790628519,
+      "sponsorIds": [
+        "W000092"
+      ],
+      "cosponsorIds": []
     },
     "96:SRES:25": {
       "congress": 96,
@@ -7928,7 +9428,11 @@
       "originChamberCode": "S",
       "updateDate": "2025-01-14T17:21:40Z",
       "detailUrl": "https://api.congress.gov/v3/bill/96/sres/25?format=json",
-      "lastCached": 1755659835395
+      "lastCached": 1755790628519,
+      "sponsorIds": [
+        "S000132"
+      ],
+      "cosponsorIds": []
     },
     "96:SRES:220": {
       "congress": 96,
@@ -7949,7 +9453,11 @@
       "originChamberCode": "S",
       "updateDate": "2025-01-14T17:14:00Z",
       "detailUrl": "https://api.congress.gov/v3/bill/96/sres/220?format=json",
-      "lastCached": 1755659835683
+      "lastCached": 1755790628520,
+      "sponsorIds": [
+        "M000956"
+      ],
+      "cosponsorIds": []
     },
     "95:SRES:373": {
       "congress": 95,
@@ -7970,7 +9478,11 @@
       "originChamberCode": "S",
       "updateDate": "2025-01-14T17:14:00Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/sres/373?format=json",
-      "lastCached": 1755659835943
+      "lastCached": 1755790628522,
+      "sponsorIds": [
+        "S000890"
+      ],
+      "cosponsorIds": []
     },
     "95:SRES:265": {
       "congress": 95,
@@ -7991,7 +9503,11 @@
       "originChamberCode": "S",
       "updateDate": "2025-01-14T17:14:00Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/sres/265?format=json",
-      "lastCached": 1755659836255
+      "lastCached": 1755790628522,
+      "sponsorIds": [
+        "S000890"
+      ],
+      "cosponsorIds": []
     },
     "95:SRES:319": {
       "congress": 95,
@@ -8012,7 +9528,11 @@
       "originChamberCode": "S",
       "updateDate": "2025-01-14T17:14:00Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/sres/319?format=json",
-      "lastCached": 1755659836648
+      "lastCached": 1755790628523,
+      "sponsorIds": [
+        "S000890"
+      ],
+      "cosponsorIds": []
     },
     "96:SRES:249": {
       "congress": 96,
@@ -8033,7 +9553,11 @@
       "originChamberCode": "S",
       "updateDate": "2025-01-14T17:14:00Z",
       "detailUrl": "https://api.congress.gov/v3/bill/96/sres/249?format=json",
-      "lastCached": 1755659837057
+      "lastCached": 1755790628524,
+      "sponsorIds": [
+        "S000890"
+      ],
+      "cosponsorIds": []
     },
     "95:SRES:542": {
       "congress": 95,
@@ -8054,7 +9578,11 @@
       "originChamberCode": "S",
       "updateDate": "2025-01-14T17:14:00Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/sres/542?format=json",
-      "lastCached": 1755659837467
+      "lastCached": 1755790628524,
+      "sponsorIds": [
+        "S000890"
+      ],
+      "cosponsorIds": []
     },
     "95:SRES:584": {
       "congress": 95,
@@ -8075,7 +9603,11 @@
       "originChamberCode": "S",
       "updateDate": "2025-01-14T17:21:40Z",
       "detailUrl": "https://api.congress.gov/v3/bill/95/sres/584?format=json",
-      "lastCached": 1755659837743
+      "lastCached": 1755790628525,
+      "sponsorIds": [
+        "S000132"
+      ],
+      "cosponsorIds": []
     },
     "94:SRES:325": {
       "congress": 94,
@@ -8096,7 +9628,11 @@
       "originChamberCode": "S",
       "updateDate": "2025-01-14T17:14:00Z",
       "detailUrl": "https://api.congress.gov/v3/bill/94/sres/325?format=json",
-      "lastCached": 1755659838082
+      "lastCached": 1755790628525,
+      "sponsorIds": [
+        "C000120"
+      ],
+      "cosponsorIds": []
     },
     "116:SRES:532": {
       "congress": 116,
@@ -8117,7 +9653,11 @@
       "originChamberCode": "S",
       "updateDate": "2025-01-14T17:14:00Z",
       "detailUrl": "https://api.congress.gov/v3/bill/116/sres/532?format=json",
-      "lastCached": 1755659838492
+      "lastCached": 1755790628526,
+      "sponsorIds": [
+        "H001089"
+      ],
+      "cosponsorIds": []
     }
   }
 }

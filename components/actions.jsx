@@ -83,7 +83,7 @@ export default function Actions({ congress, billType, billNumber }) {
         {actions.map((action, i) => (
           <li key={i} className="relative pl-6">
             {/* timeline dot */}
-            <div className="absolute left-0 top-[0.4rem] h-1 w-2 rounded-full bg-neutral-300 dark:bg-neutral-700" />
+            <div className="absolute left-0 top-[0.4rem] h-1 w-1 rounded-full bg-neutral-300 dark:bg-neutral-700" />
 
             {/* date */}
             <div className="text-[12px] text-neutral-600 dark:text-neutral-400">

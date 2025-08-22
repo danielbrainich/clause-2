@@ -1,14 +1,24 @@
-// app/pol/[bioguideId]/page.jsx
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { Inter } from "next/font/google";
+import { cleanActionString as clean } from "@/app/utils/utils";
 
-// tiny neutral spinner
+const inter = Inter({ subsets: ["latin"] });
+
 function InlineSpinner({ size = "sm" }) {
-  const sizes = { xs: "h-3 w-3 border", sm: "h-4 w-4 border-2", md: "h-6 w-6 border-2" };
+  const sizes = {
+    xs: "h-3 w-3 border",
+    sm: "h-4 w-4 border-2",
+    md: "h-6 w-6 border-2",
+  };
   return (
-    <span className="inline-flex items-center" role="status" aria-label="Loading">
+    <span
+      className="inline-flex items-center"
+      role="status"
+      aria-label="Loading"
+    >
       <span
         className={`${sizes[size]} animate-spin rounded-full border-t-transparent border-neutral-300 dark:border-neutral-700`}
         aria-hidden="true"
@@ -17,39 +27,70 @@ function InlineSpinner({ size = "sm" }) {
     </span>
   );
 }
-
-const toTitleCase = (s = "") =>
-  String(s).replace(/\w\S*/g, (t) => t[0].toUpperCase() + t.slice(1).toLowerCase());
-
 function formatDate(d) {
   if (!d) return "—";
   const dt = new Date(d);
   if (Number.isNaN(dt.getTime())) return "—";
-  return dt.toLocaleDateString("en-US", { month: "short", day: "2-digit", year: "numeric" });
+  return dt.toLocaleDateString("en-US", {
+    month: "short",
+    day: "2-digit",
+    year: "numeric",
+  });
 }
 
-function cleanActionString(str = "") {
-  // keep your util if you want; this is a safe inline fallback
-  return String(str).replace(/\s+/g, " ").trim();
-}
+const Card = ({ children, className = "" }) => (
+  <div
+    className={`rounded-2xl border bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-900 ${className}`}
+  >
+    {children}
+  </div>
+);
+const Grid = ({ children }) => (
+  <div className="grid gap-5 [grid-template-columns:repeat(auto-fill,minmax(300px,1fr))]">
+    {children}
+  </div>
+);
 
-// Shared bill card (matches home look)
 function BillCard({ bill }) {
   const billNo = `${bill?.type ?? "?"}-${bill?.number ?? "?"}`;
   const href = `/bill/${bill?.congress}/${bill?.type}/${bill?.number}`;
+  const chamberRaw = bill?.originChamber || bill?.chamber || "—";
+  const chamber =
+    chamberRaw === "House" ? "House of Representatives" : chamberRaw;
   const introduced =
-    bill?.introducedDate || bill?.introDate || bill?.latestAction?.actionDate || null;
-  const latest = cleanActionString(bill?.latestAction?.text || bill?.latestAction || "");
+    bill?.introducedDate ||
+    bill?.introDate ||
+    bill?.latestAction?.actionDate ||
+    null;
+  const latestText = clean(
+    typeof bill?.latestAction === "string"
+      ? bill.latestAction
+      : bill?.latestAction?.text || ""
+  );
+  const latestDate =
+    typeof bill?.latestAction === "object"
+      ? bill?.latestAction?.actionDate
+      : null;
 
   return (
-    <Link href={href} prefetch={false}>
-      <div className="group flex h-full flex-col rounded-2xl border bg-white shadow-sm transition-shadow hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900">
+    <Link href={href}>
+      <div className="group flex h-full flex-col rounded-2xl border bg-white shadow-sm transition-all hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900">
         <div
           className="border-b p-4 dark:border-neutral-800"
-          style={{ minHeight: 88, display: "flex", flexDirection: "column", gap: "0.4rem" }}
+          style={{
+            minHeight: 88,
+            display: "flex",
+            flexDirection: "column",
+            gap: "0.4rem",
+          }}
         >
           <div className="flex items-start justify-between gap-2">
-            <h3 className="text-[14px] font-semibold leading-tight tracking-[-0.01em]">{billNo}</h3>
+            <h3 className="text-[14px] font-semibold leading-tight tracking-[-0.01em]">
+              {billNo}
+              <span className="ml-2 text-[12px] font-normal text-neutral-600 dark:text-neutral-400">
+                {chamber}
+              </span>
+            </h3>
           </div>
           <p
             className="text-[14.5px] leading-snug font-medium"
@@ -66,9 +107,13 @@ function BillCard({ bill }) {
           </p>
         </div>
         <div className="flex grow flex-col p-4">
+          {/* Latest action label + date (matches list style) */}
+          <div className="mb-1 text-[12px] text-neutral-500 dark:text-neutral-400">
+            Latest Action{latestDate ? ` • ${formatDate(latestDate)}` : ""}
+          </div>
           <p
             className="text-[13px] leading-5"
-            title={latest}
+            title={latestText}
             style={{
               display: "-webkit-box",
               WebkitLineClamp: 3,
@@ -77,7 +122,7 @@ function BillCard({ bill }) {
               minHeight: "3.75rem",
             }}
           >
-            {latest || "—"}
+            {latestText || "—"}
           </p>
           <div className="mt-auto pt-3 text-[12px] text-neutral-600 dark:text-neutral-400">
             Introduced {formatDate(introduced)}
@@ -88,159 +133,299 @@ function BillCard({ bill }) {
   );
 }
 
-export default function RepresentativePage({ params }) {
-  const bioguideId = decodeURIComponent(params?.bioguideId || "");
+export default function Representative({ params }) {
+  const { bioguideId } = params;
 
+  // member basics
   const [rep, setRep] = useState(null);
-  const [sponsored, setSponsored] = useState([]);
-  const [cosponsored, setCosponsored] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [err, setErr] = useState(null);
+  const [repName, setRepName] = useState("");
+  const [loadingRep, setLoadingRep] = useState(true);
+  const [errRep, setErrRep] = useState(null);
+
+  // normal sponsored/cosponsored (existing)
+  const [sponsoredLeg, setSponsoredLeg] = useState([]);
+  const [cosponsoredLeg, setCosponsoredLeg] = useState([]);
+
+  // ethics-by-member
+  const [ethLoading, setEthLoading] = useState(true);
+  const [ethErr, setEthErr] = useState(null);
+  const [ethAuthored, setEthAuthored] = useState([]);
+  const [ethCosponsored, setEthCosponsored] = useState([]);
+  const [ethTargeted, setEthTargeted] = useState([]);
 
   useEffect(() => {
     let cancelled = false;
     (async () => {
       try {
-        setLoading(true);
-        setErr(null);
-
-        // Member
-        const r1 = await fetch(`/api/show-rep/${encodeURIComponent(bioguideId)}`, { cache: "no-store" });
-        if (!r1.ok) throw new Error(`Member HTTP ${r1.status}`);
-        const j1 = await r1.json();
-        const member = j1?.member ?? j1 ?? null; // handle either shape
+        setLoadingRep(true);
+        const r = await fetch(`/api/show-rep/${bioguideId}`);
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        const data = await r.json();
         if (cancelled) return;
+        const member = data?.member ?? null;
         setRep(member);
-
-        // Sponsored
-        const r2 = await fetch(`/api/rep/sponsored-legislation/${encodeURIComponent(bioguideId)}`, { cache: "no-store" });
-        if (r2.ok) {
-          const j2 = await r2.json();
-          if (!cancelled) setSponsored(Array.isArray(j2?.sponsoredLegislation) ? j2.sponsoredLegislation : []);
-        }
-
-        // Cosponsored
-        const r3 = await fetch(`/api/rep/cosponsored-legislation/${encodeURIComponent(bioguideId)}`, { cache: "no-store" });
-        if (r3.ok) {
-          const j3 = await r3.json();
-          if (!cancelled) setCosponsored(Array.isArray(j3?.cosponsoredLegislation) ? j3.cosponsoredLegislation : []);
-        }
+        const title = member?.district ? "Rep." : "Sen.";
+        const name = member?.directOrderName ?? "";
+        setRepName(`${title} ${name}`.trim());
       } catch (e) {
-        if (!cancelled) setErr(e?.message || String(e));
+        if (!cancelled) setErrRep("Failed to load member.");
       } finally {
-        if (!cancelled) setLoading(false);
+        if (!cancelled) setLoadingRep(false);
       }
     })();
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+    };
   }, [bioguideId]);
 
-  if (loading) {
+  // existing sponsored
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const r = await fetch(`/api/rep/sponsored-legislation/${bioguideId}`);
+        if (!r.ok) throw new Error();
+        const d = await r.json();
+        if (!cancelled)
+          setSponsoredLeg(
+            Array.isArray(d?.sponsoredLegislation) ? d.sponsoredLegislation : []
+          );
+      } catch {}
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [bioguideId]);
+
+  // existing cosponsored
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const r = await fetch(`/api/rep/cosponsored-legislation/${bioguideId}`);
+        if (!r.ok) throw new Error();
+        const d = await r.json();
+        if (!cancelled)
+          setCosponsoredLeg(
+            Array.isArray(d?.cosponsoredLegislation)
+              ? d.cosponsoredLegislation
+              : []
+          );
+      } catch {}
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [bioguideId]);
+
+  // ethics by member (NEW) — uses your local ethics store
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        setEthLoading(true);
+        setEthErr(null);
+        const r = await fetch(
+          `/api/ethics/by-member/${bioguideId}?limit=24&loose=1`,
+          { cache: "no-store" }
+        );
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        const d = await r.json();
+        if (cancelled) return;
+        setEthAuthored(d?.authored ?? []);
+        setEthCosponsored(d?.cosponsored ?? []);
+        setEthTargeted(d?.targeted ?? []);
+      } catch (e) {
+        if (!cancelled) setEthErr("Failed to load ethics activity.");
+      } finally {
+        if (!cancelled) setEthLoading(false);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [bioguideId]);
+
+  if (loadingRep) {
     return (
       <main className="mx-auto max-w-5xl px-4 py-10">
-        <div className="flex items-center justify-center gap-2 text-neutral-600 dark:text-neutral-400">
+        <div className="flex justify-center items-center gap-2 text-neutral-600 dark:text-neutral-400">
           <InlineSpinner size="md" />
           <span className="text-sm">Loading…</span>
         </div>
       </main>
     );
   }
-
-  if (err || !rep) {
+  if (errRep || !rep) {
     return (
       <main className="mx-auto max-w-5xl px-4 py-10">
         <div className="rounded-2xl border p-4 text-sm text-rose-600 dark:border-neutral-800 dark:text-rose-400">
-          {err || "No member found."}
+          {errRep || "Could not load member data."}
         </div>
       </main>
     );
   }
 
-  const title = rep?.district ? "Rep." : "Sen.";
-  const name = rep?.directOrderName || rep?.name || "";
-  const portrait = rep?.depiction?.imageUrl || null;
-  const party = rep?.partyHistory?.[0]?.partyName || null;
-  const state = rep?.state || null;
-  const district = rep?.district || null;
+  const party = rep?.partyHistory?.[0]?.partyName ?? null;
+  const state = rep?.state ?? null;
+  const district = rep?.district ?? null;
+  const portrait = rep?.depiction?.imageUrl ?? null;
 
   return (
-    <main className="mx-auto max-w-5xl px-4 py-6">
+    <main className={`${inter.className} mx-auto max-w-5xl px-4 py-6`}>
       {/* Back chip */}
       <Link
         href="/"
-        className="mb-4 inline-flex items-center gap-1 rounded-xl border px-3 py-1.5 text-[12.5px]
+        className="mb-4 inline-flex items-center gap-1 rounded-xl border px-3 py-1.5 text-[13px]
                    text-neutral-700 hover:text-neutral-900 hover:bg-neutral-50
-                   dark:border-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-800"
+                   dark:border-neutral-800 dark:text-neutral-300 dark:hover:bg-neutral-800 transition-colors"
       >
         <span aria-hidden>←</span> Back to latest
       </Link>
 
-      {/* Summary card */}
-      <section className="mb-6 rounded-2xl border bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
+      {/* Summary card (existing look) */}
+      <Card className="mb-6">
         <div className="flex items-start gap-4">
           {portrait ? (
             <img
               src={portrait}
-              alt={`Photo of ${name || "Member"}`}
+              alt={`Photo of ${rep?.directOrderName ?? "Member"}`}
               className="h-24 w-24 rounded-xl object-cover border dark:border-neutral-800"
             />
           ) : null}
-
-          <div className="min-w-0">
+          <div>
             <h1 className="text-[18px] font-semibold tracking-[-0.01em]">
-              {title} {name || "—"}
+              {repName || "—"}
             </h1>
             <div className="mt-2 flex flex-wrap items-center gap-2">
               <span className="rounded-xl border px-2.5 py-1 text-[12px] dark:border-neutral-800">
-                {rep?.district ? "Representative" : "Senator"}
+                {district ? "Representative" : "Senator"}
               </span>
               {party ? (
                 <span className="rounded-xl border px-2.5 py-1 text-[12px] dark:border-neutral-800">
                   {party}
                 </span>
               ) : null}
-              {(state || district) && (
+              {state || district ? (
                 <span className="rounded-xl border px-2.5 py-1 text-[12px] dark:border-neutral-800">
-                  {state}{district ? `-${district}` : ""}
+                  {state}
+                  {district ? `-${district}` : ""}
                 </span>
-              )}
+              ) : null}
             </div>
           </div>
         </div>
-      </section>
+      </Card>
 
-      {/* Sponsored */}
-      <section className="mb-6 rounded-2xl border bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
-        <div className="mb-2 text-[13px] font-semibold tracking-[-0.01em]">Sponsored legislation</div>
-        {sponsored.filter((b) => b?.title).length > 0 ? (
-          <div className="grid gap-5 [grid-template-columns:repeat(auto-fill,minmax(300px,1fr))]">
-            {sponsored
+      {/* NEW: Ethics measures authored/co-sponsored */}
+      <Card className="mb-6">
+        <div className="mb-2 text-[13px] font-semibold tracking-[-0.01em]">
+          Ethics actions by this member
+        </div>
+        {ethLoading ? (
+          <div className="flex items-center gap-2 text-neutral-600 dark:text-neutral-400">
+            <InlineSpinner />
+            <span className="text-sm">Loading…</span>
+          </div>
+        ) : ethErr ? (
+          <div className="text-[13px] text-rose-600 dark:text-rose-400">
+            {ethErr}
+          </div>
+        ) : ethAuthored.length + ethCosponsored.length > 0 ? (
+          <Grid>
+            {[...ethAuthored, ...ethCosponsored].slice(0, 12).map((b, i) => (
+              <BillCard
+                key={`me-${b.congress}-${b.type}-${b.number}-${i}`}
+                bill={b}
+              />
+            ))}
+          </Grid>
+        ) : (
+          <div className="text-[13px] text-neutral-600 dark:text-neutral-400">
+            None.
+          </div>
+        )}
+      </Card>
+
+      {/* NEW: Ethics actions naming this member */}
+      <Card className="mb-6">
+        <div className="mb-2 text-[13px] font-semibold tracking-[-0.01em]">
+          Ethics actions naming this member
+        </div>
+        {ethLoading ? (
+          <div className="flex items-center gap-2 text-neutral-600 dark:text-neutral-400">
+            <InlineSpinner />
+            <span className="text-sm">Loading…</span>
+          </div>
+        ) : ethErr ? (
+          <div className="text-[13px] text-rose-600 dark:text-rose-400">
+            {ethErr}
+          </div>
+        ) : ethTargeted.length > 0 ? (
+          <Grid>
+            {ethTargeted.slice(0, 12).map((b, i) => (
+              <BillCard
+                key={`tgt-${b.congress}-${b.type}-${b.number}-${i}`}
+                bill={b}
+              />
+            ))}
+          </Grid>
+        ) : (
+          <div className="text-[13px] text-neutral-600 dark:text-neutral-400">
+            None.
+          </div>
+        )}
+      </Card>
+
+      {/* Existing: Sponsored */}
+      <Card className="mb-6">
+        <div className="mb-2 text-[13px] font-semibold tracking-[-0.01em]">
+          Sponsored legislation
+        </div>
+        {Array.isArray(sponsoredLeg) &&
+        sponsoredLeg.filter((b) => b?.title).length > 0 ? (
+          <Grid>
+            {sponsoredLeg
               .filter((b) => b?.title)
               .slice(0, 12)
               .map((bill, i) => (
-                <BillCard key={`${bill?.congress}-${bill?.type}-${bill?.number}-${i}`} bill={bill} />
+                <BillCard
+                  key={`spr-${bill?.congress}-${bill?.type}-${bill?.number}-${i}`}
+                  bill={bill}
+                />
               ))}
-          </div>
+          </Grid>
         ) : (
-          <div className="text-[13px] text-neutral-600 dark:text-neutral-400">No sponsored bills listed.</div>
+          <div className="text-[13px] text-neutral-600 dark:text-neutral-400">
+            None.
+          </div>
         )}
-      </section>
+      </Card>
 
-      {/* Cosponsored */}
-      <section className="mb-6 rounded-2xl border bg-white p-4 shadow-sm dark:border-neutral-800 dark:bg-neutral-900">
-        <div className="mb-2 text-[13px] font-semibold tracking-[-0.01em]">Cosponsored legislation</div>
-        {cosponsored.filter((b) => b?.title).length > 0 ? (
-          <div className="grid gap-5 [grid-template-columns:repeat(auto-fill,minmax(300px,1fr))]">
-            {cosponsored
+      {/* Existing: Cosponsored */}
+      <Card>
+        <div className="mb-2 text-[13px] font-semibold tracking-[-0.01em]">
+          Cosponsored legislation
+        </div>
+        {Array.isArray(cosponsoredLeg) &&
+        cosponsoredLeg.filter((b) => b?.title).length > 0 ? (
+          <Grid>
+            {cosponsoredLeg
               .filter((b) => b?.title)
               .slice(0, 12)
               .map((bill, i) => (
-                <BillCard key={`co-${bill?.congress}-${bill?.type}-${bill?.number}-${i}`} bill={bill} />
+                <BillCard
+                  key={`co-${bill?.congress}-${bill?.type}-${bill?.number}-${i}`}
+                  bill={bill}
+                />
               ))}
-          </div>
+          </Grid>
         ) : (
-          <div className="text-[13px] text-neutral-600 dark:text-neutral-400">No cosponsored bills listed.</div>
+          <div className="text-[13px] text-neutral-600 dark:text-neutral-400">
+            None.
+          </div>
         )}
-      </section>
+      </Card>
     </main>
   );
 }
