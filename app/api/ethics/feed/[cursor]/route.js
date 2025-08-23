@@ -1,54 +1,35 @@
 import { NextResponse } from "next/server";
 import { loadStore } from "@/lib/ethicsCommitteeStore";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(req, { params }) {
+  const { cursor } = params;
   const { searchParams } = new URL(req.url);
-  const limit = Math.max(
-    1,
-    Math.min(Number(searchParams.get("limit") ?? 12), 48)
-  );
-  const cursor = Number(params.cursor ?? 0);
+  const limit = Math.min(Number(searchParams.get("limit") || 12), 50);
+  const start = Number(cursor || 0) || 0;
 
-  const state = await loadStore();
-  const rows = Array.from(state.map.values());
+  const store = await loadStore();
+  const itemsObj =
+    store?.items ||
+    store?.map?.items ||   // legacy
+    store?.map ||          // last-ditch legacy
+    {};
+  const all = Object.values(itemsObj);
 
-  // Sort newest-first by latestAction.actionDate, fallback to updateDate or committeeActionDate
-  rows.sort((a, b) => {
-    const da =
-      a?.latestAction?.actionDate ||
-      a?.updateDate ||
-      a?.committeeActionDate ||
-      "1900-01-01";
-    const db =
-      b?.latestAction?.actionDate ||
-      b?.updateDate ||
-      b?.committeeActionDate ||
-      "1900-01-01";
-    return db.localeCompare(da);
+  all.sort((a, b) => {
+    const db = Date.parse(b?.latestAction?.actionDate || b?.committeeActionDate || b?.updateDate || 0) || 0;
+    const da = Date.parse(a?.latestAction?.actionDate || a?.committeeActionDate || a?.updateDate || 0) || 0;
+    return db - da;
   });
 
-  const slice = rows.slice(cursor, cursor + limit);
-  const nextCursor =
-    cursor + slice.length < rows.length ? cursor + slice.length : null;
-
-  // Normalize fields expected by your cards
-  const items = slice.map((b) => ({
-    congress: b.congress,
-    type: b.type,
-    number: b.number,
-    title: b.title,
-    originChamber: b.originChamber,
-    originChamberCode: b.originChamberCode,
-    latestAction: b.latestAction,
-    introducedDate: b.introducedDate, // may be absent; card already guards this
-    url: b.detailUrl || b.url || null,
-  }));
+  const slice = all.slice(start, start + limit);
+  const nextCursor = start + slice.length < all.length ? start + slice.length : null;
 
   return NextResponse.json({
     ok: true,
-    count: items.length,
-    total: rows.length,
+    total: all.length,
     nextCursor,
-    items,
+    items: slice,
   });
 }
