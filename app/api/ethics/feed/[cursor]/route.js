@@ -1,27 +1,54 @@
 import { NextResponse } from "next/server";
 import { loadStore } from "@/lib/ethicsCommitteeStore";
 
-export const runtime = "nodejs";
-export const dynamic = "force-dynamic";
-
 export async function GET(req, { params }) {
-  const { cursor } = params;
   const { searchParams } = new URL(req.url);
-  const limit = Number(searchParams.get("limit") ?? 12);
+  const limit = Math.max(
+    1,
+    Math.min(Number(searchParams.get("limit") ?? 12), 48)
+  );
+  const cursor = Number(params.cursor ?? 0);
 
-  const store = await loadStore();
-  const all = Array.from(store.map.values());
+  const state = await loadStore();
+  const rows = Array.from(state.map.values());
 
-  // Sort newest first by: latestAction.actionDate, then committeeActionDate, then updateDate
-  all.sort((a, b) => {
-    const ad = a?.latestAction?.actionDate || a?.committeeActionDate || a?.updateDate || "";
-    const bd = b?.latestAction?.actionDate || b?.committeeActionDate || b?.updateDate || "";
-    return ad > bd ? -1 : ad < bd ? 1 : 0;
+  // Sort newest-first by latestAction.actionDate, fallback to updateDate or committeeActionDate
+  rows.sort((a, b) => {
+    const da =
+      a?.latestAction?.actionDate ||
+      a?.updateDate ||
+      a?.committeeActionDate ||
+      "1900-01-01";
+    const db =
+      b?.latestAction?.actionDate ||
+      b?.updateDate ||
+      b?.committeeActionDate ||
+      "1900-01-01";
+    return db.localeCompare(da);
   });
 
-  const start = Number(cursor) || 0;
-  const items = all.slice(start, start + limit);
-  const nextCursor = start + items.length < all.length ? start + items.length : null;
+  const slice = rows.slice(cursor, cursor + limit);
+  const nextCursor =
+    cursor + slice.length < rows.length ? cursor + slice.length : null;
 
-  return NextResponse.json({ items, nextCursor, total: all.length, lastUpdated: store.lastUpdated });
+  // Normalize fields expected by your cards
+  const items = slice.map((b) => ({
+    congress: b.congress,
+    type: b.type,
+    number: b.number,
+    title: b.title,
+    originChamber: b.originChamber,
+    originChamberCode: b.originChamberCode,
+    latestAction: b.latestAction,
+    introducedDate: b.introducedDate, // may be absent; card already guards this
+    url: b.detailUrl || b.url || null,
+  }));
+
+  return NextResponse.json({
+    ok: true,
+    count: items.length,
+    total: rows.length,
+    nextCursor,
+    items,
+  });
 }

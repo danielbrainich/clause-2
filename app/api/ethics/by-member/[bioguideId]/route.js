@@ -2,9 +2,6 @@
 import { NextResponse } from "next/server";
 import { loadStore } from "@/lib/ethicsCommitteeStore";
 
-export const runtime = "nodejs";
-export const dynamic = "force-dynamic";
-
 const esc = (s) => String(s || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 async function fetchJSON(url, opts = {}) {

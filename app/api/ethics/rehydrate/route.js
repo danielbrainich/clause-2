@@ -1,9 +1,6 @@
 import { NextResponse } from "next/server";
 import { loadStore, saveStore } from "@/lib/ethicsCommitteeStore";
 
-export const runtime = "nodejs";
-export const dynamic = "force-dynamic";
-
 async function fetchJSON(url, opts = {}) {
   const r = await fetch(url, opts);
   if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
