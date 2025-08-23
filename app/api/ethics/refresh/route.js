@@ -1,5 +1,7 @@
 // app/api/ethics/committee-refresh/route.js
 import { NextResponse } from "next/server";
+
+export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 import { ETHICS_COMMITTEES, billKey } from "@/lib/ethicsCommittee";

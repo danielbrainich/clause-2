@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { loadStore, saveStore } from "@/lib/ethicsCommitteeStore";
 
+export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
 async function fetchJSON(url, opts = {}) {
