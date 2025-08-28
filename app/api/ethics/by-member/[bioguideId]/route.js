@@ -19,29 +19,53 @@ function getBase(req) {
 }
 
 function parseMemberName(member) {
-  const direct = member?.directOrderName; // "Last, First M."
+  const direct = member?.directOrderName; // "Last, First M." (sometimes with quotes)
   const last = member?.lastName || (direct ? direct.split(",")[0]?.trim() : null);
+
+  // First name token
   const firstRaw =
     member?.firstName ||
     (direct?.includes(",") ? direct.split(",")[1]?.trim() : null);
   const first = firstRaw ? firstRaw.split(/\s+/)[0] : null;
-  return { first, last };
+
+  // Try to pick up a quoted nickname in directOrderName, e.g., Earl L. "Buddy" Carter
+  const nickInQuotes = direct?.match(/"([^"]+)"/)?.[1];
+  const nickname = member?.nickname || nickInQuotes || null;
+
+  // Build an alternation of acceptable “first” tokens (first name or nickname)
+  const firstTokens = Array.from(new Set([first, nickname].filter(Boolean)));
+
+  return { first, last, firstTokens };
 }
 
-function buildTargetRegex({ first, last }, { loose = false } = {}) {
+function buildTargetRegex({ first, last, firstTokens = [] }, { loose = false } = {}) {
   if (!last) return null;
-  const lastRx = esc(last);
-  const firstRx = first ? esc(first) : null;
 
+  const lastRx = esc(last);
+
+  // If we have multiple acceptable first tokens (e.g., "Earl" OR "Buddy"), build an alternation
+  const firstAlt = firstTokens.length
+    ? `(?:${firstTokens.map(esc).join("|")})`
+    : (first ? esc(first) : null);
+
+  // STRICT: “Rep./Sen. First Last” OR “Last, First”
   const strict = [
-    `(?:Rep\\.?|Representative|Sen\\.?|Senator)\\s+(?:${firstRx ? `${firstRx}\\s+` : ""})${lastRx}`,
-    firstRx ? `${lastRx},\\s*${firstRx}` : null,
+    `(?:Rep\\.?|Representative|Sen\\.?|Senator)\\s+(?:${firstAlt ? `${firstAlt}\\s+` : ""})${lastRx}`,
+    firstAlt ? `${lastRx},\\s*${firstAlt}` : null,
   ].filter(Boolean);
 
-  if (!loose) return new RegExp(`\\b(?:${strict.join("|")})\\b`, "i");
+  if (!loose) {
+    return new RegExp(`\\b(?:${strict.join("|")})\\b`, "i");
+  }
 
+  // LOOSE: still require the first token when we know it to avoid Troy/Buddy collisions.
+  // Keep the discipline-word proximity, but demand the member’s first (or nickname) + last.
   const disc = `(censur(?:e|ed|es|ing)|reprimand(?:ed|s|ing)?|expel(?:led|s|ling)?|expulsion|condemn(?:ed|s|ing)?|condemnation)`;
-  const loosePiece = `(?:${disc}).{0,80}\\b(?:Rep\\.?|Representative|Sen\\.?|Senator)?\\s*${lastRx}\\b`;
+
+  // If we know a first token, REQUIRE it. If we don't, fall back to last-only (rare edge case).
+  const namePiece = firstAlt ? `${firstAlt}\\s+${lastRx}` : `${lastRx}`;
+  const loosePiece = `(?:${disc}).{0,120}\\b(?:Rep\\.?|Representative|Sen\\.?|Senator)?\\s*${namePiece}\\b`;
+
   return new RegExp(`\\b(?:${strict.join("|")}|${loosePiece})\\b`, "i");
 }
 
@@ -96,8 +120,8 @@ export async function GET(req, { params }) {
     map instanceof Map
       ? Array.from(map.values())
       : map && typeof map === "object"
-      ? Object.values(map)
-      : [];
+        ? Object.values(map)
+        : [];
 
   if (debug) {
     const keysPreview =
