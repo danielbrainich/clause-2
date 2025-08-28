@@ -17,7 +17,7 @@ exports.handler = async (event) => {
   });
   if (log) params.set("log", "1");
 
-  const refreshUrl = `${base}/api/ethics/refresh?${params.toString()}`;
+  const refreshUrl = `${base}/api/ethics/committee-refresh?${params.toString()}`;
 
   const ac = new AbortController();
   const timer = setTimeout(() => ac.abort(), 25_000);
