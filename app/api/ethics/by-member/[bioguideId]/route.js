@@ -20,8 +20,7 @@ function getBase(req) {
 
 function parseMemberName(member) {
   const direct = member?.directOrderName; // "Last, First M."
-  const last =
-    member?.lastName || (direct ? direct.split(",")[0]?.trim() : null);
+  const last = member?.lastName || (direct ? direct.split(",")[0]?.trim() : null);
   const firstRaw =
     member?.firstName ||
     (direct?.includes(",") ? direct.split(",")[1]?.trim() : null);
@@ -35,9 +34,7 @@ function buildTargetRegex({ first, last }, { loose = false } = {}) {
   const firstRx = first ? esc(first) : null;
 
   const strict = [
-    `(?:Rep\\.?|Representative|Sen\\.?|Senator)\\s+(?:${
-      firstRx ? `${firstRx}\\s+` : ""
-    })${lastRx}`,
+    `(?:Rep\\.?|Representative|Sen\\.?|Senator)\\s+(?:${firstRx ? `${firstRx}\\s+` : ""})${lastRx}`,
     firstRx ? `${lastRx},\\s*${firstRx}` : null,
   ].filter(Boolean);
 
@@ -60,11 +57,13 @@ function norm(b) {
     updateDate: b.updateDate || null,
   };
 }
+
 function latestDate(b) {
   const la = b?.latestAction;
   if (la && typeof la === "object" && la.actionDate) return la.actionDate;
   return b?.updateDate || b?.introducedDate || null;
 }
+
 const uniqByKey = (arr) => {
   const seen = new Set();
   const out = [];
@@ -77,6 +76,7 @@ const uniqByKey = (arr) => {
   }
   return out;
 };
+
 const sortDesc = (a, b) =>
   String(latestDate(b) || "").localeCompare(String(latestDate(a) || ""));
 
@@ -85,29 +85,50 @@ export async function GET(req, { params }) {
   const { searchParams } = new URL(req.url);
   const limit = Number(searchParams.get("limit") ?? 100);
   const loose = searchParams.get("loose") === "1";
+  const debug = searchParams.get("debug") === "1";
 
+  // 1) Load ethics store
   const store = await loadStore();
+  const map = store?.map;
 
-  // fetch member name so regex can match targeted items
-  let member = null;
+  // Normalize to a plain array we can iterate multiple times
+  const items =
+    map instanceof Map
+      ? Array.from(map.values())
+      : map && typeof map === "object"
+      ? Object.values(map)
+      : [];
+
+  if (debug) {
+    const keysPreview =
+      map instanceof Map
+        ? Array.from(map.keys()).slice(0, 10)
+        : Object.keys(map || {}).slice(0, 10);
+    console.log("[by-member] keys:", keysPreview);
+    console.log("[by-member] sample item:", items[0]);
+  }
+
+  // 2) Get member name (for targeted regex)
+  let targetRe = null;
   try {
     const base = getBase(req);
     const r = await fetchJSON(`${base}/api/show-rep/${bioguideId}`, {
       cache: "no-store",
     });
-    member = r?.member ?? null;
-  } catch {}
+    const name = r?.member ? parseMemberName(r.member) : {};
+    targetRe = buildTargetRegex(name, { loose });
+  } catch {
+    // fine; targeted matching will be disabled without a name
+  }
 
-  const name = member ? parseMemberName(member) : {};
-  const targetRe = buildTargetRegex(name, { loose });
-
+  // 3) Partition results
   const authored = [];
   const cosponsored = [];
   const targeted = [];
 
-  for (const item of store.map.values()) {
-    const sponsors = item?.sponsorIds || [];
-    const cosponsors = item?.cosponsorIds || [];
+  for (const item of items) {
+    const sponsors = Array.isArray(item?.sponsorIds) ? item.sponsorIds : [];
+    const cosponsors = Array.isArray(item?.cosponsorIds) ? item.cosponsorIds : [];
     const title = String(item?.title || item?.titleWithoutNumber || "");
     const laText =
       typeof item?.latestAction === "string"
@@ -116,7 +137,7 @@ export async function GET(req, { params }) {
 
     if (sponsors.includes(bioguideId)) {
       authored.push(norm(item));
-      continue;
+      continue; // authored wins for this item
     }
     if (cosponsors.includes(bioguideId)) {
       cosponsored.push(norm(item));
