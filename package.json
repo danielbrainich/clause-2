@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@netlify/blobs": "^10.0.9",
+    "@netlify/functions": "^4.2.4",
     "@supabase/supabase-js": "^2.43.4",
     "lucide-react": "^0.511.0",
     "next": "14.2.3",

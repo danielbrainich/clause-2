@@ -1,5 +1,0 @@
-{
-  "crons": [
-    { "path": "/api/cron/ethics-daily", "schedule": "0 13 * * *" } // 13:00 UTC (~6am PT)
-  ]
-}

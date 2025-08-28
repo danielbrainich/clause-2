@@ -63,8 +63,8 @@ export default function HeroCard({
             they’ve sponsored or faced a censure of their own.
           </p>
           <p className="mt-2 text-[13.5px] leading-6 text-neutral-700 dark:text-neutral-300">
-            Transparency and accountability are essential to a functioning
-            republic. And Capitol Hill drama is fun to follow 🍿
+            Because transparency and accountability are essential to a functioning
+            republic. And because political drama is fun to follow 🍿
           </p>
 
           {/* Full clause quote */}
